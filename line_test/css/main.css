@@ -1,0 +1,106 @@
+/*html파일에서는 main.css만 호출, 다른 필요한 css는 main.css가 부름 */
+@import url(font.css);
+body{
+    font-family: 'Pretendard' , sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555555;
+    word-break: keep-all;
+}
+/* ############START :: 태그의 기본 스타일 삭제(초기화) ##############*/
+h1,h2,h3,h3,h4,h5,h6{
+    font-size: inherit; /*브라우저가 주는 값 무시*/
+    font-weight: inherit;
+}
+li{
+    list-style: none; /* 앞 동그라미 삭제*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* ############END :: 태그의 기본 스타일 삭제(초기화) ##############*/
+
+.wrapper{ /*보통 콘텐츠 넓이가 들어가는 것에만 부르지 다른 것에서는 wrapper를 부르지 않음! */
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.global{
+    margin: 114px 0 0 0;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1d1d1d;
+}
+
+.global .sub_tit{
+    color: #00b900;
+    margin: 15px 0 10px 0;
+}
+
+
+.global .more a{
+    border: 1px solid #00b900;
+    padding: 5px 31px 5px 31px;
+    display: inline-block;
+    margin: 30px 0 0 0;
+}
+
+.global .more .view{
+    color: #00b900;
+}
+
+.global .photo{
+    margin: 41px 0 89px 0;
+}
+
+
+.line{
+    background-image: url(../images/line_bg.png);
+    height: 642px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    padding: 115px 0 0 0;
+}
+
+.line h1{
+    margin: 0 0 14px 0;
+    color: #fff;
+}
+
+.line .more a{
+    border: 1px solid #fff;
+    padding: 5px 25px 5px 25px;
+    display: inline-block;
+    margin: 33px 0 0 0;
+}
+
+.line .photo{
+    margin: 42px 0 100px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

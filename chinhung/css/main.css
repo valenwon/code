@@ -1,0 +1,71 @@
+/*html파일에서는 main.css만 호출, 다른 필요한 css는 main.css가 부름 */
+@import url(font.css);
+body{
+    font-family: 'Pretendard' , sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3d3d3d;
+    word-break: keep-all;
+}
+/* ############START :: 태그의 기본 스타일 삭제(초기화) ##############*/
+h1,h2,h3,h3,h4,h5,h6{
+    font-size: inherit; /*브라우저가 주는 값 무시*/
+    font-weight: inherit;
+}
+li{
+    list-style: none; /* 앞 동그라미 삭제*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* ############END :: 태그의 기본 스타일 삭제(초기화) ##############*/
+
+.wrapper{ /*보통 콘텐츠 넓이가 들어가는 것에만 부르지 다른 것에서는 wrapper를 부르지 않음! */
+    width: 1260px;
+    margin: 0 auto;
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    /*logo와 gnb를 좌우로 배치*/
+}
+header .logo{
+    margin: 31px 0 0 0;
+}
+
+header .logo a img{
+    width: 163px; 
+    /*이미지는 넓이나 높이 둘중에 하나만 주면 나머지는 비율에 맞게 알아서 조절됨
+    -- 오히려 넓이/ 높이 모두 주면 찌그러짐*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
