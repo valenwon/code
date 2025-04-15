@@ -1,0 +1,36 @@
+@import url(font.css);
+body{
+    font-family: 'Pretendard' , sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3d3d3d;
+    word-break: keep-all;
+}
+
+/* ############START :: 태그의 기본 스타일 삭제(초기화) ##############*/
+
+h1,h2,h3,h3,h4,h5,h6{
+    font-size: inherit; /*브라우저가 주는 값 무시*/
+    font-weight: inherit;
+}
+li{
+    list-style: none; /* 앞 동그라미 삭제*/
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+em, address{
+    font-style: normal;
+}
+
+/* ############END :: 태그의 기본 스타일 삭제(초기화) ##############*/
+#wrap{
+    min-width: 1300px;
+}    
