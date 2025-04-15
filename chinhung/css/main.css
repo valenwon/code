@@ -25,7 +25,23 @@ a{
     text-decoration: none;
     color: inherit;
 }
+em, address{
+    font-style: normal;
+}
+
+
 /* ############END :: 태그의 기본 스타일 삭제(초기화) ##############*/
+#wrap{
+    min-width: 1300px;
+    /* 홈페이지 넓이 1260px에 왼쪽/오른쪽에 여백을 20px정도 줌
+    1260 + 20 + 20 = 1300px
+    (브라우저가 줄어들었을 때 가로스크롤바가 생겼을 때 왼쪽/오른쪽 여백)
+
+    min-width은 늘어나는 건 상관 없는데 줄어들 때 이거보다 줄어드면 안됨
+    */
+}
+
+
 
 .wrapper{ /*보통 콘텐츠 넓이가 들어가는 것에만 부르지 다른 것에서는 wrapper를 부르지 않음! */
     width: 1260px;
@@ -153,5 +169,30 @@ header .gnb ul li a{
 }
 
 footer{
-    margin: 400px 0 0 0;
+    padding: 41px 0 102px 0;
+    background-color: #1d1d1d;
+    color: rgba(255,255,255,0.8);
 }
+footer .f_nav ul{
+    display: flex;
+    gap: 35px;
+    color: #fff;
+}
+footer .f_info{
+    margin: 9px 0;
+    display: flex;
+    gap: 21px;
+}
+footer .f_info strong{
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
