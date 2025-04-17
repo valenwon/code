@@ -34,3 +34,36 @@ em, address{
 #wrap{
     min-width: 1300px;
 }    
+
+.wrapper{
+    width: 1260px;
+    margin: 0 auto;
+}
+header{
+    height: 104px;
+}
+
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo  a img{
+    width: 161px;
+}
+header .logo{
+    margin: 29px 0 0 0;
+}
+
+header .gnb ul{
+    display: flex;
+}
+header .gnb ul a{
+    display: block;
+    font-size: 23px;
+    letter-spacing: -0.02em;
+    color: #1d1d1d;
+    margin: 33px 30px 32px 30px;
+}
+
+
