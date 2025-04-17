@@ -1,0 +1,54 @@
+/*태그 스타일 초기화*/
+
+h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+strong{
+    font-weight: inherit;
+}
+em, address{
+    font-style: normal; /*글자의 기울임 취소*/
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    cursor: pointer; /*마우스포인터 손바닥*/
+    font-family: inherit; /*글자의 기본 스타일을 상속 받지 않이 상속받으라고 써줌*/
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    border: none;
+    background-color: transparent; /*배경색 투명*/  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

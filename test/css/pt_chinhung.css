@@ -65,5 +65,10 @@ header .gnb ul a{
     color: #1d1d1d;
     margin: 33px 30px 32px 30px;
 }
-
+.visual{
+    background: url(../images/visual_bg.png) no-repeat center center /cover;
+    height: 869px;
+    color: #fff;
+    text-align: right;
+}
 
