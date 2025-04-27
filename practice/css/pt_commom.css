@@ -1,0 +1,29 @@
+body{
+    font-family: "NanumSquareNeo";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
+    word-break: keep-all; /*단어별로 떨어짐*/
+}
+
+.wrapper{
+    width: 1260px;
+    margin: 0 auto; /*가운데*/
+}
+
+#wrap{
+    min-width: 1308px;
+    /* 1260 + 24 + 24 */
+    position: relative;
+}
+/*글자를 숨겨야하는 경우 blind 클래스를 적용*/
+.blind{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    color: transparent;
+}
