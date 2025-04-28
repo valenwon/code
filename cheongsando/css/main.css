@@ -419,7 +419,7 @@ header .tnb a.icon03::before{
 .community .inner .notice .more{
     position: absolute; /*notice를 기준으로 정렬, after을 기준으로 정렬*/
     top: 50px;
-    right: 29px;
+    right: 31px;
     padding: 0 21px 0 0; /*아이콘 까지 눌려야하기 때문에 아이콘 여백 넣어주기*/
     font-size: 15px;
     color: rgba(255,255,255,0.8);   
