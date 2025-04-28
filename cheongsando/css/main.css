@@ -358,12 +358,96 @@ header .tnb a.icon03::before{
     align-items: flex-end;
 }
 .community .inner .notice{
+    position: relative; /*more의 정렬 기준*/
     width: 536px;
     height: 355px;
     border-radius: 10px;
     background-color: rgba(0, 60, 110, 0.7);
     backdrop-filter: blur(2px); /*background-blur효과*/
+    padding: 44px 32px 0 32px; 
+    /*높이로 제한하고 있기 때문에 여백을 안줌*/
+
 }
+.community .inner .notice:hover{
+    background-color: #003C6E;
+}
+.community .inner .notice h3{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.community .inner .notice .list{
+    margin: 15px 0 0 0;
+}
+.community .inner .notice .list ul li{
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.community .inner .notice .list ul li:first-child{
+    border-top: 0;
+}
+.community .inner .notice .list ul li a{
+    display: flex; /*strong 이랑 span 태그 좌우 배치*/
+    justify-content: space-between;
+    padding: 10px 0 11px 0;
+}
+.community .inner .notice .list ul li a strong{
+    width: calc(100% - 90px);
+    /*100%에서 옆의 날짜 자리 넓이 만큼을 뺀 나머지 전체 
+    25-55-55의 넓이를 빼주는 것(넉넉잡은 넓이) + 둘 사이 여백*/
+
+    /*1줄 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.community .inner .notice .list ul li a:hover{
+    font-weight: 800;
+}
+.community .inner .notice .list ul li a span{
+    width: 80px;
+    /*날짜는 자리수가 늘지 않음
+    닐찌 표시는 대부분 01 02로 함
+    25-1-1 이렇게 표시하면 자릿수가 변동됨
+    => 날짜표시는 25-01-01 이렇게 표시 - 자릿수를 변동시키지 않기 위해
+    제일 넓은 숫자를 기준으로 최대 넓이 고정값으로 줌 
+    ex) 25-55-55*/
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+.community .inner .notice .more{
+    position: absolute; /*notice를 기준으로 정렬, after을 기준으로 정렬*/
+    top: 50px;
+    right: 29px;
+    padding: 0 21px 0 0; /*아이콘 까지 눌려야하기 때문에 아이콘 여백 넣어주기*/
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);   
+}
+.community .inner .notice .more::after{
+    content: ""; /*필수*/
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_47_691' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_47_691)'%3E%3Cpath d='M7.84066 6.5013L3.85941 2.52005C3.724 2.38464 3.65855 2.22439 3.66306 2.03932C3.66757 1.85425 3.73754 1.69401 3.87296 1.55859C4.00837 1.42318 4.16862 1.35547 4.35369 1.35547C4.53875 1.35547 4.699 1.42318 4.83441 1.55859L8.99171 5.72943C9.10004 5.83776 9.18129 5.95964 9.23546 6.09505C9.28962 6.23047 9.31671 6.36589 9.31671 6.5013C9.31671 6.63672 9.28962 6.77214 9.23546 6.90755C9.18129 7.04297 9.10004 7.16484 8.99171 7.27318L4.82087 11.444C4.68546 11.5794 4.52747 11.6449 4.34691 11.6404C4.16636 11.6359 4.00837 11.5659 3.87296 11.4305C3.73754 11.2951 3.66983 11.1348 3.66983 10.9497C3.66983 10.7647 3.73754 10.6044 3.87296 10.469L7.84066 6.5013Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.community .inner .notice .more:hover{
+    font-weight: 800;
+}
+.community .inner .notice .more:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 5px);
+    height: 1px;
+    background-color: rgba(255,255,255,0.8);
+}
+
 .community .inner .link{
     width: 284px;
 }
@@ -388,6 +472,9 @@ header .tnb a.icon03::before{
     font-weight: 800;
     line-height: 1.2;
     position: relative;/*after정렬의 기준*/
+}
+.community .inner .link ul li a:hover{
+    background-color: #003C6E;
 }
 .community .inner .link ul li a::after{
     content: "";
@@ -414,15 +501,53 @@ header .tnb a.icon03::before{
 }
 
 
-
-
-
-
-
-
-
-
-
 footer{
-    margin: 400px 0 0 0;
+    padding: 67px 0 97px 0;
+    background-color: #1d1d1d;
+    color: #cccccc;
 }
+footer .f_nav ul{
+    display: flex;
+    gap: 44px;
+}
+footer .f_nav ul li{
+    position: relative; /*before의 정렬 기준*/
+}
+footer .f_nav ul li::before{
+    content: "";
+    position: absolute; /*li을 기준으로 정렬*/
+    left: -18px;
+    top: 3px;
+    width: 1px;
+    height: 17px;
+    background-color: rgba(204,204,204,0.2);
+}
+footer .f_nav ul li:first-child:before{
+    display: none; /*숨김*/
+
+}
+footer .f_nav ul li a:hover{
+    text-decoration: underline;
+}
+footer .f_info{
+    margin: 36px 0 44px 0;
+    display: flex;
+    gap: 22px;
+}
+footer .copyright{
+    color: rgba(204,204,204,0.6);
+}
+footer .copyright p{
+    margin: 6px 0 0 0;
+}
+footer .copyright strong{
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
