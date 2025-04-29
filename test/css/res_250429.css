@@ -107,7 +107,7 @@
                 align-items: flex-start;
             }
             .news .list ul li a .txt{
-                width: calc(100% - 110px); 
+                width: calc(100% - 110px); /*사진은 고정 글만 줄어들음*/
                 /*사진의 넓이 고정 - 제목이 들어갈 수 있는 넓이는 브라우저 넓이에 따라 바뀜
                 글자와 사진 전체의 넓이 100% - 사진의 넓이&여백값 px */
             }
@@ -141,13 +141,78 @@
 }/*@media*/
 
 
+.global{
+    margin: 205px 0 0 0;
+}
+.global .wrapper{
+    display: flex; /* txt와 photo 좌우 배치*/
+    justify-content: space-between;
+}
+.global .txt{
+    width: calc(50% - 12px);
+    /*2개 -  50% - (여백 24px / 2개 - 12px) */
+    padding: 50px 0;
+    /* 왼쪽 글자의 높이에서 padding 만큼 오른쪽 이미지가 늘어남*/
+}
+.global .txt h2{
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 47px 0;
+    position: relative; /*after의 정렬기준*/
+}
+.global .txt h2::after{
+    content: "";
+    position: absolute; /*h2 기준 정렬*/
+    left: 0;
+    bottom: -23px;
+    width: 83px;
+    height: 1px;
+    background-color: #ccc;
 
+}
 
+.global .photo{
+    width: calc(50% - 12px);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.global .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-
-
-
-
+@media screen and (max-width:640px){
+            .global{
+                margin: 53px 0 0 0;
+            }
+            .global .txt{
+                width: calc(50% - 8px); /*같이 줄어들음*/
+                /*2개 -  50% - (여백 16px / 2개 - 8px) */
+                padding: 26px 0;
+                /* 왼쪽 글자의 높이에서 padding 만큼 오른쪽 이미지가 늘어남*/
+            }
+            .global .txt h2{
+                font-size: 25px;
+                margin: 0 0 13px 0;
+            }
+            .global .txt h2::after{
+                bottom: -8px;
+                width: 39px;
+            }
+            .global .txt h2 br{
+                display: none;
+            }
+            .global .txt p br{
+                display: none;
+            }
+            .global .photo{
+                width: calc(50% - 8px);/*같이 줄어들음*/
+                border-radius: 5px;
+            }
+}/*@media*/
 
 
 body{
