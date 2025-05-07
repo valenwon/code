@@ -77,7 +77,7 @@ header .tnb .lang{
                     margin-right: 0; /*오른쪽 여백만 삭제 - 메뉴 열기 버튼이 오른족 끝까지 배치*/
                 }
                 header .logo a img{
-                    width: 85px;
+                    width: 90px;
                 }
                 header .gnb .gnb_open{
                     display: block;
