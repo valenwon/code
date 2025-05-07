@@ -126,3 +126,137 @@ header .tnb .lang{
                 }
 }/* @media */
 
+
+.project{
+    margin: 165px 0 0 0;
+}
+.project .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* tit 높이를 존재하는 만큼만 주기 위해서 */
+}
+.project .wrapper .tit{
+    margin: 5px 0 0 0;
+}
+.project .tit{
+    position: sticky; /* 감싸는 wrapper을 기준으로 정렬 무조건*/
+    top: 20px; /* 좌우 정렬값 주면 안됨 top값은 상단에 고정되었을 때 위치값 */
+    /* sticky의 단점 - 감싸는 요소 중에 하나라도 overflow-hidden값을 가지고 있으면 적용 X
+    사실상 못써!! */
+}
+.project .tit h2{
+    color: #0047AB;
+    margin: 0 0 11px 0;
+}
+.project .list{
+    width: 49.04%; /* 618/1260*100 = 49.04% */
+    margin: 143px 0 0 0; /*홀수 사진이 내려가는 걸로 해서 여백을 더 줌*/
+}
+.project .list ul{
+    display: flex;
+    flex-wrap: wrap; /* 2줄 이상 허용 */
+    gap: 24px 24px;
+}
+.project .list ul li{
+    width: calc(50% - 12px);
+    /* 1000% / 한줄에 보일 li 갯수 = 100% / 2 = 50%
+    한줄에 있는 여백의 총합 / 한줄에 보일 li 갯수 = 24 / 2 = 12px */
+}
+.project .list ul li:nth-child(even){ /*even : 짝수 - 짝수 사진이 올라가야 함 /// odd - 홀수*/
+    transform: translateY(-143px);
+}
+.project .list ul li a{
+    display: block;
+    position: relative; /* txt 정렬의 기준 */
+}
+.project .list ul li a .photo{
+    overflow: hidden;
+    border-radius: 20px;
+    height: 435px;
+    position: relative; /* before 정렬의 기준 */
+}
+.project .list ul li a .photo::before{
+    content: "";
+    position: absolute; /* photo를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 71, 171, 0.9);
+    opacity: 0;
+    transition: 0.5s;
+}
+.project .list ul li a .photo img{
+    /* 이미지를 감싸는 영역 photo 사이즈만큼만 나오게 리사이즈*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project .list ul li a .txt{
+    position: absolute; /* a을 기준으로 정렬 */
+    left: 30px;
+    bottom: 40px;
+    color: #fff;
+    width: calc(100% - 62px); /* 왼쪽여백, 오른쪽 여백 합 */
+}
+.project .list ul li a .txt h3{
+    font-family: 'Gmarket Sans'; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.project .list ul li a .txt p{
+    display: none;
+    margin: 19px 0 13px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+.project .list ul li a .txt span{
+    display: none; /* 나머지 글자 숨김 - display: none 은 아예 태그가 존재하지 않는 것처럼 코딩됨 */
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 21px 0 0;
+    position: relative; /* after 정렬의 기준*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.project .list ul li a .txt span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_1101' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_1101)'%3E%3Cpath d='M9.2684 7.5L4.56044 2.79203C4.43627 2.66786 4.3758 2.52005 4.37903 2.34859C4.38226 2.17714 4.44596 2.02927 4.57012 1.905C4.69429 1.78083 4.8421 1.71875 5.01356 1.71875C5.18502 1.71875 5.33288 1.78083 5.45715 1.905L10.242 6.69953C10.3549 6.81255 10.4386 6.93917 10.4931 7.07937C10.5477 7.21958 10.575 7.35979 10.575 7.5C10.575 7.64021 10.5477 7.78042 10.4931 7.92063C10.4386 8.06083 10.3549 8.18745 10.242 8.30047L5.44747 13.095C5.3233 13.2192 5.1771 13.2796 5.00887 13.2764C4.84054 13.2732 4.69429 13.2095 4.57012 13.0853C4.44596 12.9611 4.38387 12.8133 4.38387 12.6419C4.38387 12.4704 4.44596 12.3226 4.57012 12.1983L9.2684 7.5Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*********************************** project 오버했을 때 *********************************/
+
+.project .list ul li a:hover .photo::before{
+    opacity: 1;
+}
+.project .list ul li a:hover .txt p{
+    display: block; 
+}
+.project .list ul li a:hover .txt span{
+    display: inline-block; /*그냥 block으로 하면 꽉차게 여백이 있어서 inline으로 바꿔줌*/
+}
+/*********************************** project 오버 끝 *********************************/
+
+@media screen and (max-width:640px){
+
+}/* @media */
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 2000px 0 0 0;
+}
