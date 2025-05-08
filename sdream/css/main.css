@@ -116,7 +116,6 @@ header .tnb .lang{
                 }
                 .visual h2{
                     padding: 355px 0 8px 0;
-                    font-size: 16px;
                 }
                 .visual p{
                     font-size: 25px;
@@ -228,21 +227,93 @@ header .tnb .lang{
     background-position: center center;
     background-repeat: no-repeat;
 }
-/*********************************** project 오버했을 때 *********************************/
+@media screen and (min-width:641px){
+/*********************************** 오버했을 때 641px 이상 (포함)에서만*********************************/
 
-.project .list ul li a:hover .photo::before{
-    opacity: 1;
-}
-.project .list ul li a:hover .txt p{
-    display: block; 
-}
-.project .list ul li a:hover .txt span{
-    display: inline-block; /*그냥 block으로 하면 꽉차게 여백이 있어서 inline으로 바꿔줌*/
-}
-/*********************************** project 오버 끝 *********************************/
+            .project .list ul li a:hover .photo::before{
+                opacity: 1;
+            }
+            .project .list ul li a:hover .txt p{
+                display: block; 
+            }
+            .project .list ul li a:hover .txt span{
+                display: inline-block; /*그냥 block으로 하면 꽉차게 여백이 있어서 inline으로 바꿔줌*/
+            }
+/*********************************** 오버 끝 *********************************/
+}/* @media */       
 
-@media screen and (max-width:640px){
-
+@media screen and (max-width:640px){ /*640px 이하 (포함)에서만 작동 */
+                .project{
+                    margin: 71px 0 0 0;
+                }
+                .project .wrapper{
+                    display: block; /* flex 해제 / tit list 위아래 배치 */
+                }
+                .project .tit{
+                    position: relative; /* sticky를 해제하기 위해서 다른 속성을 줌*/
+                    top: auto; /* top 값을 지정하지 않은 것 처럼 취소하는 값 0이랑 다름 */
+                }
+                .project .wrapper .tit {
+                    margin: auto;
+                }
+                .project .tit h2{
+                    margin: 0 0 7px 0;
+                }
+                .project .list{
+                    width: auto; /*block 요소 이기 때문에 100% 들어감 - auto 가능*/
+                    margin: 24px 0 0 0; 
+                }
+                .project .list ul{
+                    gap: 16px 16px;
+                }
+                .project .list ul li{
+                    width: calc(50% - 8px);
+                    /* 1000% / 한줄에 보일 li 갯수 = 100% / 2 = 50%
+                    한줄에 있는 여백의 총합 / 한줄에 보일 li 갯수 = 16 / 2 = 8px */
+                }
+                .project .list ul li:nth-child(even){ /*even : 짝수 odd - 홀수*/
+                    transform: none; /* 짝수 사진 위로 올린 것 취소 */
+                }
+                .project .list ul li a .photo{
+                    border-radius: 10px;
+                    height: 85px;
+                }
+                .project .list ul li a .txt{
+                    position: relative; /* absolute -> 해제하기 */
+                    left: auto;
+                    bottom: auto;
+                    color: #1d1d1d;
+                    width: auto;
+                    padding: 8px 0 0 0;
+                }
+                .project .list ul li a .txt h3{
+                    font-family: 'Gmarket Sans'; 
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+                .project .list ul li a .txt p{
+                    display: none;
+                    margin: 19px 0 13px 0;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                .project .list ul li a .txt span{
+                    display: none; /* 나머지 글자 숨김 - display: none 은 아예 태그가 존재하지 않는 것처럼 코딩됨 */
+                    color: rgba(255, 255, 255, 0.8);
+                    padding: 0 21px 0 0;
+                    position: relative; /* after 정렬의 기준*/
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+                }
+                .project .list ul li a .txt span::after{
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 6px;
+                    width: 15px;
+                    height: 15px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_1101' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_1101)'%3E%3Cpath d='M9.2684 7.5L4.56044 2.79203C4.43627 2.66786 4.3758 2.52005 4.37903 2.34859C4.38226 2.17714 4.44596 2.02927 4.57012 1.905C4.69429 1.78083 4.8421 1.71875 5.01356 1.71875C5.18502 1.71875 5.33288 1.78083 5.45715 1.905L10.242 6.69953C10.3549 6.81255 10.4386 6.93917 10.4931 7.07937C10.5477 7.21958 10.575 7.35979 10.575 7.5C10.575 7.64021 10.5477 7.78042 10.4931 7.92063C10.4386 8.06083 10.3549 8.18745 10.242 8.30047L5.44747 13.095C5.3233 13.2192 5.1771 13.2796 5.00887 13.2764C4.84054 13.2732 4.69429 13.2095 4.57012 13.0853C4.44596 12.9611 4.38387 12.8133 4.38387 12.6419C4.38387 12.4704 4.44596 12.3226 4.57012 12.1983L9.2684 7.5Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
 }/* @media */
 
 
