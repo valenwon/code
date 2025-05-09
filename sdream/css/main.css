@@ -769,7 +769,7 @@ header .tnb .lang{
                     33.33% - (32 / 3) 10.66px */
                 }
                 .service .list ul li a{
-                    padding: 17px 10px 87px 10px; /*원래 위 아래만 여백줌 - 근데 답답해보여서 좌우에 여백 10px씩 줌*/
+                    padding: 22px 10px 87px 10px; /*원래 위 아래만 여백줌 - 근데 답답해보여서 좌우에 여백 10px씩 줌*/
                     text-align: center;
                     height: 100%;
                 }
