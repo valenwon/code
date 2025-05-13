@@ -1,0 +1,209 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+
+.tit_font{  /*중복되는 것들만 넣어주기*/
+    font-family: "Eulyoo1945";
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+header{
+    position: absolute; /*wrap을 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    color: #fff;
+    z-index: 100;
+    width: 100%; /*wrap을 기준으로 100%*/
+    height: 90px;
+    display: flex; /*logo, gnb, tnb 좌우 배치*/
+    justify-content: space-between; /*좌우 양쪽 끝*/
+    padding: 0 20px; /*logo, tnb 좌우 여백 padding으로 주기*/
+    align-items: center;/*위아래 가운데*/
+}
+header .logo a{
+    display: block;
+    font-size: 0; /*이미지 히단에 존재하는 행간 삭제*/
+    line-height: 0;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close{
+    display: none;
+}
+header .gnb .gnb_wrap ul{
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a{
+    display: block;
+    font-size: 20px;
+    padding: 0 23px;
+    line-height: 90px; /*header의 높이와 같은 값을 행간으로!*/
+}
+header .tnb{
+    display: flex; /*마이페이지 검색 정렬*/
+    gap: 2px;
+}
+header .tnb .mypage{
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_14_170' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='35' height='35'%3E%3Crect width='35' height='35' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_14_170)'%3E%3Cpath d='M17.5 17.0511C16.0964 17.0511 14.8948 16.5514 13.8954 15.5519C12.8957 14.5523 12.3958 13.3506 12.3958 11.9469C12.3958 10.5433 12.8957 9.34175 13.8954 8.3423C14.8948 7.34262 16.0964 6.84277 17.5 6.84277C18.9036 6.84277 20.1052 7.34262 21.1046 8.3423C22.1043 9.34175 22.6042 10.5433 22.6042 11.9469C22.6042 13.3506 22.1043 14.5523 21.1046 15.5519C20.1052 16.5514 18.9036 17.0511 17.5 17.0511ZM6.5625 28.157V24.9148C6.5625 24.2007 6.75646 23.5394 7.14438 22.9307C7.53229 22.3221 8.05073 21.8542 8.69969 21.5271C10.141 20.8205 11.5951 20.2906 13.0619 19.9371C14.5288 19.5837 16.0081 19.407 17.5 19.407C18.9919 19.407 20.4712 19.5837 21.9381 19.9371C23.4049 20.2906 24.859 20.8205 26.3003 21.5271C26.9493 21.8542 27.4677 22.3221 27.8556 22.9307C28.2435 23.5394 28.4375 24.2007 28.4375 24.9148V28.157H6.5625ZM8.75 25.9695H26.25V24.9148C26.25 24.6195 26.1644 24.3461 25.9933 24.0945C25.8222 23.8432 25.59 23.638 25.2966 23.4791C24.04 22.8603 22.7589 22.3914 21.4532 22.0725C20.1472 21.7539 18.8295 21.5945 17.5 21.5945C16.1705 21.5945 14.8528 21.7539 13.5468 22.0725C12.2411 22.3914 10.96 22.8603 9.70339 23.4791C9.41002 23.638 9.17778 23.8432 9.00667 24.0945C8.83556 24.3461 8.75 24.6195 8.75 24.9148V25.9695ZM17.5 14.8636C18.3021 14.8636 18.9887 14.578 19.5599 14.0068C20.1311 13.4357 20.4167 12.749 20.4167 11.9469C20.4167 11.1449 20.1311 10.4582 19.5599 9.88704C18.9887 9.31586 18.3021 9.03027 17.5 9.03027C16.6979 9.03027 16.0113 9.31586 15.4401 9.88704C14.8689 10.4582 14.5833 11.1449 14.5833 11.9469C14.5833 12.749 14.8689 13.4357 15.4401 14.0068C16.0113 14.578 16.6979 14.8636 17.5 14.8636Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+header .tnb .search{
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_14_173' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_14_173)'%3E%3Cpath d='M24.4277 25.7218L16.5768 17.8705C15.9518 18.3865 15.233 18.7904 14.4205 19.0821C13.608 19.3737 12.7675 19.5196 11.8989 19.5196C9.76249 19.5196 7.95436 18.7799 6.47457 17.3005C4.99478 15.8211 4.25488 14.0134 4.25488 11.8774C4.25488 9.74155 4.99457 7.93322 6.47395 6.45238C7.95332 4.97176 9.76103 4.23145 11.8971 4.23145C14.0329 4.23145 15.8412 4.97134 17.3221 6.45113C18.8027 7.93092 19.543 9.73905 19.543 11.8755C19.543 12.7682 19.3932 13.6208 19.0936 14.4333C18.7938 15.2458 18.3939 15.9525 17.8939 16.5533L25.7449 24.4043L24.4277 25.7218ZM11.8989 17.6449C13.5096 17.6449 14.8737 17.0859 15.9914 15.968C17.1094 14.8503 17.6683 13.4861 17.6683 11.8755C17.6683 10.2649 17.1094 8.90072 15.9914 7.78301C14.8737 6.66509 13.5096 6.10613 11.8989 6.10613C10.2883 6.10613 8.92415 6.66509 7.80645 7.78301C6.68853 8.90072 6.12957 10.2649 6.12957 11.8755C6.12957 13.4861 6.68853 14.8503 7.80645 15.968C8.92415 17.0859 10.2883 17.6449 11.8989 17.6449Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+@media screen and (max-width:640px) {
+            header{
+                height: 56px;
+                padding: 0 0 0 20px;
+            }
+            header .logo a img{
+                width: 119px;
+            }
+            header .gnb .gnb_open{
+                display: block; /*none -> block*/
+                width: 56px; /*header높이와 동일*/
+                height: 56px;
+                background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_412' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_412)'%3E%3Cpath d='M5.31348 8.74902C5.04785 8.74902 4.82525 8.65913 4.64566 8.47934C4.46587 8.29954 4.37598 8.07684 4.37598 7.81121C4.37598 7.54538 4.46587 7.32277 4.64566 7.1434C4.82525 6.96381 5.04785 6.87402 5.31348 6.87402H24.6885C24.9541 6.87402 25.1767 6.96392 25.3563 7.14371C25.5361 7.3235 25.626 7.54621 25.626 7.81184C25.626 8.07767 25.5361 8.30027 25.3563 8.47965C25.1767 8.65923 24.9541 8.74902 24.6885 8.74902H5.31348ZM5.31348 23.124C5.04785 23.124 4.82525 23.0341 4.64566 22.8543C4.46587 22.6745 4.37598 22.4518 4.37598 22.1862C4.37598 21.9204 4.46587 21.6978 4.64566 21.5184C4.82525 21.3388 5.04785 21.249 5.31348 21.249H24.6885C24.9541 21.249 25.1767 21.3389 25.3563 21.5187C25.5361 21.6985 25.626 21.9212 25.626 22.1868C25.626 22.4527 25.5361 22.6753 25.3563 22.8546C25.1767 23.0342 24.9541 23.124 24.6885 23.124H5.31348ZM5.31348 15.9365C5.04785 15.9365 4.82525 15.8466 4.64566 15.6668C4.46587 15.487 4.37598 15.2643 4.37598 14.9987C4.37598 14.7329 4.46587 14.5103 4.64566 14.3309C4.82525 14.1513 5.04785 14.0615 5.31348 14.0615H24.6885C24.9541 14.0615 25.1767 14.1514 25.3563 14.3312C25.5361 14.511 25.626 14.7337 25.626 14.9993C25.626 15.2652 25.5361 15.4878 25.3563 15.6671C25.1767 15.8467 24.9541 15.9365 24.6885 15.9365H5.31348Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            header .gnb .gnb_wrap{
+                display: none;
+            }
+            header .tnb{
+                display: none;
+            }
+}/*@header visual 모바일*/
+
+
+.visual{
+    height: 100vh; /*vh 쓰기 - 브라우저 높이에 맞춰서*/
+    min-height: 500px; /*최소 높이*/
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+}
+/* .visual .wrapper { 글자가 만약 아래에 있거나, 중앙정렬일 때는 이렇게!
+    height: 100vh;
+    dispaly: flex; 
+    flex-direction: column => 위아래 정렬
+    justify-centent : flex-end or center => 맨 아래 정렬
+}*/
+.visual h2{
+    font-size: 45px;
+    padding: 47vh 0 17px 0; 
+    /*브라우저의 높이가 줄어들었을 때를 고려해서
+    상단 여백을 padding 의 vh로 주기!*/
+    /*10vh = 100px정도 - 어느정도 차이나긴 함*/
+}
+@media screen and (max-width:640px) { /* visual 모바일 */
+            /*.visual{ <- 방법1. 위 아래 여백이 고정되어 있어서 브라우저 높이가 줄어들면 글자가 내려가면서 높이도 같이 바뀜
+                height: auto;
+                min-height: 0; 
+            }
+            .visual h2{
+                font-size: 30px;
+                padding: 427px 0 8px 0; 
+            }
+            .visual p{
+                padding: 0 0 81px 0;
+            }*/
+
+            .visual{ /* <-방법2. 높이가 한정되어 있고 줄어들 때 내부 글자가 줄바꿈 되면서 들어감, 위 여백은 계속 바뀜*/
+                height: auto; 
+                min-height: 0; /* 최소 높이 */
+            }
+            .visual .wrapper{ /*위에 패딩을 주는 건 모바일에서는 안됨, 아래에서부터 여백 들어가야 함*/
+                height: 600px;
+                display: flex;
+                flex-direction: column; /* flex 양옆 정렬 => 위 아래 정렬 */
+                justify-content: flex-end; /* 맨 아래로 내려가게 정렬 */
+                padding: 0 0 81px 0;
+            }
+            .visual h2{
+                font-size: 30px;
+                padding: 0 0 8px 0; 
+            }
+} /*@media visual 모바일*/
+
+
+.book{
+    margin: 153px 0 0 0;
+}
+.book .book_wrap{
+    width: calc(50% + 630px); /*book_wrap의 50%*/
+    position: relative;
+    left: calc(50% - 630px); /* 위치 잡아준 것*/
+    display: flex; /* tit, list 좌우 배치 */
+    justify-content: space-between;
+}
+.book .book_wrap .tit h2{
+    font-size: 45px;
+    color: #1d1d1d;
+    margin: 0 0 11px 0;
+}
+.book .book_wrap .list{
+    width: calc(100% - 319px); /* book_wrap의 넓이를 100% 하고 왼쪽 tit의 넓이를 빼기*/
+    overflow-x: hidden; /*가로 스크롤바 X */
+}
+.book .book_wrap .list ul{
+    display: flex;
+    gap: 20px;
+    width: 1440px;
+    /* 
+    li의 넓이 * li의 갯수 = 220 * 6 = 1320
+    사이 여백 * li의 갯수 = 20 * 6 = 120
+    1320 + 120 = 1440
+    */
+}
+.book .book_wrap .list ul li{
+    width: 220px;
+}
+.book .book_wrap .list ul li a{
+    display: block;
+}
+.book .book_wrap .list ul li a h3{
+    font-size: 20px;
+    color: #1d1d1d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .book_wrap .list ul li a .photo{
+    height: 100%;
+}
+.book .book_wrap .list ul li a .photo img{
+    width: 100%; /*높이 알아서 들어감
+    -책은 이미지 전체가 나와야 하기 때문에 object-fit 안줌*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 500px 0 0 0;
+}
