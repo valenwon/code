@@ -293,16 +293,16 @@ header .tnb .search{
                 font-size: 16px;
                 color: #1d1d1d;
                 padding: 8px 0 0px 0;
-                /* 1줄 제한 */
+                /* 1줄 제한 
                 white-space: nowrap; 
                 overflow: hidden;
-                text-overflow: ellipsis;
+                text-overflow: ellipsis;*/
             
-                /* 2줄 제한
+                /* 2줄 제한*/
                 white-space: normal;
                 line-height: 1.2;
-                height: 2.8em;
-                overflow: hidden; */
+                height: 2.8em; /* 두줄이 되었을 때의 높이 */
+                overflow: hidden; 
             }
             .book .book_wrap .list ul li a strong{
                 display: none; 
@@ -331,19 +331,391 @@ header .tnb .search{
 }/*@media book 모바일*/
 
 
+.interview{
+    margin: 95px 0 0 0;
+    padding: 122px 0 140px 0;
+    background-color: rgba(231, 222, 207, 0.3);
+}
+.interview .tit{
+    text-align: center;
+}
+.interview .tit h2{
+    font-size: 45px;
+    color: #482E1D;
+    margin: 0 0 11px 0;
+}
+.interview .list{
+    margin: 42px 0 0 0;
+}
+.interview .list ul{
+    display: flex; /*list 배치*/
+    justify-content: space-between;
+}
+.interview .list ul li{
+    width: calc(33.33% - 38px);
+    /*
+    100 % 한 줄에 나오는 li의 갯수 = 33.33
+    한줄 여백의 합 % li의 갯수 = 114 / 3 = 38 */
+}
+.interview .list ul li:nth-child(2){
+    /*디자인이 무조건 두번째 요소는 스타일이 다름*/
+    margin: 29px 0 0 0;
+}
+.interview .list ul li a{
+    display: block;
+    position: relative; /*txt, txt_over 정렬의 기준*/
+}
+.interview .list ul li a .photo{
+    position: relative; /*before의 정렬 기준*/
+    overflow: hidden;
+    height: 466px;
+    border-radius: 40px 0 40px 0;
+}
+.interview .list ul li:nth-child(2) a .photo{
+    /*디자인이 무조건 두번째 요소는 스타일이 다름*/
+    border-radius: 0 40px 0 40px;
+}
+.interview .list ul li a .photo::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    /*이미지보다 순서를 위로
+    z-index가 없는 것보다 있으면 무조건 위
+    z-index가 서로 있으면 높은 숫자가 위로 올라감
+    z-index값은 position 값이 필요*/
+    width: 100%;
+    height: 50%; /*그라디언트 높이 제한*/
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, 0.9)); /*그라디언트*/
+    transition: 0.5s;
+}
+.interview .list ul li a .photo img{
+    filter: grayscale(1); /*흑백*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.interview .list ul li a .txt{
+    position: absolute; /*a를 기준으로 정렬*/
+    left: 40px;
+    bottom: 48px;
+    z-index: 11; /*이미지 그라디언트 보다 위로!*/
+    width: calc(100% - 80px); /*양 옆 여백 빼주기*/
+    transition: 0.5s; /*오버시 글자 중첩되는 거 막아줌*/
+}
+.interview .list ul li a .txt::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_14_280' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_14_280)'%3E%3Cpath d='M18.7497 34.1663V21.2497H5.83301V18.7497H18.7497V5.83301H21.2497V18.7497H34.1663V21.2497H21.2497V34.1663H18.7497Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.interview .list ul li a .txt strong{
+    color: #fff;
+    font-size: 30px;
+}
+.interview .list ul li a .txt_over{
+    position: absolute; /*a를 기준으로 정렬*/
+    left: 0;
+    bottom: -73px;
+    width: calc(100% - 40px);
+    background-color: #482E1D;
+    color: #fff;
+    z-index: 12;
+    padding: 29px 45px 44px 45px;
+    border-radius: 40px 0 40px 0;
+    opacity: 0;
+    /*부드럽게 나타났다 사라지는 건 display : none으로 구현 X
+    opacity 0 -> 1로 변경
+    opacity 는 공간을 차지함 --주의*/
+    transition: 0.5s;
+}
+.interview .list ul li:nth-child(2) a .txt_over{
+    border-radius: 0 40px 0 40px;
+}
+.interview .list ul li a .txt_over h3{
+    font-size: 25px;
+}
+.interview .list ul li a .txt_over p{
+    margin: 11px 0 17px 0;
+    color: rgba(255,255,255, 0.8);
+    /*2줄로 제한 --padding 주면 안됨*/
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+
+    /*2줄 이상으로 제한시 끝에 ... 추가하는 코드*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: normal; /*줄바꿈 풀기 - 이쁘게 들어가라고*/
+}
+.interview .list ul li a .txt_over span{
+    display: inline-block;
+    padding: 0 32px 0 0;
+    position: relative; /*after 정렬의 기준*/
+}
+.interview .list ul li a .txt_over span::after{
+    content: "";
+    position: absolute; /*span를 기준으로 정렬*/
+    top: 2px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_10_774' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_10_774)'%3E%3Cpath d='M9.37484 17.0837V10.6253H2.9165V9.37533H9.37484V2.91699H10.6248V9.37533H17.0832V10.6253H10.6248V17.0837H9.37484Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width:641px) {
+    /********** interview 오버효과 **********/
+    .interview .list ul li a:hover .photo::before{
+        display: none;
+    }
+    .interview .list ul li a:hover .photo img{
+        filter:grayscale(0);
+    }
+    .interview .list ul li a:hover .txt{
+        opacity: 0; /*오버시 글자 중첩되는 거 막아줌*/
+    }
+    .interview .list ul li a:hover .txt_over{
+        opacity: 1; /* 0-> 1*/
+        bottom: -90px; /* 살짝 자연스럽게 내려가게 bottom 위치 조절해주기*/
+    }
+    .interview .more{
+        display: none; /*모바일에서만 보임*/
+    }
+}/*@media interview 오버 효과 - pc버전*/
+
+@media screen and (max-width:640px) {
+            .interview{
+                margin: 44px 0 0 0;
+                padding: 86px 0 105px 0;
+            }
+            .interview .wrapper{
+                position: relative; /*more정렬의 기준*/
+            }
+            .interview .tit{
+                text-align: left;
+                padding: 0 52px 0 0; /*more와의 여백 - 브라우저 줄어들었을 때 대비*/
+            }
+            .interview .tit h2{
+                font-size: 28px;
+                margin: 0;
+            }
+            .interview .tit p{
+                display: none;
+            }
+            .interview .list{
+                margin: 35px 0 0 0;
+            }
+            .interview .list ul{
+                display: block; /*flex ->block*/
+            }
+            .interview .list ul li{
+                width: auto;
+            }
+            .interview .list ul li:nth-child(2),
+            .interview .list ul li:nth-child(3){
+               display: none; /* 2, 3번 숨김*/
+            }
+            .interview .list ul li a .photo{
+                height: 320px;
+                border-radius: 30px 0 30px 0;
+            }
+            .interview .list ul li a .photo::before{
+               display: none;
+            }
+            .interview .list ul li a .photo img{
+                filter: grayscale(0); /*흑백*/
+            }
+            .interview .list ul li a .txt{
+                display: none; /*모바일에서는 안나옴*/
+            }
+            .interview .list ul li a .txt_over{
+                bottom: -70px;
+                width: 85%; /*txt_over 박스의 넓이 / 전체 넓이 *100 = 272 / 320*100 */
+                padding: 29px 25px 21px 25px;
+                border-radius: 30px 0 30px 0;
+                opacity: 1;
+            }
+            .interview .list ul li a .txt_over h3{
+                font-size: 18px;
+            }
+            .interview .list ul li a .txt_over p{
+                margin: 6px 0 16px 0;
+            }
+            .interview .list ul li a .txt_over span{
+                padding: 0 20px 0 0;
+            }
+            .interview .list ul li a .txt_over span::after{
+                top: 3px;
+                width: 16px;
+                height: 16px;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_10_774' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_10_774)'%3E%3Cpath d='M9.37484 17.0837V10.6253H2.9165V9.37533H9.37484V2.91699H10.6248V9.37533H17.0832V10.6253H10.6248V17.0837H9.37484Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+            .interview .more{
+                display: block; /*나타남*/
+                position: absolute; /*wrapper을 기준으로 정렬*/
+                left: auto;
+                top: 0;
+                right: 0;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background-color: #E7DECF;
+                padding: 0;
+            }
+            .interview .more::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                top: 0;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_490' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_490)'%3E%3Cpath d='M7.50016 13.6663V8.49967H2.3335V7.49967H7.50016V2.33301H8.50016V7.49967H13.6668V8.49967H8.50016V13.6663H7.50016Z' fill='%23482E1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        
+            .interview .more span{
+                display: none; /*더보기 글자 숨김*/
+            }
+}/*@media interview 모바일*/
+
+.story{
+    margin: 150px 0 0 0;
+}
+.story .wrapper{
+    position: relative; /*more정렬의 기준*/
+}
+.story .tit h2{
+    font-size: 45px;
+    color: #482E1D;
+}
+.story .list{
+    margin: 52px 0 0 0;
+}
+.story .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.story .list ul li{
+    width: calc(25% - 18px);
+    /* (100 / 한줄에 보이는 li의 갯수) - (한줄 여백의 총합 / 한줄에 보이는 li의 갯수)
+    25% - 18px
+    */
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+}
+.story .list ul li a{
+    display: block;
+}
+.story .list ul li a .photo{
+    overflow: hidden;
+    height: 295px; /*짧은 거 높이*/
+    border-radius: 5px;
+}
+.story .list ul li.long a .photo{
+    height: 400px; /*긴 거 높이*/
+}
+.story .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*transition: 0.5s; - 오버하면 사진이 커지는 효과*/
+}
+.story .list ul li a .txt{
+    padding: 17px 10px 15px 10px;
+}
+.story .list ul li a .txt strong{
+    display: block;
+    color: #482E1D;
+    /*1줄 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.story .list ul li a .txt h3{
+    padding: 10px 0;
+    font-size: 20px;
+    color: #1d1d1d;
+    /*1줄 제한*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.story .list ul li a .txt p{
+    /*7줄 제한*/
+    line-height: 1.5;
+    height: 10.5em; /* 7줄이 되었을 때의 높이 */ /*행간 *줄수*/
+    overflow: hidden; 
+
+    /*...생성*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7; /*줄 수*/
+
+    word-break: normal;
+}
+.story .list ul li.long a .txt p{ /*long에서 바뀌는 것들*/
+    /*3줄제한*/
+    height: 4.5em;
+    -webkit-line-clamp: 3; /*줄 수*/
+}
+.story .more{
+    position: absolute; /*wrapper을 기준으로 정렬*/
+    top: 30px;
+    right: 0;
+    padding: 0 23px 0 0;
+}
+.story .more::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_14_228' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_14_228)'%3E%3Cpath d='M7.50016 13.6663V8.49967H2.3335V7.49967H7.50016V2.33301H8.50016V7.49967H13.6668V8.49967H8.50016V13.6663H7.50016Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+@media screen and (min-width:641px) {
+/********************** story 오버스타일*****************/
+    /*
+    오버하면 사진이 커지는 효과
+    .story .list ul li a:hover .photo img{
+        transform: scale3d(1.2, 1.2, 1); 
+    }
+    */
+    .story .list ul li a .txt h3 span{
+        position: relative;
+    }
+    .story .list ul li a .txt h3 span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 1px;
+        background-color: #482E1D;
+        transition: 0.5s;
+    }
+    .story .list ul li a:hover .txt h3 span::after{
+        width: 100%;
+    }
+}/*@media story 오버 - pc버전*/
 
 
+@media screen and (max-width:640px) {
 
-
-
-
-
-
-
-
-
-
-
+}/*@media story 모바일*/
 
 
 footer{
