@@ -121,3 +121,163 @@ header .tnb .lang{
             display: none;
         }
 } /*header media*/
+
+
+.project{
+    margin: 165px 0 0 0;
+}
+.project .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /*tit 높이만큼만 줄려고*/
+}
+.project .wrapper .tit{
+    position: sticky;
+    top: 20px;
+    margin: 5px 0 0 0;
+}
+.project .tit h2{
+    color: #0047AB;
+    margin: 0 0 11px 0;
+}
+.project .list{
+    width: 49.04%;
+    /* 618 / 1260 * 100*/
+    margin: 143px 0 0 0;
+}
+.project .list ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 24px;
+}
+.project .list ul li{
+    width: calc(50% - 12px);
+}
+.project .list ul li:nth-child(even){
+    transform: translateY(-143px);
+}
+.project .list ul li a{
+    display: block;
+    position: relative;
+}
+.project .list ul li a .photo{
+    overflow: hidden;
+    height: 435px;
+    border-radius: 20px;
+    position: relative; /*파란 배경 before의 기준*/
+}
+.project .list ul li a .photo::before{
+    opacity: 0;
+    transition: 0.5s;
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,71, 171, 0.9);
+}
+.project .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project .list ul li a .txt{
+    position: absolute;
+    color: #fff;
+    left: 30px;
+    bottom: 40px;
+}
+.project .list ul li a .txt h3{
+    font-family: 'Gmarket Sans'; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2; 
+}
+.project .list ul li a .txt p{
+    display: none;
+    margin: 19px 0 13px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+.project .list ul li a .txt span{
+    display: none;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding: 0 19px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.project .list ul li a .txt span::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    top: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_1101' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_1101)'%3E%3Cpath d='M9.2684 7.5L4.56044 2.79203C4.43627 2.66786 4.3758 2.52005 4.37903 2.34859C4.38226 2.17714 4.44596 2.02927 4.57012 1.905C4.69429 1.78083 4.8421 1.71875 5.01356 1.71875C5.18502 1.71875 5.33288 1.78083 5.45715 1.905L10.242 6.69953C10.3549 6.81255 10.4386 6.93917 10.4931 7.07937C10.5477 7.21958 10.575 7.35979 10.575 7.5C10.575 7.64021 10.5477 7.78042 10.4931 7.92063C10.4386 8.06083 10.3549 8.18745 10.242 8.30047L5.44747 13.095C5.3233 13.2192 5.1771 13.2796 5.00887 13.2764C4.84054 13.2732 4.69429 13.2095 4.57012 13.0853C4.44596 12.9611 4.38387 12.8133 4.38387 12.6419C4.38387 12.4704 4.44596 12.3226 4.57012 12.1983L9.2684 7.5Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width:641px){
+/******************오버 스타일*******************/
+    .project .list ul li a:hover .photo::before{
+        opacity: 1;
+    }
+    .project .list ul li a:hover .txt p{
+    display: block;
+    }
+    .project .list ul li a:hover .txt span{
+        display: inline-block;
+    }
+} /*@media project 오버 스타일*/
+
+@media screen and (max-width:640px){
+            .project{
+                margin: 71px 0 0 0;
+            }
+            .project .wrapper{
+                display: block;
+            }
+            .project .wrapper .tit{
+                position: relative;
+                top: auto;
+                margin: auto;
+            }
+            .project .tit h2{
+                margin: 0 0 7px 0;
+            }
+            .project .list{
+                width: auto;
+                margin: 24px 0 0 0;
+            }
+            .project .list ul{
+                gap: 16px 16px;
+            }
+            .project .list ul li{
+                width: calc(50% - 8px);
+            }
+            .project .list ul li:nth-child(even){
+                transform: none;
+            }
+            .project .list ul li a .photo{
+                height: 85px;
+                border-radius: 10px;
+            }
+            .project .list ul li a .txt{
+                position: relative; /*떠있게 하는 거 풀기*/
+                color: #1d1d1d;
+                left: auto;
+                bottom: auto;
+                padding: 8px 0 0 0;
+            }
+            .project .list ul li a .txt h3{
+                font-weight: 500;
+                font-size: 15px;
+            }
+}/*@media 모바일 */
+
+.news{
+    margin: 128px 0 0 0;
+    padding: 148px 0 146px 0;
+    background: #f6f6f6;
+}

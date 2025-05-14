@@ -134,14 +134,12 @@ header .tnb .lang{
     justify-content: space-between;
     align-items: flex-start; /* tit 높이를 존재하는 만큼만 주기 위해서 */
 }
-.project .wrapper .tit{
-    margin: 5px 0 0 0;
-}
 .project .tit{
     position: sticky; /* 감싸는 wrapper을 기준으로 정렬 무조건*/
     top: 20px; /* 좌우 정렬값 주면 안됨 top값은 상단에 고정되었을 때 위치값 */
     /* sticky의 단점 - 감싸는 요소 중에 하나라도 overflow-hidden값을 가지고 있으면 적용 X
     사실상 못써!! */
+    margin: 5px 0 0 0;
 }
 .project .tit h2{
     color: #0047AB;
@@ -158,7 +156,7 @@ header .tnb .lang{
 }
 .project .list ul li{
     width: calc(50% - 12px);
-    /* 1000% / 한줄에 보일 li 갯수 = 100% / 2 = 50%
+    /* 100% / 한줄에 보일 li 갯수 = 100% / 2 = 50%
     한줄에 있는 여백의 총합 / 한줄에 보일 li 갯수 = 24 / 2 = 12px */
 }
 .project .list ul li:nth-child(even){ /*even : 짝수 - 짝수 사진이 올라가야 함 /// odd - 홀수*/
@@ -182,6 +180,7 @@ header .tnb .lang{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 71, 171, 0.9);
+
     opacity: 0;
     transition: 0.5s;
 }
@@ -252,8 +251,6 @@ header .tnb .lang{
                 .project .tit{
                     position: relative; /* sticky를 해제하기 위해서 다른 속성을 줌*/
                     top: auto; /* top 값을 지정하지 않은 것 처럼 취소하는 값 0이랑 다름 */
-                }
-                .project .wrapper .tit {
                     margin: auto;
                 }
                 .project .tit h2{
@@ -300,7 +297,7 @@ header .tnb .lang{
     background-color: #f6f6f6;
 }
 .news .wrapper{
-    position: relative;
+    position: relative; /*more정렬의 기준*/
 }
 .news .tit h2{
     color: #0047AB;
