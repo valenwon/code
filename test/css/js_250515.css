@@ -1,0 +1,84 @@
+@import url(default.css);
+@import url(font.css);
+@import url(res_common.css);
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    font-size: 30px;
+    background-color: aquamarine;
+    color: #fff;
+    text-align: center;
+}
+header.fixed{
+    background-color: purple;
+}
+.container{
+    margin: 90px 0 0 0;
+}
+
+h1{
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+}
+.box{
+    width: 500px;
+    height: 300px;
+    background-color: yellowgreen;
+    transition: 0.5s;
+}
+.box.bg_red{
+    background-color: red;
+    color: #fff;
+}
+
+.group{
+    margin: 100px 0;
+    width: 300px;
+    height: 200px;
+    background-color: plum;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+.group.on{
+    background-color: turquoise;
+    font-weight: 800;
+}
+
+.list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.list ul li{
+    width: calc(33.33% - 20px);
+    height: 200px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 30px;
+    padding: 40px;
+    font-weight: 800;
+}
+.list ul li.on{
+    background-color: olivedrab;
+    font-size: 30px;
+    color: #fff;
+    padding: 40px;
+    font-weight: 800;
+}
+
+footer{
+    margin: 1000px 0 0 0;
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 20px 0;
+}
+
+
+
+
