@@ -612,6 +612,104 @@ header .tnb .lang{
 }/*@media webzine 모바일*/
 
 
+.service{
+    margin: 175px 0 0 0;
+}
+.service .tit h2{
+    color: #0047AB;
+    margin: 0 0 11px 0;
+}
+.service .list{
+    margin: 66px 0 148px 0;
+}
+.service .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.service .list ul li{
+    width: calc(33.33% - 16px);
+}
+.service .list ul li a{
+    display: block;
+    padding: 20px 0 32px 27px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+.service .list ul li a::after{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 32px;
+    right: 32px;
+    border-radius: 50%;
+    background-color: #0047AB;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_25_3744' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='17' height='17'%3E%3Crect width='17' height='17' fill='%230047AB'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_25_3744)'%3E%3Cpath d='M11.7775 9.0304H3.71875C3.56799 9.0304 3.44179 8.97952 3.34015 8.87776C3.23838 8.77611 3.1875 8.64991 3.1875 8.49915C3.1875 8.34839 3.23838 8.22219 3.34015 8.12055C3.44179 8.01878 3.56799 7.9679 3.71875 7.9679H11.7775L8.11591 4.30635C8.0106 4.20104 7.9586 4.07779 7.9599 3.9366C7.96131 3.7954 8.01692 3.66985 8.12671 3.55994C8.23662 3.45735 8.36105 3.40423 8.5 3.40057C8.63895 3.39691 8.76338 3.45003 8.87329 3.55994L13.3643 8.05095C13.4306 8.1173 13.4774 8.18725 13.5046 8.2608C13.5318 8.33435 13.5455 8.4138 13.5455 8.49915C13.5455 8.58451 13.5318 8.66396 13.5046 8.7375C13.4774 8.81105 13.4306 8.881 13.3643 8.94735L8.87329 13.4384C8.77519 13.5365 8.65371 13.5866 8.50885 13.5889C8.364 13.5911 8.23662 13.5409 8.12671 13.4384C8.01692 13.3285 7.96202 13.2022 7.96202 13.0598C7.96202 12.9171 8.01692 12.7909 8.12671 12.681L11.7775 9.0304Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.service .list ul li a h3{
+    color: #0047AB;
+    font-size: 15px;
+    margin: 0 0 3px 0;
+}
+.service .list ul li a p{
+    font-family:'Gmarket Sans';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+@media screen and (min-width:641px){
+    .service .list ul li a:hover{
+        background-color: #0047AB;
+    }
+    .service .list ul li a:hover h3{
+        color: #fff;
+    }
+    .service .list ul li a:hover p{
+        color: #fff;
+    }
+    .service .list ul li a:hover::after{
+        background-color: #fff;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_22_2181' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='17' height='17'%3E%3Crect width='17' height='17' fill='%230047AB'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_22_2181)'%3E%3Cpath d='M11.7775 9.0304H3.71875C3.56799 9.0304 3.44179 8.97952 3.34015 8.87776C3.23838 8.77611 3.1875 8.64991 3.1875 8.49915C3.1875 8.34839 3.23838 8.22219 3.34015 8.12055C3.44179 8.01878 3.56799 7.9679 3.71875 7.9679H11.7775L8.11591 4.30635C8.0106 4.20104 7.9586 4.07779 7.9599 3.9366C7.96131 3.7954 8.01692 3.66985 8.12671 3.55994C8.23662 3.45735 8.36105 3.40423 8.5 3.40057C8.63895 3.39691 8.76338 3.45003 8.87329 3.55994L13.3643 8.05095C13.4306 8.1173 13.4774 8.18725 13.5046 8.2608C13.5318 8.33435 13.5455 8.4138 13.5455 8.49915C13.5455 8.58451 13.5318 8.66396 13.5046 8.7375C13.4774 8.81105 13.4306 8.881 13.3643 8.94735L8.87329 13.4384C8.77519 13.5365 8.65371 13.5866 8.50885 13.5889C8.364 13.5911 8.23662 13.5409 8.12671 13.4384C8.01692 13.3285 7.96202 13.2022 7.96202 13.0598C7.96202 12.9171 8.01692 12.7909 8.12671 12.681L11.7775 9.0304Z' fill='%230047AB'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+} /* @media  오버 스타일*/
 
-
-
+@media screen and (max-width:640px){
+            .service{
+                margin: 71px 0 0 0;
+            }
+            .service .tit h2{
+                margin: 0 0 7px 0;
+            }
+            .service .list{
+                margin: 24px 0 56px 0;
+            }
+            .service .list ul li{
+                width: calc(33.33% - 10.66px);
+            }
+            .service .list ul li a{
+                display: block;
+                padding: 22px 12px 82px 12px;
+                text-align: center;
+                height: 100%;
+            }
+            .service .list ul li a p{
+                display: none;
+            }
+            .service .list ul li a::after{
+                width: 32px;
+                height: 32px;
+                top: auto;
+                right: 50%;
+                bottom: 28px;
+                transform: translateX(50%);
+            }
+            .service .list ul li a h3{
+                font-family:'Gmarket Sans';
+                font-weight: 400;
+                color: #1d1d1d;
+                margin: 0;
+            }
+} /**service 모바일******/
