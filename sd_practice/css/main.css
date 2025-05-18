@@ -713,3 +713,49 @@ header .tnb .lang{
                 margin: 0;
             }
 } /**service 모바일******/
+
+footer{
+    padding: 93px 0 64px 0 ;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+footer .f_nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 40px;
+}
+footer .f_nav ul li{
+    position: relative;
+}
+footer .f_nav ul li::after{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    top: 6px;
+    right: -21px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+footer .f_nav ul li:last-child:after{
+    display: none;
+}
+footer .f_info{
+    color: rgba(255, 255, 255, 0.5);
+    margin: 40px 0 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 40px;
+}
+footer .copyright{
+    color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width:640px){
+        footer{
+            padding: 56px 0 46px 0 ;
+        }
+        footer .f_info{
+            margin: 28px 0 17px 0;
+            display: block;
+            flex-wrap: nowrap;
+        }
+} /* @media footer 모바일*/
