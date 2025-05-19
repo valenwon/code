@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header_250516.css">
-    <!--jquery 라이브러리를 먼저 호출-->
+    <link rel="stylesheet" href="css/menu1_250519.css">
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/header_250516.js"></script>
-    <title>header 인터렉티브 테스트</title>
+    <script src="js/menu1_250519.js"></script>
+    <title>메뉴구현 - 오버한 메뉴의 하위메뉴만 나옴</title>
 </head>
 <body>
     <div id="wrap">
-        <!--브라우저가 스크롤이 되면 jquery에서 header에서 fixed class를 추가해줌-->
+        <!--메뉴에 마우스를 오버하면
+            header에 menu_over 클래스 추가
+            오버한 1차메뉴 li에 over 클래스 추가
+        
+            모바일에서 메뉴열기를 클릭하면
+            header에 menu_open 클래스 추가
+            1차 메뉴를 클릭하면 하위메뉴 열어줌 
+            클릭한 1차메뉴 li에 open클래스 추가
+        -->
         <header>
             <div class="wrapper">
                 <h1 class="logo"><a href="#"><span class="blind">로고</span></a></h1>
                 <nav class="gnb">
                     <button class="gnb_open"><span class="blind">메뉴열기</span></button>
                     <div class="gnb_wrap">
-                        <ul class="depth1">
+                        <ul class="depth1"><!--1차메뉴-->
                             <li>
-                                <a href="#"><span>기업소개</span></a><!--1차메뉴-->
-                                <ul class="depth2">
+                                <a href="https://www.naver.com/"><span>기업소개</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
                                     <li><a href="#"><span>인사말</span></a></li>
                                     <li><a href="#"><span>연혁</span></a></li>
-                                    <li><a href="#"><span>찾아오시는 길</span></a></li>
+                                    <li><a href="#"><span>찾아오시는길</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span>사업분야</span></a><!--1차메뉴-->
-                                <ul class="depth2">
+                                <a href="https://www.naver.com/"><span>사업분야</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
                                     <li><a href="#"><span>건축사업</span></a></li>
                                     <li><a href="#"><span>기부사업</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span>소식</span></a><!--1차메뉴-->
-                                <ul class="depth2">
+                                <a href="https://www.naver.com/"><span>소식</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
                                     <li><a href="#"><span>공지사항</span></a></li>
                                     <li><a href="#"><span>FAQ</span></a></li>
                                     <li><a href="#"><span>묻고답하기</span></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span>인재채용</span></a><!--1차메뉴-->
-                                <ul class="depth2">
+                                <a href="https://www.naver.com/"><span>인재채용</span></a>
+                                <ul class="depth2"><!--2차메뉴-->
                                     <li><a href="#"><span>인재상</span></a></li>
                                     <li><a href="#"><span>직무소개</span></a></li>
                                     <li><a href="#"><span>채용공고</span></a></li>
@@ -58,11 +65,11 @@
                     <button class="search"><span class="blind">검색</span></button>
                 </div>
             </div>
-        </header><!--header-->
+        </header>
         <main class="container">
             <section class="visual">
                 <div class="wrapper">
-                    <h2>le. If you are going to use a passage of Lorem Ipsum, you<br> need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem</h2>
+                    <p>le. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem</p>
                 </div>
             </section>
         </main>
