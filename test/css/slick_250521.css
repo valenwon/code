@@ -1,0 +1,121 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+
+.visual .popup .popup_wrap .popup_item{
+    height: 900px;
+    color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual .popup .popup_wrap .popup_item.bg1{
+    background-image: url(../images/popup01.jpg);
+}
+.visual .popup .popup_wrap .popup_item.bg2{
+    background-image: url(../images/popup02.jpg);
+}
+.visual .popup .popup_wrap .popup_item.bg3{
+    background-image: url(../images/popup03.jpg);
+}
+.visual .popup .popup_wrap .popup_item h3{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 401px 0 23px 0;
+}
+.visual .slick-prev{
+    position: absolute; /*popup_wrap을 기준으로 정렬*/
+    left: 20px;
+    top: 440px;
+    width: 50px;
+    height: 50px;
+    color: transparent; /*previous 글자를 안보이게*/
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_106_59' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_106_59)'%3E%3Cpath d='M6.63447 25L22.3277 40.6932C22.7416 41.1071 22.9433 41.5944 22.9329 42.1552C22.9221 42.7163 22.7098 43.2038 22.2959 43.6177C21.8817 44.0316 21.3942 44.2385 20.8334 44.2385C20.2727 44.2385 19.7852 44.0316 19.3709 43.6177L3.38968 27.6682C3.01294 27.2915 2.73378 26.8694 2.55218 26.4021C2.37058 25.9347 2.27979 25.4673 2.27979 25C2.27979 24.5326 2.37058 24.0652 2.55218 23.5979C2.73378 23.1305 3.01294 22.7085 3.38968 22.3317L19.3709 6.34997C19.7852 5.93608 20.278 5.73452 20.8496 5.74528C21.4211 5.75605 21.9138 5.96837 22.3277 6.38226C22.7416 6.79615 22.9485 7.28365 22.9485 7.84476C22.9485 8.40553 22.7416 8.89285 22.3277 9.30674L6.63447 25Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.visual .slick-next{
+    position: absolute; /*popup_wrap을 기준으로 정렬*/
+    right: 20px;
+    top: 440px;
+    width: 50px;
+    height: 50px;
+    color: transparent; /*previous 글자를 안보이게*/
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_106_59' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='50' height='50'%3E%3Crect width='50' height='50' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_106_59)'%3E%3Cpath d='M6.63447 25L22.3277 40.6932C22.7416 41.1071 22.9433 41.5944 22.9329 42.1552C22.9221 42.7163 22.7098 43.2038 22.2959 43.6177C21.8817 44.0316 21.3942 44.2385 20.8334 44.2385C20.2727 44.2385 19.7852 44.0316 19.3709 43.6177L3.38968 27.6682C3.01294 27.2915 2.73378 26.8694 2.55218 26.4021C2.37058 25.9347 2.27979 25.4673 2.27979 25C2.27979 24.5326 2.37058 24.0652 2.55218 23.5979C2.73378 23.1305 3.01294 22.7085 3.38968 22.3317L19.3709 6.34997C19.7852 5.93608 20.278 5.73452 20.8496 5.74528C21.4211 5.75605 21.9138 5.96837 22.3277 6.38226C22.7416 6.79615 22.9485 7.28365 22.9485 7.84476C22.9485 8.40553 22.7416 8.89285 22.3277 9.30674L6.63447 25Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+}
+
+.visual ul.slick-dots{
+    position: absolute; /*popup_wrap을 기준으로 정렬*/
+    left: 0;
+    bottom: 37px;
+    width: 100%;
+    display: flex; /* li를 좌우 배치*/
+    justify-content: center; /*가운데*/
+    gap: 5px;
+
+}
+.visual ul.slick-dots li button{
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: transparent; /* 1,2,3 글자 안보이게*/
+}
+.visual ul.slick-dots li.slick-active button{
+    background-color: #fff;
+}
+
+.visual .btn_wrap .ctrl_stop{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.visual .btn_wrap .ctrl_play{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+
+@media screen and (max-width:1410px){
+    .visual .slick-prev,
+    .visual .slick-next{
+        display: none !important; /*숨김*/
+        /*css 적용 우선순위 상관없이 무조건 먼저 실행하도록 하는 명령
+            !important - 단 하나의 요소의 pc버전에서 important,
+            모바일에서 important 남발하면 스타일이 꼬임!
+        */ 
+    }
+}
+
+@media screen and (max-width:768px){
+            .visual .popup .popup_wrap .popup_item{
+                height: 600px;
+            }
+            .visual .popup .popup_wrap .popup_item h3{
+                font-size: 28px;
+                padding: 342px 0 10px 0;
+            }
+            .visual ul.slick-dots{
+                bottom: 18px;
+            }
+            .visual ul.slick-dots li button{
+                width: 8px;
+                height: 8px;
+            }
+} /*@media 모바일*/
+
+
+
+
