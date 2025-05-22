@@ -2,6 +2,9 @@
 @import url(font.css);
 @import url(common_full.css);
 
+.visual{
+    position: relative; /*btn_wrap 의 정렬 기준*/
+}
 
 .visual .popup .popup_wrap .popup_item{
     height: 900px;
@@ -53,11 +56,9 @@
 
 .visual ul.slick-dots{
     position: absolute; /*popup_wrap을 기준으로 정렬*/
-    left: 0;
+    right: 50%;
     bottom: 37px;
-    width: 100%;
     display: flex; /* li를 좌우 배치*/
-    justify-content: center; /*가운데*/
     gap: 5px;
 
 }
@@ -73,20 +74,33 @@
     background-color: #fff;
 }
 
+.visual .btn_wrap{
+    position: absolute; /*visual을 기준으로 정렬*/
+    left: calc(50% + 10px);
+    bottom: 35px;
+    display: flex; /* js에서 요소에 display: inline-block을 줘서 코딩이 틀어짐*/
+}
 .visual .btn_wrap .ctrl_stop{
     display: block;
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_131_8' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='12' height='11'%3E%3Crect x='0.181152' width='11' height='11' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_131_8)'%3E%3Cpath d='M6.5979 8.25V2.75H8.20207V8.25H6.5979ZM3.1604 8.25V2.75H4.76457V8.25H3.1604Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 .visual .btn_wrap .ctrl_play{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    display: none; /*처음에는 숨김*/
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_127_242' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='12' height='11'%3E%3Crect x='0.181152' width='11' height='11' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_127_242)'%3E%3Cpath d='M4.30615 7.87968V3.12012L8.04329 5.4999L4.30615 7.87968Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-
 
 @media screen and (max-width:1410px){
     .visual .slick-prev,
@@ -114,8 +128,164 @@
                 width: 8px;
                 height: 8px;
             }
-} /*@media 모바일*/
+} /*@media visual 모바일*/
 
 
+
+.biz{
+    margin: 153px 0 0 0;
+}
+.biz .tit h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.biz .list{
+    margin: 41px 0 0 0;
+    width: calc(100% + 24px); /*여백주면 wrapper 안으로 들어가서 안맞음, 따로 wrapper 밖으로 빼줘야 함*/
+}
+.biz .list .list_wrap .list_item{
+    margin-right: 24px; /*여백주기*/
+}
+.biz .list .list_wrap .list_item a{
+    display: block;
+}
+.biz .list .list_wrap .list_item a .photo{
+    overflow: hidden;
+    height: 264px;
+}
+.biz .list .list_wrap .list_item a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list .list_wrap .list_item a h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 12px 0 6px 0;
+}
+
+@media screen and (max-width:768px){
+            .biz{
+                margin: 72px 0 0 0;
+            }
+            .biz .tit h2{
+                font-size: 23px;
+            }
+            .biz .list{
+                margin: 17px 0 0 0;
+                width: calc(100% + 16px); /*여백주면 wrapper 안으로 들어가서 안맞음, 따로 wrapper 밖으로 빼줘야 함*/
+            }
+            .biz .list .list_wrap .list_item{
+                margin-right: 16px; /*여백주기*/
+            }
+            .biz .list .list_wrap .list_item a .photo{
+                height: 235px;
+            }
+            .biz .list .list_wrap .list_item a h3{
+                font-size: 18px;
+                margin: 11px 0 4px 0;
+            }
+            
+} /*@media biz 모바일*/
+
+
+
+.notice{
+    background-color: #FF7373;
+    margin: 121px 0 0 0;
+    padding: 120px 0 98px 0;
+    color: #fff;
+}
+.notice .tit h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.notice .list{
+    margin: 61px 0 0 0;
+    width: calc(50% + 630px);
+    position: relative;
+    left: calc(50% - 630px);
+}
+.notice .list .list_wrap .list_item a{
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #555;
+}
+.notice .list .list_wrap .list_item{
+    width: 404px;
+    margin-right: 24px;
+}
+.notice .list .list_wrap .list_item a .photo{
+    overflow: hidden;
+    height: 335px;
+    border-radius: 20px 20px 0 0 ;
+}
+.notice .list .list_wrap .list_item a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notice .list .list_wrap .list_item a .txt{
+    padding: 28px 40px 52px 40px;
+}
+.notice .list .list_wrap .list_item a .txt h3{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 17px 0;
+}
+
+@media screen and (max-width:1300px){
+    .notice .list{
+        width: calc(100% + 20px); /*왼쪽 여백만 빼주기*/
+        left: 20px;
+    }
+}/*@media notice 모바일*/
+
+@media screen and (max-width:768px){
+            .notice{
+                margin: 44px 0 0 0;
+                padding: 64px 0 43px 0;
+            }
+            .notice .tit h2{
+                font-size: 23px;
+            }
+            .notice .list{
+                margin: 17px 0 0 0;
+            }
+            .notice .list .list_wrap .list_item a{
+                border-radius: 10px;
+            }
+            .notice .list .list_wrap .list_item{
+                width: 264px;
+                margin-right: 16px;
+            }
+            .notice .list .list_wrap .list_item a .photo{
+                height: 219px;
+                border-radius: 10px 10px 0 0 ;
+            }
+            .notice .list .list_wrap .list_item a .txt{
+                padding: 18px 28px 37px 28px;
+            }
+            .notice .list .list_wrap .list_item a .txt h3{
+                font-size: 18px;
+                margin: 0 0 5px 0;
+            }
+}/*@media notice 모바일*/
+
+
+
+
+
+footer{
+    margin: 5000px 0 0 0;
+}
 
 

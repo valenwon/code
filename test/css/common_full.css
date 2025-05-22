@@ -15,7 +15,8 @@ body{
 }
 
 #wrap{                        
-    position: relative;
+    position: relative; /*header 정렬의 기준*/
+    overflow: hidden; /*가로 스크롤 바 삭제*/
 }
 
 
