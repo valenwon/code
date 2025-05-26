@@ -1,0 +1,22 @@
+/*웹폰트를 선언*/
+@font-face {
+    font-family: 'MangoDdobak';
+	font-style: normal;
+    font-weight: 300;
+    src:url('../font/MangoDdobak-L.woff2')  format('woff2');
+}
+
+
+@font-face {
+    font-family: 'MangoDdobak';
+	font-style: normal;
+    font-weight: 400;
+    src:url('../font/MangoDdobak-R.woff2')  format('woff2');
+}
+
+@font-face {
+    font-family: 'MangoDdobak';
+	font-style: normal;
+    font-weight: 700;
+    src:url('../font/MangoDdobak-B.woff2')  format('woff2');
+}
