@@ -42,21 +42,56 @@ $(document).ready(function(){
         //console.log(device_status)
     }
     
-    /*******header에 마우스를 오버했을 때 *******/
-    $('header').on('mouseenter', function(){
-        console.log('오버햤더')
-        $('header').addClass('fixed')
+    /*******header에 마우스를 오버했을 때 - 클릭했을 때도 작동함*******/
+    $('header').on('mouseenter focusin', function(){
+        if(device_status == 'pc'){
+            $('header').addClass('fixed')
+        }  
     })
     $('header').on('mouseleave', function(){
         /*브라우저가 스크롤된 상태에서는 header에 fixed클래스를 삭제하면 XX 
           맨 위에 있을 때만 삭제해야 함*/
         if(scrolling <= 0){ 
-            console.log('아웃')
             $('header').removeClass('fixed')
         } //if 종료 
     })
     
-    /***************************  header & 메뉴 끝  **************************************/
+    $('header .gnb .gnb_wrap ul.detph1 > li').on('mouseenter focusin', function(){
+        if(device_status == 'pc'){
+            $(this).addClass('over')
+        }
+    })
+    $('header .gnb .gnb_wrap ul.detph1 > li').on('mouseleave', function(){
+        $(this).removeClass('over')
+    })
+    $('header .gnb .gnb_wrap ul.detph1 > li > ul.detph2 > li:last-child').on('focusout', function(){
+        $('header .gnb .gnb_wrap ul.detph1 > li').removeClass('over')
+    })
+
+
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+    })
+
+    /* 
+        닫힌 메뉴를 클릭하면 열리고, 열린메뉴를 클릭하면 닫힘
+        동시에 여러개의 메뉴가 열려있을 수도 있음
+        toggleClass - 클래스가 없으면 추가하고, 있으면 삭제
+    */
+    $('header .gnb .gnb_wrap ul.detph1 > li:has(ul.detph2) > a').on('click', function(e){
+        if( device_status == 'mobile'){
+            e.preventDefault()
+            console.log('클릭함요')
+            $(this).parents('li').toggleClass('open')
+        }
+       
+    })
+
+    /***************************  header & 메뉴 끝!  **************************************/
+    
     
     /***************************  visual_swiper 시작  ************************************/
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
@@ -90,6 +125,26 @@ $(document).ready(function(){
         $(this).hide() //재생버튼 자신은 숨김
         $('.visual .btn_wrap button.btn_stop').show() //정지 나타남
     })
-    /****************************  visual_swiper 끝  ************************************/
+    /****************************  visual_swiper 끝!  ************************************/
+
+
+    /****************************  find 탭 기능 시작  ************************************/
+
+    let find_content //클릭한 메뉴의 이름(id)
+    $('.find .list .tab_list ul li').on('click', function(){
+        if($(this).hasClass('active') == false){
+            //console.log('선택안된 메뉴')
+            find_content = $(this).attr('data-content')
+            console.log(find_content)
+        }
+    })
+
+
+
+
+
+    /****************************  find 탭 기능 끝!  ************************************/
+
+
 })
 
