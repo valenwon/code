@@ -1126,7 +1126,7 @@ header.fixed .logo a{
             }
             .review .list .swiper-slide a h3{
                 margin: 11px 0 6px 0;
-                font-size: 17px;
+                font-size: 19px;
             }
             .review .more{
                 top: 2px;
@@ -1228,6 +1228,9 @@ footer .link_wrap ul.sns{
     gap: 5px;
     justify-content: flex-end;
 }
+footer .link_wrap ul.sns span{
+    color: transparent;
+}
 footer .link_wrap ul.sns li a{
     display: block;
     width: 27px;
@@ -1281,6 +1284,9 @@ footer .copyright{
 @media screen and (max-width: 1024px) {
                 footer{
                     padding: 57px 0 76px 0;
+                }
+                footer .top{
+                    right: 16px;
                 }
                 footer .wrapper{
                     display: block; /*link_wrap , info_wrap 좌우 배치*/
