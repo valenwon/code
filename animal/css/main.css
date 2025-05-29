@@ -1153,7 +1153,6 @@ header.fixed .logo a{
 
 
 footer{
-    padding: 81px 0 101px 0;
     background-color: #0171B9;
     color: rgba(255, 255, 255, 0.9);
     position: relative;  /* top 정렬의 기준*/
@@ -1204,12 +1203,13 @@ footer .wrapper{
     display: flex; /*link_wrap , info_wrap 좌우 배치*/
     flex-direction: row-reverse; /*좌우 반전*/
     justify-content: space-between; /*양쪽 끝 배치*/
+    padding: 81px 0 101px 0;
 }
 footer .link_wrap ul.link li a{
     display: block;
     text-align: right;
-    padding-right: 19px; /*아이콘 여백*/
-    position: relative; /*after정렬 기준*/
+    padding-right: 23px;
+    position: relative; /*after 정렬 기준*/
 }
 footer .link_wrap ul.link li a::after{
     content: "";
@@ -1223,15 +1223,15 @@ footer .link_wrap ul.link li a::after{
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_28_2028' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_28_2028)'%3E%3Cpath d='M3.53854 13.6673C3.20176 13.6673 2.91671 13.5507 2.68337 13.3173C2.45004 13.084 2.33337 12.7989 2.33337 12.4622V3.53915C2.33337 3.20237 2.45004 2.91732 2.68337 2.68398C2.91671 2.45065 3.20176 2.33398 3.53854 2.33398H7.24354C7.38543 2.33398 7.50426 2.38187 7.60004 2.47765C7.69571 2.57332 7.74354 2.6921 7.74354 2.83398C7.74354 2.97587 7.69571 3.09465 7.60004 3.19032C7.50426 3.2861 7.38543 3.33398 7.24354 3.33398H3.53854C3.48721 3.33398 3.44021 3.35537 3.39754 3.39815C3.35476 3.44082 3.33337 3.48782 3.33337 3.53915V12.4622C3.33337 12.5135 3.35476 12.5605 3.39754 12.6032C3.44021 12.6459 3.48721 12.6673 3.53854 12.6673H12.4615C12.5129 12.6673 12.5599 12.6459 12.6025 12.6032C12.6453 12.5605 12.6667 12.5135 12.6667 12.4622V8.75715C12.6667 8.61526 12.7146 8.49643 12.8104 8.40065C12.906 8.30498 13.0248 8.25715 13.1667 8.25715C13.3086 8.25715 13.4274 8.30498 13.523 8.40065C13.6188 8.49643 13.6667 8.61526 13.6667 8.75715V12.4622C13.6667 12.7989 13.55 13.084 13.3167 13.3173C13.0834 13.5507 12.7983 13.6673 12.4615 13.6673H3.53854ZM12.6667 4.03648L6.83087 9.87248C6.73854 9.96471 6.62249 10.0119 6.48271 10.0142C6.34304 10.0163 6.22487 9.96904 6.12821 9.87248C6.03165 9.77582 5.98337 9.65871 5.98337 9.52115C5.98337 9.3836 6.03165 9.26648 6.12821 9.16982L11.9642 3.33398H9.83337C9.69149 3.33398 9.57271 3.2861 9.47704 3.19032C9.38126 3.09465 9.33337 2.97587 9.33337 2.83398C9.33337 2.6921 9.38126 2.57332 9.47704 2.47765C9.57271 2.38187 9.69149 2.33398 9.83337 2.33398H13.064C13.2359 2.33398 13.3793 2.39148 13.4942 2.50648C13.6092 2.62137 13.6667 2.76476 13.6667 2.93665V6.16732C13.6667 6.30921 13.6188 6.42798 13.523 6.52365C13.4274 6.61943 13.3086 6.66732 13.1667 6.66732C13.0248 6.66732 12.906 6.61943 12.8104 6.52365C12.7146 6.42798 12.6667 6.30921 12.6667 6.16732V4.03648Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 footer .link_wrap ul.sns{
-    margin: 66px 0 0 0;
+    margin: 28px 0 0 0;
     display: flex;
     gap: 5px;
     justify-content: flex-end;
 }
 footer .link_wrap ul.sns li a{
     display: block;
-    width: 27px;
-    height: 27px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 1px solid #fff;
     background-position: center center;
@@ -1254,69 +1254,55 @@ footer .link_wrap ul.sns li.instagram a{
 footer .info_wrap .info ul{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 42px; /*위아래, 좌우 여백*/
-    margin: 0 0 22px 0;
+    gap: 15px 42px;
+    margin: 0 0 21px 0;
 }
 footer .info_wrap .info ul li{
-    position: relative; 
+    position: relative;
 }
 footer .info_wrap .info ul li::after{
     content: "";
     position: absolute;
+    right: -22px;
+    top: 5px;
     width: 1px;
     height: 12px;
-    right: -20px;
-    top: 5px;
-    color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 footer .info_wrap .info ul li:last-child::after{
     display: none;
 }
-
 footer .copyright{
     margin: 76px 0 0 0;
 }
 
 @media screen and (max-width: 1024px) {
-                footer{
-                    padding: 57px 0 76px 0;
-                }
-                footer .top{
-                    right: 16px;
-                }
-                footer .wrapper{
-                    display: block; /*link_wrap , info_wrap 좌우 배치*/
-                }
-                footer .link_wrap ul.link{
-                    display: none;
-                }
-                footer .link_wrap ul.sns{
-                    margin: 0;
-                    justify-content: flex-start;
-                }
-                footer .link_wrap ul.sns li a{
-                    width: 23px;
-                    height: 23px;
-                }
-                footer .link_wrap ul.sns li.facebook a{
-                    background-size: 6px;
-                }
-                footer .link_wrap ul.sns li.naver a{
-                    background-size: 9px;
-                }
-                footer .link_wrap ul.sns li.youtube a{
-                    background-size: 10px;
-                }
-                footer .link_wrap ul.sns li.instagram a{
-                    background-size: 11px;
-                }
-                footer .info_wrap {
-                    margin: 24px 0 0 0;
-                }
-                footer .info_wrap .info ul{
-                    margin: 0 0 9px 0;
-                }
-                footer .copyright{
-                    margin: 48px 0 0 0;
-                }
+            footer .top{
+                right: 16px;
+            }
+            footer .wrapper{
+                display: block; /*link_wrap , info_wrap 좌우 배치*/
+                padding: 40px 0 46px 0;
+            }
+            footer .link_wrap ul.link{
+                display: none;
+            }
+            footer .link_wrap ul.sns{
+                margin: 0;
+                justify-content: flex-start;
+            }
+            footer .info_wrap{
+                margin: 20px 0 0 0;
+            }
+            footer .info_wrap .info ul{
+                margin: 0 0 9px 0;
+            }
+            footer .info_wrap .info ul li{
+                position: relative;
+            }
+            footer .copyright{
+                margin: 48px 0 0 0;
+            }
+                
 }/*@media*/
+
