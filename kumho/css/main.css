@@ -4,9 +4,14 @@
 @import url(layout.css);
 
 
+.visual{
+    position: relative; /*ctrl_wraps, croll_down의 정렬 기준*/
+}
+
 .visual .swiper-slide .photo{
     overflow: hidden;
     height: 100dvh; /* 모바일까지 고려한 브라우저 높이 100% */
+    min-height: 31.76em; /* 최소 높이 : 540 / 17 */
 }
 .visual .swiper-slide .photo img{
     width: 100%;
@@ -20,7 +25,7 @@
 .visual .swiper-slide .txt_wrap{
     position: absolute; /*.swiper-slide에 이미 position: realative 있음*/
     left: 0;
-    bottom: 33.5%;
+    bottom: 34.5%;
     width: 100%;
 }
 .visual .swiper-slide .txt_wrap .txt{
@@ -40,7 +45,6 @@
    /* transform: translateY(50%);  100% -> 0으로 애니메이션*/
    transition: 0.7s;
    transition-delay: 0.5s;
-   
 }
 .visual .swiper-slide .txt_wrap .txt.delay1 p {
     transition-delay: 1s;
@@ -61,25 +65,130 @@
     animation-fill-mode: forwards; */
 }
 
+.visual .ctrl_wrap{
+    position: absolute; /*visual을 기준으로 정렬*/
+    left: calc(50% - 630px); /*wrapper가 없으니까 1920의 반으로 간다음에 1260의 절반을 빼줌*/
+    /*오른쪽 부분에 들어가면 right로 넣어주면 됨*/
+    bottom: 29.8%; /*visual높이가 1000, 사이 간격이 277px이니까*/
+    z-index: 10;
+    display: flex;
+}
+.visual .ctrl_wrap button{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-left: 0; /*겹쳐서 중첩되기 때문에 왼쪽 꺼 빼주기*/
+    width: 1.41em; /*24 % 17*/
+    height: 1.41em; /*24 % 17*/
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.visual .ctrl_wrap button:first-child{
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+.visual .ctrl_wrap button.btn_prev{
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='10' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.16668 9.02233L0.144287 4.99994L4.16668 0.977539L4.75804 1.56889L1.32689 4.99994L4.75804 8.43098L4.16668 9.02233Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M4.73901 1.56836L1.31812 4.99121L1.30933 5L4.73999 8.43066L4.16577 9.00391L0.161865 5L4.16577 0.995117L4.73901 1.56836Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_next{
+    background-image: url("data:image/svg+xml,%3Csvg width='5' height='10' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.833346 0.97767L4.85574 5.00007L0.833347 9.02246L0.241992 8.43111L3.67314 5.00007L0.241992 1.56902L0.833346 0.97767Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M0.261017 8.43164L3.68191 5.00879L3.6907 5L0.26004 1.56934L0.834258 0.996094L4.83816 5L0.834259 9.00488L0.261017 8.43164Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_stop{
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_24_519' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect width='14' height='14' fill='%23D9D9D9'/%3E%3Crect x='0.5' y='0.5' width='13' height='13' stroke='white' stroke-opacity='0.7'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_24_519)'%3E%3Cpath d='M8.16668 10.7913V3.20801H10.3542V10.7913H8.16668ZM3.64584 10.7913V3.20801H5.83334V10.7913H3.64584Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M10.3421 3.2207V10.7793H8.17905V3.2207H10.3421ZM5.82065 3.2207V10.7793H3.65854V3.2207H5.82065Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_play{
+    display: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_24_516' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='14' height='14'%3E%3Crect x='14' y='14' width='14' height='14' transform='rotate(180 14 14)' fill='%23D9D9D9'/%3E%3Crect x='13.5' y='13.5' width='13' height='13' transform='rotate(180 13.5 13.5)' stroke='white' stroke-opacity='0.7'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_24_516)'%3E%3Cpath d='M4.95833 3.44415L10.5448 7.00015L4.95833 10.5562L4.95833 3.44415Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M4.97055 3.46729L10.5223 7.00049L4.97055 10.5337L4.97055 3.46729Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.visual .scroll_down{
+    position: absolute; /*visual기준으로 정렬*/
+    /*가운데 정렬*/
+    left: 50%;
+    transform: translateX(-50%); 
+
+    bottom: 5.4%;
+    z-index: 10;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+.visual .scroll_down::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 1.85em; /* 26 % 14 = 1.85em*/
+    width: 0.64em; /* scroll_down글자가 14px이니까 9 % 14 */
+    height: 0.42em; /* 6 % 14 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.49999 5.91753L0.0241089 1.44164L0.858328 0.607422L4.49999 4.24909L8.14166 0.607422L8.97588 1.44164L4.49999 5.91753Z' fill='white'/%3E%3C/svg%3E%0A");
+
+    animation-name: scroll_down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; /*가속도 없앰*/
+
+}
+@keyframes scroll_down {
+   0%{top: 1.85em;} /* 26 % 14 = 1.85em*/
+   50%{top: 3.07em;} /* 43 % 14 = 3.07em*/
+   100%{top: 1.85em;} 
+}
+
+@media screen and (max-width:1300px) {
+    .visual .ctrl_wrap{
+        left: 20px
+    }
+}
+
 @keyframes visual_txt {
     0% { transform: translateY(100%);}
     100% { transform: translateY(0);}
 }
 
 @media screen and (max-width:1024px) {
-    .visual .swiper-slide .txt_wrap{
-        bottom: 26.2%; 
-    }
-    .visual .swiper-slide .txt_wrap .txt.mobile{
-        display: block; 
-    }
-    .visual .swiper-slide .txt_wrap .txt.pc{
-        display: none; /* 숨김 */
-    }
     .visual .swiper-slide .txt_wrap .txt p{
-        font-size: 2.37rem; /*38 % 16*/
-    }
-}
+        font-size: 2.8rem; 
+    } 
+   
+}/*@media visual 1024 */
+
+@media screen and (max-width:768px) {
+                .visual .swiper-slide.swiper-slide-active .photo img{
+                    transform: scale3d(1, 1, 1); /*확대되는 animation 안일어남*/
+                }
+                .visual .swiper-slide .txt_wrap{ 
+                    bottom: 32.75%; /* 262 / 800 * 100 */
+                }
+                .visual .swiper-slide .txt_wrap .txt.mobile{
+                    display: block; /* 나타남 */
+                }
+                .visual .swiper-slide .txt_wrap .txt.pc{
+                    display: none; /* 사라짐 */
+                }
+                .visual .swiper-slide .txt_wrap .txt p{
+                    font-size: 2.37rem; /* 38 % 16px*/
+                } 
+                .visual .ctrl_wrap{
+                    left: 20px;
+                    bottom: 28.5%; /*visual높이가 800, 사이 간격이 228px이니까*/
+                }
+                .visual .ctrl_wrap button:first-child{
+                    display: none;
+                }
+                .visual .ctrl_wrap button:nth-child(3),
+                .visual .ctrl_wrap button:nth-child(4){
+                    border: 1px solid rgba(255, 255, 255, 0.7);
+                }
+                .visual .ctrl_wrap button.btn_prev,
+                .visual .ctrl_wrap button.btn_next{
+                   display: none;
+                }
+                .visual .scroll_down{
+                    bottom: 5.2%;
+                }
+}/*@media visual 768 모바일 */
 
 
 
