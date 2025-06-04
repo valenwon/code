@@ -22,12 +22,12 @@
             pc버전에서 메뉴에 마우스를 오버하면 menu_over
             mobile버전에서 메뉴를 클릭하면 menu_open
         -->
-        <header class="">
+        <header>
             <h1 class="logo"><a href="index.html"><span class="blind">금호건설</span></a></h1>
             <nav class="gnb">
                 <button class="gnb_open"><span class="blind">메뉴열기</span></button>
                 <div class="gnb_wrap">
-                    <div class="gnb_util">
+                    <div class="gnb_util"><!--모바일-->
                         <div class="lang">
                             <button class="lang_open"><span>KOR</span></button>
                         </div>
@@ -38,7 +38,7 @@
                     <ul class="depth1">
                         <!--pc버전 - over클래스 추가, 모바일에서는 open클래스 추가-->
                         <li>
-                            <a href="#"><span>회사소개</span></a>
+                            <a href="https://www.naver.com/"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <li><a href="#"><span>기업정보</span></a></li>
                                 <li><a href="#"><span>CEO인사말</span></a></li>
@@ -92,6 +92,7 @@
                     </ul>
                     <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
                 </div><!--gnb_wrap-->  
+                <div class="gnb_bg"></div><!--메뉴 아래 검은색 배경-->
             </nav>
             <div class="util">
                 <div class="lang">
@@ -101,7 +102,7 @@
                     <button class="search_open"><span class="blind">검색열기</span></button>
                 </div>
             </div><!--//util-->
-        </header>
+        </header><!--header-->
         <main class="container">
             <section class="visual">
                 <h2 class="blind">팝업</h2>
@@ -156,9 +157,127 @@
                 </div>
                 <div class="scroll_down"><a href="#">scroll down</a></div>
             </section><!--visual-->
-            <section class="biz"></section>
-            <section class="news"></section>
-            <section class="service"></section>
+            <section class="biz">
+                <div class="tit">
+                    <div class="wrapper">
+                        <strong>BUSINESS</strong>
+                        <h2>세계로 뻗어가는 건설 한류의 중심</h2>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <!--마우스를 오버하면 on클래스 추가-->
+                        <li>
+                            <a href="#" class="more"><span class="blind">자세히보기::</span></a><!--모바일-->
+                            <div class="photo"><img src="images/main/biz01.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>건축사업</strong>
+                                <h3>Architecture</h3>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="more"><span class="blind">자세히보기::</span></a><!--모바일-->
+                            <div class="photo"><img src="images/main/biz02.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>토목사업</strong>
+                                <h3>Civil</h3>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="more"><span class="blind">자세히보기::</span></a><!--모바일-->
+                            <div class="photo"><img src="images/main/biz03.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>주택사업</strong>
+                                <h3>Housing</h3>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="more"><span class="blind">자세히보기::</span></a><!--모바일-->
+                            <div class="photo"><img src="images/main/biz04.jpg" alt=""></div>
+                            <div class="txt">
+                                <strong>플랜트/환경사업</strong>
+                                <h3>Plant<br>Enviroment</h3>
+                                <a href="#">자세히 보기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section><!--biz-->
+            <section class="news">
+                <div class="tit">
+                    <div class="wrapper">
+                        <strong>NEWS</strong>
+                        <h2>고객의 곁에서 함께합니다</h2>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="wrapper">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.05.22</span>
+                                        <h3>금호건설, ‘청주테크노폴리스 아테라 2차’ 완판`</h3>
+                                        <p>충북 청주시 흥덕구 문암동 청주테크노폴리스 A7블록에 공급한 '청주테크노폴리스 아테라 2차'의 조기 완판에 성공했다고 22일 밝혔다. 지난해 1450가구가 조기 마감된 '청주테크노폴리스 내 마지막 민간분양이라는 희소성이 실수요자들의</p>
+                                        <div class="photo"><img src="images/main/news01.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.05.15</span>
+                                        <h3>금호건설, 1분기 영업익 57억원…2개 분기 연속 흑자</h3>
+                                        <p>금호건설은 올해 1분기 영업이익이 57억원으로 전년 동기 대비 380% 증가했다고 15일 밝혔다. 같은 기간 매출은 4680억원으로 5% 줄었으며 순이익은 8억원으로 흑자 전환했다.차별화된 설계가 적용돼 선호도가 높은 4베이 맞통풍 구조를</p>
+                                        <div class="photo"><img src="images/main/news02.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.05.12</span>
+                                        <h3>금호건설, 제11회 아테라 하모니 콘서트 개최</h3>
+                                        <p>금호건설은 지난 9일 서울 은평구 꿈나무마을 보육원에서 ‘제11회 아테라 하모니 콘서트’를 개최했다고 12일 밝혔다. 이번 공연은 어린이날을 맞아 문화 활동 기회가 적은 아동·청소년들 차공간을 확보했으며, 피트니스센터, 작은</p>
+                                        <div class="photo"><img src="images/main/news03.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.05.08</span>
+                                        <h3>금호건설, 캄보디아 타크마우시 하수처리시설 착공</h3>
+                                        <p>착공식에는 훈 마넷 캄보디아 총리를 비롯해 박정욱 주캄보디아 한국대사, 조완석 금호건설 사장 등 양국 관계자와 현지 주민 4000여명이 참석했다.  다양한 방식의 사내 모금 활동을 지속해 오고 있다.</p>
+                                        <div class="photo"><img src="images/main/news04.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.04.29</span>
+                                        <h3>‘안전보건’의 의미를 새롭게...금호건설 공감토론회 개최</h3>
+                                        <p>‘안전보건’에 대한 이론적, 실체적 정의에 현장에서의 경험을 최대한 접목시켜 형식적, 일회성이 아닌 사고의 전환을 통해 안전보건에 대한 새로운 정의를 내리기 시작한 것 한 긴급 지원과 미얀마 지진 피해 복구를 위한 후원금 기탁 등 국내외</p>
+                                        <div class="photo"><img src="images/main/news05.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <span class="date">2025.04.24</span>
+                                        <h3>금호건설, 초록우산에 결식아동 지원 후원금 1000만원 전달</h3>
+                                        <p>이번 후원금은 경제적 어려움으로 끼니를 걱정해야 하는 아동들의 식비 및 간식비 지원에 사용되며, 아이들이 건강하고 안정된 환경에서 성장할 수 있도록 실질적인 도움을 줄 예정이 으로도 임직원들과 함께 지속 가능한 나눔을 실천해 따듯한 사회적</p>
+                                        <div class="photo"><img src="images/main/news06.jpg" alt=""></div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service">
+                <div class="tit">
+                    <div class="wrapper">
+                        <strong>KUMHO</strong>
+                        <h2>금호건설은 아름다운 미래를 건설합니다</h2>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer></footer>
     </div>
