@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <div class="list">
-                    <div class="wrapper">
+                    <div class="wrapper"><!-- 밖으로 나가면 wrapper 필요없음 -->
                         <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
                             <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
                                 <li class="swiper-slide">
@@ -266,16 +266,54 @@
                                     </a>
                                 </li> 
                             </ul>
+                        </div><!--//swiper-->
+                    </div>
+                </div><!--//list-->
+                <div class="ctrl_wrap">
+                    <div class="wrapper">
+                        <div class="group1">
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div class="group2">
+                            <div class="count"></div>
+                            <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                            <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                            <a href="#" class="more">view all</a>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div><!--//ctrl_wrap-->
+            </section><!--news-->
             <section class="service">
                 <div class="tit">
                     <div class="wrapper">
                         <strong>KUMHO</strong>
                         <h2>금호건설은 아름다운 미래를 건설합니다</h2>
                     </div>
+                </div>
+                <div class="list" data-bg="">
+                    <ul>
+                        <li>
+                            <a href="#" data-name="bg1">
+                                <strong>KUMHO TV</strong>
+                                <h3>금호건설TV</h3>
+                                <span class="more">바로가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-name="bg2">
+                                <strong>ARTERA</strong>
+                                <h3>아테라</h3>
+                                <span class="more">바로가기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-name="bg3">
+                                <strong>Recruitment</strong>
+                                <h3>인재채용</h3>
+                                <span class="more">바로가기</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
