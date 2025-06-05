@@ -70,12 +70,12 @@ $(document).ready(function(){
 
     /*-----------------news swiper :: 끝 -----------------------*/
 
+    
 
     /*-----------------service 배경 변경:: 시작 ------------------
     - .service .list ul li a 에 마우스를 오버해서 a에 있는
     - data-name값을 가져다가 list의 class명으로 줌
     -----*/
-
     let service_name //가져온 data-name 값을 저장
     $('.service .list ul li a').on('mouseenter', function(){
         if($(window).width() > 1024){

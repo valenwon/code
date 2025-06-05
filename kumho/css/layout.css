@@ -351,26 +351,160 @@ header.menu_over .util .search .search_open{
                 0% {opacity: 0;}
                 100% {opacity: 1;}
             }
-} /* @media 모바일 1024 */
-
-
-
-
-
-
-
+} /* @media header 모바일 1024 */
 
 
 
 footer{
-    margin: 1500px 0 0 0;
+    background-color: var(--tit-font-color);
+    color: rgba(255, 255, 255, 0.7); /* color: #fff; */
+    
+}
+footer .wrapper{
+    padding: 5.05em 0 ;
+    position: relative; /*top버튼 정렬의 기준*/
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+footer .top{
+    position: absolute;
+    right: 0;
+    top: 5.05em;
+    background-color: var(--point-font-color);
+    color: #fff;
+    padding: 1.52em 0.70em 0.17em 0.70em;
+    font-size: 0.82rem;
+}
+footer .top::before{
+    content: "";
+    position: absolute;
+    top: 0.235em;
+    right: 14px;
+    width: 1.29em;
+    height: 1.29em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.3125 13.875V2.75858L1.09094 7.98015L0.125 7L7 0.125L13.875 7L12.9091 7.98015L7.6875 2.75858V13.875H6.3125Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+footer .family_site{
+    position: relative; /*ul 정렬의 기준*/
+}
+footer .family_site .family_open{
+    display: block;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 0 2.17em 0 0.94em;
+    height: 2.17em;
+    position: relative;/*after 정렬의 기준*/
+}
+footer .family_site .family_open::after{
+    content: "";
+    position: absolute;
+    right: 0.70em;
+    top: 0.52em;
+    width: 0.82em;
+    height: 0.82em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.368395 5.83253L5.99975 0.201172L11.6311 5.83253L10.8032 6.66042L5.99975 1.85682L1.19629 6.66042L0.368395 5.83253Z' fill='white' fill-opacity='0.7'/%3E%3Cpath d='M10.804 6.6416L6.00903 1.84766L5.99927 1.83887L1.19653 6.6416L0.386963 5.83203L6.00024 0.21875L11.6135 5.83203L10.804 6.6416Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+footer .family_site ul{
+    display: none;
+    position: absolute; /*family_site을 기준으로 정렬*/
+    left: 0;
+    bottom: 2.17em;
+    width: 100%;
+    background-color: #353535;
+    padding: 0.47em 0 0.52em 0.82em;
+}
+footer .family_site ul li a{
+    display:  block;
+    line-height: 1.8;
+    font-size: 0.88rem;
+}
+
+footer .f_nav ul{
+    display: flex;
+    flex-wrap: wrap; /*여러줄 허용*/
+    gap: 0.2em 2.82em;
+}
+footer .f_nav ul li{
+    position: relative; /*after 정렬 기준*/
+    color: #fff;
+}
+footer .f_nav ul li::after{
+    content: "";
+    position: absolute;
+    right: -1.41em;
+    top: 0.4em;
+    width: 1px;
+    height: 0.64em;
+    background-color: rgba(255, 255, 255, 0.4);
+}   
+footer .f_nav ul li:last-child::after{
+    display: none;
+}
+footer .f_info {
+    margin: 2.11em 0 4.47em 0;
+}
+footer .f_info address{
+    margin-bottom: 0.58em;
+}
+footer .f_info span + span {
+    margin-left: 2.47em;
 }
 
 
+@media screen and (max-width:1490px) {
+            footer .top{
+                top: 0  ;
+                transform: translateY(-50%); /*내 높이의 절반*/
+            }
+}
 
-
-
-
-
+@media screen and (max-width:1024px) {
+            footer .wrapper{
+                padding: 4em 0 5.31em 0;
+                position: relative; /*top버튼 정렬의 기준*/
+                display: block;
+            }
+            footer .family_site{
+                margin: 0 0 2.81em 0;
+            }
+            footer .family_site .family_open{
+                padding: 0 2.17em 0 1em;
+                width: 100%;
+                max-width: 400px; /*이 이상 늘어나지 않게*/
+            }
+            footer .family_site ul{
+                display: none;
+                position: absolute; /*family_site을 기준으로 정렬*/
+                left: 0;
+                bottom: 2.17em;
+                width: 100%;
+                background-color: #353535;
+                padding: 0.47em 0 0.52em 0.82em;
+            }
+            footer .family_site ul li a{
+                display:  block;
+                line-height: 1.8;
+                font-size: 0.88rem;
+            }  
+            footer .f_info {
+                margin: 1.81em 0 3.12em 0;
+            }
+            footer .f_info address{
+                margin-bottom: 0.25em;
+            }
+            footer .f_info span{
+                display: inline-block;
+                margin-right: 2.47em;
+            }
+            footer .f_info span + span {
+                margin-left: 0;
+            }
+} /* @media footer 모바일 1024 */
 
 
