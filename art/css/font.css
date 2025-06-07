@@ -1,7 +1,5 @@
 /*웹폰트를 선언*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 
 @font-face {
 	font-family: 'Pretendard';
@@ -12,7 +10,7 @@
 
 @font-face {
 	font-family: 'Pretendard';
-	font-weight: 600; /*영문서체랑 한글서체랑 두께가 똑같아야 하기때문에 지정할 수 있는 한글 폰트의 두께를 줄여야 함*/
+	font-weight: 700; /*영문서체랑 한글서체랑 두께가 똑같아야 하기때문에 지정할 수 있는 한글 폰트의 두께를 줄여야 함*/
 	font-display: swap;
 	src: local('Pretendard Bold'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff');
 }
