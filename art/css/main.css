@@ -2,3 +2,115 @@
 @import url(font.css);
 @import url(common.css);
 @import url(layout.css);
+
+.visual{
+    position: relative; /* ctrl_wrap, scroll_down 정렬 기준*/
+}
+
+.visual .swiper-slide .photo{
+    overflow: hidden;
+    height: 100dvh; /*모바일까지 고려한 브라우저 높이 100%*/
+    min-height: 27.64em; /*470 / 17*/
+}
+.visual .swiper-slide .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.visual .swiper-slide.swiper-slide-active .photo img{
+    transform: scale3d(1.1, 1.1, 1);
+}
+.visual .swiper-slide .txt_wrap{
+    position: absolute;
+    left: 0;
+    bottom: 34.8%;
+    width: 100%;
+}
+.visual .swiper-slide .txt_wrap .txt{
+    overflow: hidden;
+}
+.visual .swiper-slide .txt_wrap .txt.mobile{
+    display: none;
+}
+.visual .swiper-slide .txt_wrap .txt p{
+    color: #fff;
+    font-size: 1.8rem; 
+    line-height: var(--tit-line-height);
+
+    /*글자 위로 올라오는 효과*/
+    transform: translateY(100%);
+    transition: 0.7s;
+}
+.visual .swiper-slide.swiper-slide-active .txt_wrap .txt p{
+    transform: translateY(0);
+}
+
+.visual .ctrl_wrap{
+    display: flex;
+    position: absolute;
+    right: calc(50% - 630px);
+    bottom: 34.8%;
+    z-index: 10;
+}
+.visual .ctrl_wrap button{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    width: 1.23em;
+    height: 1.23em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-left: none;
+}
+.visual .ctrl_wrap button:first-child{
+    border-left: 1px solid rgba(255, 255, 255, 0.7);
+}
+.visual .ctrl_wrap button.btn_prev{
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.99997 9.82709L0.173096 5.00022L4.99997 0.17334L5.7096 0.882965L1.59222 5.00022L5.7096 9.11747L4.99997 9.82709Z' fill='white'/%3E%3Cpath d='M5.69165 0.882324L1.58325 4.9917L1.57446 5.00049L5.69165 9.11768L4.99927 9.80908L0.190674 4.99951L4.99927 0.190918L5.69165 0.882324Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_next{
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00003 0.17291L5.8269 4.99978L1.00003 9.82666L0.290404 9.11704L4.40778 4.99979L0.290404 0.882535L1.00003 0.17291Z' fill='white'/%3E%3Cpath d='M0.30835 9.11768L4.41675 5.0083L4.42554 4.99951L0.308349 0.882325L1.00073 0.190918L5.80933 5.00049L1.00073 9.80908L0.30835 9.11768Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_stop{
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.16671 7.79146V0.20813H7.35421V7.79146H5.16671ZM0.645874 7.79146V0.20813H2.83337V7.79146H0.645874Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M7.34216 0.220825V7.77942H5.17908V0.220825H7.34216ZM2.82068 0.220825V7.77942H0.658569V0.220825H2.82068Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+.visual .ctrl_wrap button.btn_play{
+    display: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='8' viewBox='0 0 7 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.958361 0.444031L6.5448 4.00003L0.958362 7.55603L0.958361 0.444031Z' fill='white' fill-opacity='0.8'/%3E%3Cpath d='M0.97058 0.467164L6.52234 4.00037L0.970581 7.53357L0.97058 0.467164Z' stroke='white' stroke-opacity='0.7' stroke-width='0.025'/%3E%3C/svg%3E%0A");
+}
+
+.visual .scroll_down{
+    position: absolute;
+    /* 가운데정렬 */
+    left: 50%;
+    transform: translate(-50%);
+
+    bottom: 5%;
+    color: #fff;
+    z-index: 10;
+    font-size: 0.82rem;
+}
+.visual .scroll_down::after{
+    content: "";
+    position: absolute;
+    width: 0.65em; /*폰트사이즈가 14라서 14로 나눠줘야 함*/
+    height: 0.43em;
+    left: 50%;
+    transform: translate(-50%);
+    top: 1.85em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.49999 5.91753L0.0241089 1.44164L0.858328 0.607422L4.49999 4.24909L8.14166 0.607422L8.97588 1.44164L4.49999 5.91753Z' fill='white'/%3E%3C/svg%3E%0A");
+
+    animation-name: scroll_down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes  scroll_down{
+    0%{top: 1.85em;}
+    50%{top: 2.65em;}
+    100%{top: 1.85em;}
+}
+
