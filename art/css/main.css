@@ -114,3 +114,23 @@
     100%{top: 1.85em;}
 }
 
+@media screen and (max-width:768px) {
+            .visual .swiper-slide.swiper-slide-active .photo img{
+                transform: scale3d(1, 1, 1);
+            }
+            .visual .swiper-slide .txt_wrap{
+                bottom: 18.62%; /*149 % 800 * 100*/
+            }
+            .visual .swiper-slide .txt_wrap .txt.pc{
+                display: none;
+            }
+            .visual .swiper-slide .txt_wrap .txt.mobile{
+                display: block;
+            }
+            .visual .swiper-slide .txt_wrap .txt p{
+                font-size: 1.25rem; 
+            }
+            .visual .ctrl_wrap{
+                display: none;
+            }
+} /*@media visual 모바일 버전*/
