@@ -2,7 +2,7 @@
 .ctn_ceo{
     position: relative; /*before정렬의 기준 - 배경*/
 }
-.ctn_ceo::before{ /*뒤에 배경*/
+.ctn_ceo::before{ /*뒤에 회색 배경*/
     content: "";
     position: absolute;
     left: 5.58em;
@@ -13,6 +13,7 @@
     background-color: #F6F6F6;
     border-radius: 20px;
 }
+
 
 .ctn_ceo .wrapper{
     position: relative; /*photo정렬의 기준 - 배경*/
@@ -61,7 +62,78 @@
     font-weight: var(--bold-weight);
 }
 
+@media screen and (max-width:1508px) {
+            .ctn_ceo::before{ /*뒤에 회색 배경*/
+                left: 20px;
+                width: calc(100% - 40px);
+            }
+            .ctn_ceo .wrapper{
+                margin: 0 40px;
+            }
+            .ctn_ceo .ceo_tit{
+                padding-left: 45%;
+            }
+            .ctn_ceo .ceo_detail{
+                margin-left: 45%;
+            }
+} /*media*/
 
+@media screen and (max-width:1024px){
+            .ctn_ceo::before{ /*뒤에 회색 배경*/
+                display: none;
+            }
+            .ctn_ceo .wrapper{
+                margin: 0 20px;
+            }
+            .ctn_ceo .ceo_tit{
+                background-color: #F6F6F6;
+                border-radius: 10px;
+                padding: 3.37em 2.06em 3.75em 1.25em;
+            }
+            .ctn_ceo .ceo_tit h2{
+                font-size: 1.875rem; /*30px*/
+                margin: 0.46em 0 1.23em 0; 
+            }
+            .ctn_ceo .ceo_tit h2 br{
+                display: none;
+            }
+            .ctn_ceo .photo{
+                margin: 1.5em auto 0 auto;
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                max-width: 700px; /*사진 목이 안잘리게*/
+                height: 43.125em;
+                border-radius: 10px;
+            }
+            .ctn_ceo .photo img{
+                object-position: center top; /*사진 목이 안잘리게*/
+            }
+            .ctn_ceo .ceo_detail{
+                margin: 1.875em 0 0 0;
+            }
+            .ctn_ceo .ceo_detail .sign{
+                gap: 1.25em;
+                flex-direction: column;
+                margin: 3.375em 0 3.61em 0 ;
+                align-items: flex-start;
+            }
+}
+
+@media screen and (max-width:768px) {
+            .ctn_ceo .ceo_tit h2{
+                font-size: 1.56rem; /*25px*/
+                margin: 0.36em 0 1em 0; /*25px로 나눠주기*/
+            }
+            .ctn_ceo .photo{
+                max-width: 700px; /*사진 목이 안잘리게*/
+                height: 26.125em;
+            }
+            .ctn_ceo .ceo_detail .sign{
+                margin: 3.375em 0 3.31em 0 ;
+            }
+}
 
 /* 회사소개 > 찾아오시는길 */
 .ctn_map .map {
@@ -284,4 +356,81 @@
             }
     
 }
+
+
+/* 회사소개 > 연혁 */
+
+.ctn_history{
+    margin: 0 0 13.47em 0 ;
+}
+.ctn_history .his_tit{
+    margin: 0 0 3.23em 0;
+}
+.ctn_history .his_tit strong{
+    display: block;
+    color: var(--point-font-color);
+}
+.ctn_history .his_tit h2{
+    font-size: 2.05rem; /*35px*/
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+    margin: 0.25em 0 0 0;
+}
+.ctn_history .his_photo .photo{
+    overflow: hidden;
+    height: 19.70em;
+}
+.ctn_history .his_photo .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ctn_history .his_year_group{
+    margin: 4.17em 0 7.23em 0;
+    display: flex; /*year_tit, year_cont 정렬*/
+    justify-content: space-between;
+}
+.ctn_history .his_year_group.reverse{ /*반대*/
+    flex-direction: row-reverse; /*가로반전*/
+}
+
+.ctn_history .his_year_group .year_tit{
+    width: 404px; /**** 테스트 필요 ****/
+}
+.ctn_history .his_year_group .year_cont{
+    width: 642px; /**** 테스트 필요 ****/
+}
+
+.ctn_history .his_year_group .year_tit h3{
+    font-size: 2.35rem; /*40px*/
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+}
+.ctn_history .his_year_group .year_tit .photo{
+    overflow: hidden;
+    border-radius: 1.18em;
+    height: 25.23em;
+    margin: 1.70em 0 0 0;
+}
+.ctn_history .his_year_group .year_tit .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ctn_history .his_year_group .year_cont h4{
+    font-size: 1.48rem; /*25px*/
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+}
+.ctn_history .his_year_group .year_cont ul {
+    margin: 0.82em 0 2.70em 0;
+}
+.ctn_history .his_nav{
+    display: none; /*임시로!*/
+}
+
 
