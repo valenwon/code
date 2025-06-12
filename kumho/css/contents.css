@@ -243,6 +243,7 @@
 .ctn_map .map_tel .map_contact_txt .conact_txt p{
     color: var(--tit-font-color);
     margin: 0 0 1.04em 0;
+
 }
 .ctn_map .map_tel .map_contact_txt .conact_etc p{
     color: #767676;
@@ -663,6 +664,192 @@
             }
             
 }
+
+
+/* 홍보센터 > 금호뉴스 > (상담신청) */
+.ctn_notice{
+    margin: 0 0 7.58em 0;
+}
+.ctn_notice h2{
+    font-size: 2.05rem; /*35px*/
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+    margin-bottom: 0.57em; /*35px / */
+}
+.ctn_notice .agree_box{
+    border: 1px solid #ccc;
+    padding: 1.41em 1.41em 1.23em 1.64em;
+    height: 14.88em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    word-break: normal;
+}
+.ctn_notice .agree_chk{
+    margin: 1.18em 0 4.47em 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.30em;
+}
+.ctn_notice .agree_chk .item input[type="radio"]{
+    display: none;
+}
+.ctn_notice .agree_chk .item label {
+    position: relative; /*before 정렬의 기준*/
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+    padding-left: 1.76em;
+    cursor: pointer; /* 마우스 포인터 손바닥 */
+}
+.ctn_notice .agree_chk .item label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.30em;
+    height: 1.30em;
+    border: 1px solid var(--tit-font-color);
+    border-radius: 50%;
+}
+/* 라디오가 체크되었을 때 label 디자인 */
+.ctn_notice .agree_chk .item input[type="radio"]:checked + label::before{
+    border-color: var(--point-font-color);
+    background-color: var(--point-font-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.63477 7.80176L0.0722656 4.23926L0.962891 3.34863L3.63477 6.02051L9.36914 0.286133L10.2598 1.17676L3.63477 7.80176Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ctn_notice .regist{
+    border-top: 2px solid var(--tit-font-color);
+}
+.ctn_notice .regist .item{
+    border-bottom: 1px solid #8B8B8B;
+    display: flex;
+    gap: 1.41em;
+}
+.ctn_notice .regist .item label{
+    max-width: 10.55em;
+    width: 25%;
+    font-size: 1.05rem; /*18*/
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    text-align: center;
+    background-color: #FAFAFA;
+    padding: 1.38em 0 0 0;
+}
+.ctn_notice .regist .item select, 
+.ctn_notice .regist .item input,
+.ctn_notice .regist .item textarea{
+    margin: 0.76em 0; 
+    border: 1px solid #ccc;
+    min-height: 2.59em;
+    padding: 0.5em 1em;
+}
+.ctn_notice .regist .item .w100{
+    min-width: calc(100% - 20em); /*1260에서 박스 넓이 빼고 나머지 여백 다 빼주기*/
+    width: calc(75% - 4.5em);
+}
+.ctn_notice .regist .item .w40{
+    max-width: 22.64em;
+    width: calc(75% - 4.5em);
+} 
+.ctn_notice .regist .item textarea{
+    resize: none;
+}
+.ctn_notice .regist .item input::placeholder{
+    color: #8B8B8B;
+}
+.ctn_notice .btn_wrap{
+    margin: 2.52em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.ctn_notice .btn_wrap .cancel,
+.ctn_notice .btn_wrap .ok{
+    width: 8.30em;
+    height: 2.58em;
+    text-align: center;
+    line-height: 2.58em; /*가운데*/
+    color: #fff;
+    font-weight: var(--bold-weight);
+}
+.ctn_notice .btn_wrap .cancel{
+    background-color: #8B8B8B;
+}
+.ctn_notice .btn_wrap .ok{
+    background-color: var(--point-font-color);
+}
+
+@media screen and (max-width:768px) {
+            .ctn_notice{
+                margin: 0 0 6.18em 0;
+            }
+            .ctn_notice h2{
+                font-size: 1.56rem; /*25px*/
+                margin-bottom: 0.72em; /*25px / */
+            }
+            .ctn_notice .agree_box{
+                padding: 1.125em 1.125em 1.18em 1.625em;
+                height: 15.81em;
+            }
+            .ctn_notice .agree_chk{
+                margin: 0.75em 0 3.5em 0;
+                gap: 1.43em;
+            }
+            .ctn_notice .regist .item{
+                border-bottom: 0;
+                display: block;
+            }
+            .ctn_notice .regist .item label{
+                max-width: none;
+                width: auto;
+                display: block;
+                font-size: 1.06rem; /*17*/
+                text-align: left;
+                background-color: transparent;
+                padding: 1em 0 0.41em 0;
+            }
+            .ctn_notice .regist .item select, 
+            .ctn_notice .regist .item input,
+            .ctn_notice .regist .item textarea{
+                margin: 0; 
+                min-height: 2.25em;
+                padding: 0.375em 1em;
+            }
+            .ctn_notice .regist .item .w100{
+                min-width: 100%;
+                width: 100%;
+            }
+            .ctn_notice .regist .item .w40{
+                max-width: 100%;
+                width: 100%;
+            } 
+            .ctn_notice .btn_wrap{
+                margin: 2.125em 0 0 0;
+            }
+            .ctn_notice .btn_wrap .cancel,
+            .ctn_notice .btn_wrap .ok{
+                width: 6em;
+                height: 2.25em;
+                line-height: 2.25em; /*가운데*/
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
