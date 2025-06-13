@@ -171,6 +171,7 @@
 .ctn_map .map_maintit .sns_map{
     display: flex;
     gap: 0.70em; /*12*/
+    white-space: nowrap;
 }
 .ctn_map .map_maintit .sns_map .kakao{
     padding: 0.76em 1em 0.70em 3.47em;
@@ -218,8 +219,7 @@
 .ctn_map .map_tel{
     padding: 2.70em 0 4.58em 0;
     display: flex;
-    justify-content: flex-start;
-    gap: 7.82em;
+    justify-content: space-between;
 } 
 .ctn_map .map_tel h2{
     font-size: 2.05rem; /*35px*/
@@ -227,35 +227,37 @@
     line-height: var(--tit-line-height);
     color: var(--tit-font-color);
 }
-.ctn_map .map_tel .map_contact_txt .conact_txt{
-    display: flex;
-    width: 710px;
-    justify-content: flex-start;
-    gap: 5.76em;
+.ctn_map .map_tel ul.map_contact_txt{
+    width: calc(100% - 14.89em);
 }
-.ctn_map .map_tel .map_contact_txt .conact_txt h3{
+.ctn_map .map_tel ul.map_contact_txt li.conact_txt{
+    display: flex;
+    justify-content: space-between;
+}
+.ctn_map .map_tel ul.map_contact_txt li.conact_txt h3{
     font-size: 1.47rem; /*25px*/
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
     color: var(--tit-font-color);
     margin: 0 0 1.04em 0;
 }
-.ctn_map .map_tel .map_contact_txt .conact_txt p{
+.ctn_map .map_tel ul.map_contact_txt li.conact_txt p{
     color: var(--tit-font-color);
     margin: 0 0 1.04em 0;
+    width: calc(100% - 11.18em);
 
 }
-.ctn_map .map_tel .map_contact_txt .conact_etc p{
+.ctn_map .map_tel ul.map_contact_txt li.conact_etc p{
     color: #767676;
     margin-bottom: 0.52em;
 }
-.ctn_map .map_tel .map_contact_txt .conact_etc p.more a span{
+.ctn_map .map_tel ul.map_contact_txt li.conact_etc p.more a span{
     border: 1px solid #767676;
     padding: 4px 43px 4px 17px;
     border-radius: 1.77em;
     position: relative;
 }
-.ctn_map .map_tel .map_contact_txt .conact_etc p.more a span::after{
+.ctn_map .map_tel ul.map_contact_txt li.conact_etc p.more a span::after{
     content: "";
     position: absolute;
     width: 1.05em;
@@ -270,8 +272,7 @@
 .ctn_map .map_pub{
     padding: 2.70em 0 11.70em 0;
     display: flex;
-    justify-content: flex-start;
-    gap: 7.82em;
+    justify-content: space-between;
     border-top: 1px solid #5D5D5D;
 }
 .ctn_map .map_pub h2{
@@ -280,82 +281,86 @@
     line-height: var(--tit-line-height);
     color: var(--tit-font-color);
 }
-.ctn_map .map_pub .map_pub_txt .pub_txt{
-    display: flex;
-    justify-content: flex-start;
-    gap: 5.76em;
+.ctn_map .map_pub ul.map_pub_txt{
+    width: calc(100% - 14.89em);
 }
-.ctn_map .map_pub .map_pub_txt .pub_txt h3{
+.ctn_map .map_pub ul.map_pub_txt li.pub_txt{
+    display: flex;
+    justify-content: space-between;
+}
+.ctn_map .map_pub ul.map_pub_txt li.pub_txt h3{
     font-size: 1.47rem; /*25px*/
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
     color: var(--tit-font-color);
     margin: 0 0 1.04em 0;
 }
-.ctn_map .map_pub .map_pub_txt .pub_txt p{
+.ctn_map .map_pub ul.map_pub_txt li.pub_txt p{
     color: var(--tit-font-color);
     margin: 0 0 1.04em 0;
+    width: calc(100% - 11.18em);
 }
 
 @media screen and (max-width:768px) {
             .ctn_map .map_maintit{
-                padding: 3.46em 0 3.11em 0;
+                padding: 3.46em 0 2.11em 0;
                 display: block;
-                border-bottom: 1px solid #5D5D5D;
-                
+                border-bottom: 1px solid #5D5D5D;  
             }
             .ctn_map .map_maintit h2{
-                margin: 0.7em 0;
+                margin: 0 0 1.1em 0;
                 font-size: 1.47rem; /*25px*/
             }
             
             .ctn_map .map_tel{
-                padding: 2.50em 0 4.58em 0;
+                padding: 1.50em 0 2.58em 0;
                 display: block;
             } 
             .ctn_map .map_tel h2{
                 font-size: 1.47rem; /*25px*/
                 margin: 0 0 1em 0;
-
             }
-            .ctn_map .map_tel .map_contact_txt .conact_txt{
-                gap: 2.5em
+            .ctn_map .map_tel ul.map_contact_txt{
+                width: auto;
             }
-            .ctn_map .map_tel .map_contact_txt .conact_txt h3{
+            .ctn_map .map_tel ul.map_contact_txt li.conact_txt{
+                display: block;
+            }
+            .ctn_map .map_tel ul.map_contact_txt li.conact_txt h3{
                 font-size: 1.27rem; 
-                margin: 0 0 1.04em 0;
+                margin: 0 0 0.5em 0;
             }
-            .ctn_map .map_tel .map_contact_txt .conact_txt p{
-                color: var(--tit-font-color);
-                margin: 0 0 1.04em 0;
+            .ctn_map .map_tel ul.map_contact_txt li.conact_txt p{
+                width: auto;
             }
-            .ctn_map .map_tel .map_contact_txt .conact_etc p{
-                color: #767676;
-                margin-bottom: 0.52em;
+            .ctn_map .map_tel ul.map_contact_txt li.conact_etc p{
+                margin-bottom: 0.72em;
             }
             
             .ctn_map .map_pub{
-                padding: 2.50em 0 4.58em 0;
+                padding: 1.50em 0 4.58em 0;
                 display: block;
-                gap: 7.82em;
-                border-top: 1px solid #5D5D5D;
             }
             .ctn_map .map_pub h2{
-                font-size: 1.47rem; /*25px*/
-                margin: 0 0 1em 0;
+                margin: 0 0 1.1em 0;
+                font-size: 1.47rem; /*25px*/;
             }
-            .ctn_map .map_pub .map_pub_txt .pub_txt{
-                gap: 2.5em
+            .ctn_map .map_pub ul.map_pub_txt{
+                width: auto;
             }
-            .ctn_map .map_pub .map_pub_txt .pub_txt h3{
+            .ctn_map .map_pub ul.map_pub_txt li.pub_txt{
+                display: block;
+            }
+            .ctn_map .map_pub ul.map_pub_txt li.pub_txt h3{
                 font-size: 1.27rem; 
-                margin: 0 0 1.04em 0;
+                margin: 0 0 0.5em 0;
             }
-            .ctn_map .map_pub .map_pub_txt .pub_txt p{
-                color: var(--tit-font-color);
-                margin: 0 0 1.04em 0;
+            .ctn_map .map_pub ul.map_pub_txt li.pub_txt p{
+                width: auto;
             }
-    
+            .ctn_map .map_pub ul.map_pub_txt li.pub_txt:last-child p{
+                margin-bottom: 0;
+            }
 }
 
 
