@@ -94,7 +94,8 @@ html, body{
     --sub-tit-size: 1.35rem; /* 23px % 17 */
     --tit-line-height: 1.2; 
     --display-size :60px;
-    --tree-size :65px
+    --tree-size :65px;
+    --work-size :20px;
     
 }
 @media screen and (max-width:1024px) {
@@ -104,7 +105,8 @@ html, body{
         --tit-size: 2.35rem; /* 40px % 17 */
         --sub-tit-size: 1.23rem; /* 21px % 17 */
         --display-size : 50px;
-        --tree-size :55px
+        --tree-size :55px;
+        --work-size :19px;
     }
 }
 @media screen and (max-width:768px) {
@@ -112,7 +114,8 @@ html, body{
         --tit-size: 1.56rem; /* 25px % 16 */
         --sub-tit-size: 1.125rem; /* 18px % 16 */
         --display-size : 30px;
-        --tree-size :35px
+        --tree-size :35px;
+        --work-size :17px;
     }
 }
 
