@@ -14,6 +14,9 @@
 
     <!--jquery 라이브러리-->
     <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!--counter 라이브러리-->
+    <script src="js/count.js"></script>
     
     <link rel="stylesheet" href="css/main.css">
     <script src="js/common.js"></script>
@@ -100,10 +103,25 @@
                 </ul>
                 <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
             </div><!--//swiper-->
-        </section>
+        </section><!--visual-->
         <section class="section tree fp-auto-height-responsive"> 
-            tree
-        </section>
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>
+                        <strong class="counter" data-start="999999" data-end="102302">102,302</strong>
+                    </h2>
+                    <p>2024년 한 해 동안 나무의 숲에서 심은<br>나무의 수는 총 102,302그루입니다.</p>
+                </div>
+                <div class="tree_ani">
+                    <img src="images/main/tree.png" alt="나무" class="img_tree">
+                    <img src="images/main/tree_sun.png" alt="태양" class="img_sun">
+                    <img src="images/main/tree_been.png" alt="큰 씨앗봉투" class="img_been1">
+                    <img src="images/main/tree_been2.png" alt="작은 씨앗" class="img_been2">
+                    <img src="images/main/tree_leaf.png" alt="큰 잎" class="img_leaf1">
+                    <img src="images/main/tree_leaf2.png" alt="작은 잎" class="img_leaf2">
+                </div>
+            </div>
+        </section><!--tree-->
         <section class="section work fp-auto-height-responsive"> 
             work
         </section>

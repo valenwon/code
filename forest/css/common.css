@@ -21,14 +21,20 @@ html, body{
     overflow-x: hidden; /*가로 스크롤바만 삭제*/
     width: 100%;
 }
-@media screen and (max-width:1300px) { /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
+@media screen and (max-width:1580px){
+        .wrapper{
+            width: auto;
+            margin: 0 100px 0 155px; /*가운데*/
+        }
+}
+@media screen and (max-width:1024px){ /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
                 .wrapper{
                     width: auto;
                     margin: 0 20px; /*여백이 브라우저 사이즈에 따라 점점 좁아짐 - 요즘 추세임 -*/
-                     /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기*/
+                    /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기*/
                 }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:768px){
                 /*브라우저 넓이가 768px이하에서만 작용*/
                 html, body{
                     font-size: 16px;
@@ -88,6 +94,7 @@ html, body{
     --sub-tit-size: 1.35rem; /* 23px % 17 */
     --tit-line-height: 1.2; 
     --display-size :60px;
+    --tree-size :65px
     
 }
 @media screen and (max-width:1024px) {
@@ -97,6 +104,7 @@ html, body{
         --tit-size: 2.35rem; /* 40px % 17 */
         --sub-tit-size: 1.23rem; /* 21px % 17 */
         --display-size : 50px;
+        --tree-size :55px
     }
 }
 @media screen and (max-width:768px) {
@@ -104,6 +112,7 @@ html, body{
         --tit-size: 1.56rem; /* 25px % 16 */
         --sub-tit-size: 1.125rem; /* 18px % 16 */
         --display-size : 30px;
+        --tree-size :35px
     }
 }
 
