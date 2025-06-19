@@ -91,7 +91,7 @@ html, body{
     --bold-weight: 700;
     --Extra-bold-weight: 800;
     --tit-size: 2.65rem; /* 45px % 17 */
-    --sub-tit-size: 1.35rem; /* 23px % 17 */
+    --sub-tit-size: 23px; /* 23px % 17 */
     --tit-line-height: 1.2; 
     --display-size :60px;
     --tree-size :65px;
@@ -103,7 +103,7 @@ html, body{
         --header-h: 56px; /* header 높이 */
         --header-h-m: -56px;
         --tit-size: 2.35rem; /* 40px % 17 */
-        --sub-tit-size: 1.23rem; /* 21px % 17 */
+        --sub-tit-size: 21px; /* 21px % 17 */
         --display-size : 50px;
         --tree-size :55px;
         --work-size :19px;
@@ -112,7 +112,7 @@ html, body{
 @media screen and (max-width:768px) {
     :root{
         --tit-size: 1.56rem; /* 25px % 16 */
-        --sub-tit-size: 1.125rem; /* 18px % 16 */
+        --sub-tit-size: 18px; /* 18px % 16 */
         --display-size : 30px;
         --tree-size :35px;
         --work-size :17px;
