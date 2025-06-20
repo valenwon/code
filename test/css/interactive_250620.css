@@ -1,0 +1,187 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+.visual {
+    height: 800px;
+    background: url(../images/inter_image01.jpg) no-repeat center center / cover ;
+}
+.slogan {
+    margin: 133px 0;
+}
+.slogan .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.slogan p {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ccc;
+    line-height: 1.5;
+    position: relative; /*span태그 정렬의 기준*/
+    display: inline-block;
+    white-space: nowrap;
+}
+.slogan p span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #E8007F;
+    width: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px){
+        .slogan p {
+            font-size: 25px;
+        }
+}
+
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.banner .photo{
+    overflow: hidden;
+    height: 401px;
+    width: 50%;
+    transition: 0.2s; /*부드럽게 펼치기*/
+}
+.banner .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.life{
+    padding: 220px 0 227px 0;
+    transition: 0.5s;
+}
+.life h2{
+    font-size: 45px;
+    font-weight: 700;
+    color: #010101;
+    line-height: 1.2;
+    margin: 0 0 25px 0;
+    transition: 0.5s;
+}
+
+.life.dark{
+    background-color: #010101;
+    color: #fff;
+}
+.life.dark h2{
+    color: #fff;
+}
+
+.medi {
+    margin: 50px 20px 50px 20px;
+}
+.medi .bg{
+    height: 684px;
+    background: url(../images/inter_image03.jpg) no-repeat center center / cover;
+    clip-path: path('M458 2L92.5 458.5L1 1126.5H1986.5V458.5L1746 2L1482 458.5L1304 2L1049 458.5L847 2L554 458.5L458 2Z');
+}
+.medi .photo{
+    overflow: hidden;
+    height: 684px;
+    border-radius: 30px;
+    position: relative; /*h2정렬의 기준*/
+}
+.medi .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.medi .photo h2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    color: #E8007F;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 47px 54px 46px 43px;
+    border-radius: 0 30px 0 0;
+}
+.medi .photo h2::after{
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../images/inter_corner.png) no-repeat left bottom / contain;
+}
+.medi .photo h2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/inter_corner.png) no-repeat left bottom / contain;
+}
+
+
+@media screen and (max-width:768px){
+            .medi .photo{
+                height: 500px;
+                border-radius: 20px;
+            }
+            .medi .photo h2{
+                font-size: 25px;
+                padding: 27px 27px 23px 21px;
+                border-radius: 0 20px 0 0;
+            }
+            .medi .photo h2::after{
+                right: -20px;
+                width: 20px;
+                height: 20px;
+            }
+            .medi .photo h2::before{
+                top: -20px;
+                width: 20px;
+                height: 20px;
+            }
+}
+
+.icon {
+    margin: 50px 0 500px 0;
+    text-align: center;
+}
+.icon button{
+    width: 110px;
+    height: 110px;
+    background-color: #010101;
+    mask-image: url("data:image/svg+xml,%3Csvg width='101' height='101' viewBox='0 0 101 101' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_7_21' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='101' height='101'%3E%3Crect width='100.571' height='100.571' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_7_21)'%3E%3Cpath d='M31.9523 26.8189L43.6856 11.6285C44.5237 10.511 45.5189 9.69038 46.6713 9.16657C47.8237 8.64276 49.0284 8.38086 50.2856 8.38086C51.5427 8.38086 52.7475 8.64276 53.8999 9.16657C55.0522 9.69038 56.0475 10.511 56.8856 11.6285L68.6189 26.8189L86.4284 32.7903C88.2442 33.3491 89.676 34.3792 90.7236 35.8808C91.7712 37.3824 92.295 39.0411 92.295 40.857C92.295 41.6951 92.1728 42.5332 91.9284 43.3713C91.6839 44.2093 91.2823 45.0125 90.7236 45.7808L79.1998 62.1236L79.6189 79.3045C79.6887 81.7489 78.8855 83.8093 77.2093 85.4854C75.5332 87.1616 73.5776 87.9997 71.3427 87.9997C71.203 87.9997 70.4348 87.895 69.0379 87.6854L50.2856 82.4474L31.5333 87.6854C31.184 87.8251 30.7999 87.9124 30.3809 87.9473C29.9618 87.9823 29.5777 87.9997 29.2285 87.9997C26.9936 87.9997 25.038 87.1616 23.3618 85.4854C21.6857 83.8093 20.8825 81.7489 20.9523 79.3045L21.3714 62.0188L9.95235 45.7808C9.39362 45.0125 8.99203 44.2093 8.74759 43.3713C8.50314 42.5332 8.38092 41.6951 8.38092 40.857C8.38092 39.1109 8.88727 37.4871 9.89996 35.9856C10.9127 34.484 12.3269 33.4189 14.1428 32.7903L31.9523 26.8189ZM37.0856 34.0475L16.7619 40.7522L29.7523 59.5045L29.3333 79.514L50.2856 73.7521L71.2379 79.6188L70.8189 59.5045L83.8093 40.9617L63.4856 34.0475L50.2856 16.7618L37.0856 34.0475Z' fill='%23010101'/%3E%3C/g%3E%3C/svg%3E%0A");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+.icon button:hover{
+    background-color: #E8007F;
+}
+
+
+.fixed_bg {
+    margin: 100px 0;
+    height: 500px;
+    background: url(../images/inter_image04.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.fixed_bg h2{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 200px 0 0 0;
+}
+
+
+
