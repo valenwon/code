@@ -1,7 +1,7 @@
 /* 모든 페이지에 공통으로 들어가는 기본 스타일*/
 
 html, body{
-    font-family: "SUITE",sans-serif; 
+    font-family: "Cormorant Unicase", "Pretendard",sans-serif;
     /*앞에 쓴 서체를 적용, 지원이 안되면 두 번째 서체 적용*/
     font-size: 17px;
     font-weight: 400;
@@ -21,12 +21,12 @@ html, body{
     overflow-x: hidden; /*가로 스크롤바만 삭제*/
     width: 100%;
 }
-@media screen and (max-width:1580px){
+/*@media screen and (max-width:1580px){
         .wrapper{
             width: auto;
-            margin: 0 100px 0 155px; /*가운데*/
+            margin: 0 100px 0 155px; 가운데
         }
-}
+}*/
 @media screen and (max-width:1024px){ /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
                 .wrapper{
                     width: auto;
@@ -87,15 +87,15 @@ html, body{
     --header-h-m: -80px; /* header 높이 마이너스 값 */
     --tit-font-color: #1d1d1d;
     --base-font-color: #3d3d3d;
-    --point-font-color: #099808;
+    --main-font-color: #7850D2;
+    --bg-black-color : #101010;
     --bold-weight: 700;
     --Extra-bold-weight: 800;
     --tit-size: 2.65rem; /* 45px % 17 */
-    --sub-tit-size: 23px; /* 23px % 17 */
+    --sub-tit-size: 1.35rem; /* 23px % 17 */
+    --header-font-size: 1.18rem; /* 20px % 17 */
     --tit-line-height: 1.2; 
-    --display-size :60px;
-    --tree-size :65px;
-    --work-size :20px;
+    --display-size : 4.11rem; /*70 / 17*/
     
 }
 @media screen and (max-width:1024px) {
@@ -103,19 +103,17 @@ html, body{
         --header-h: 56px; /* header 높이 */
         --header-h-m: -56px;
         --tit-size: 2.35rem; /* 40px % 17 */
-        --sub-tit-size: 21px; /* 21px % 17 */
-        --display-size : 50px;
-        --tree-size :55px;
-        --work-size :19px;
+        --sub-tit-size: 1.23rem; /* 21px % 17 */
+        --header-font-size: 1.12rem; /* 19px % 17 */
+        --display-size : 2.94rem; /* 50px % 17 */
     }
 }
 @media screen and (max-width:768px) {
     :root{
         --tit-size: 1.56rem; /* 25px % 16 */
-        --sub-tit-size: 18px; /* 18px % 16 */
-        --display-size : 30px;
-        --tree-size :35px;
-        --work-size :17px;
+        --sub-tit-size: 1.19rem; /* 19px % 16 */
+        --header-font-size: 1.125rem; /* 18px % 16 */
+        --display-size : 32.19rem; /* 35px % 16 */
     }
 }
 

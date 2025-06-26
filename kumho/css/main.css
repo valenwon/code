@@ -19,7 +19,7 @@
     object-fit: cover;
     transition: 1.5s;
 }
-.visual .swiper-slide.swiper-slide-active .photo img{
+.visual .swiper-slide.swiper-slide-active .photo img{ 
     transform: scale3d(1.1, 1.1, 1);
 }
 .visual .swiper-slide .txt_wrap{
