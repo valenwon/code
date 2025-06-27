@@ -25,8 +25,16 @@
         <header>
             <h1 class="logo"><a href="index.html"><span class="blind">두산아트센터</span></a></h1>
             <nav class="gnb">
-                <button class="gnb_open"><span>메뉴열기</span></button>
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
                 <div class="gnb_wrap">
+                    <div class="gnb_util"><!--모바일메뉴열기-->
+                        <div class="search">
+                            <button class="search_open"><span class="blind">검색</span></button>
+                        </div>
+                        <div class="lang">
+                            <button class="lang_open"><span class="blind">언어</span></button>
+                        </div>
+                    </div><!--//gnb_util-->
                     <ul class="depth1">
                         <li>
                             <a href="#"><span>소개</span></a>
@@ -77,8 +85,9 @@
                             </ul>
                         </li>
                     </ul>
+                    <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
                 </div><!--//gnb_wrap-->
-                <button class="gnb_close"><span>메뉴닫기</span></button>
+                <div class="gnb_bg"></div>
             </nav><!--//nav-->
             <div class="util">
                 <div class="search">
@@ -101,8 +110,9 @@
                                     <div class="txt pc delay1"><p>DOOSAN ART CENTER</p></div>
                                     <div class="txt pc delay2"><p>DOOSAN GALLERY</p></div>
 
-                                    <div class="txt mobile delay1"><p>DOOSAN ART CENTER</p></div>
-                                    <div class="txt mobile delay2"><p>DOOSAN GALLERY</p></div>
+                                    <div class="txt mobile delay1"><p>DOOSAN</p></div>
+                                    <div class="txt mobile delay2"><p>ART CENTER</p></div>
+                                    <div class="txt mobile delay3"><p>DOOSAN GALLERY</p></div>
                                 </div>
                             </div>
                         </li> 
@@ -113,8 +123,9 @@
                                     <div class="txt pc delay1"><p>KOREAN CONTEMPORARY</p></div>
                                     <div class="txt pc delay2"><p>VISUAL ARTS</p></div>
 
-                                    <div class="txt mobile delay1"><p>KOREAN CONTEMPORARY</p></div>
-                                    <div class="txt mobile delay2"><p>VISUAL ARTS</p></div>
+                                    <div class="txt mobile delay1"><p>KOREAN</p></div>
+                                    <div class="txt mobile delay2"><p>CONTEMPORARY</p></div>
+                                    <div class="txt mobile delay3"><p>VISUAL ARTS</p></div>
                                 </div>
                             </div>
                         </li> 
@@ -125,8 +136,9 @@
                                     <div class="txt pc delay1"><p>SUPPORT FOR ARTISTS</p></div>
                                     <div class="txt pc delay2"><p>AND CURATORS</p></div>
 
-                                    <div class="txt mobile delay1"><p>SUPPORT FOR ARTISTS</p></div>
-                                    <div class="txt mobile delay2"><p>AND CURATORS</p></div>
+                                    <div class="txt mobile delay1"><p>SUPPORT</p></div>
+                                    <div class="txt mobile delay2"><p>FOR ARTISTS</p></div>
+                                    <div class="txt mobile delay3"><p>AND CURATORS</p></div>
                                 </div>
                             </div>
                         </li> 
@@ -140,6 +152,89 @@
                 </div>
                 <div class="scroll_down"><a href="#">scroll down</a></div>
             </section><!--visual-->
+            <section class="info">
+                <div class="wrapper">
+                    <ul class="guide">
+                        <li>
+                            <h3 class="clock">관람시간</h3>
+                            <p>화 - 토 11 a.m - 7p.m</p>
+                        </li>
+                        <li>
+                            <h3 class="price">관람료</h3>
+                            <p>무료</p>
+                        </li>
+                        <li>
+                            <h3 class="day">휴관일</h3>
+                            <p>월요일, 일요일 휴관</p>
+                        </li>
+                    </ul>
+                    <div class="btn_announ"><a href="#">관람안내</a></div>
+                </div>
+            </section><!--info-->
+            <section class="exhibit">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>EXHIBITION</h2>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/exhibit01.jpg" alt="두산갤러리Ringing Saga전시포스터"></div>
+                                    <div class="subject">
+                                        <h4>Ringing Saga</h4>
+                                        <div class="detail">
+                                            <p>두산갤러리</p>
+                                            <span class="date">2025. 6. 4. — 7 . 12.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="more"><a href="#">MORE</a></div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/exhibit02.jpg" alt="두산갤러리August is the cruelest전시포스터"></div>
+                                    <div class="subject">
+                                        <h4>August is the cruelest</h4>
+                                        <div class="detail">
+                                            <p>두산갤러리</p>
+                                            <span class="date">2025. 4. 2. — 5. 10.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="more"><a href="#">MORE</a></div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/exhibit03.jpg" alt="두산갤러리두산아트랩 전시 2025전시포스터"></div>
+                                    <div class="subject">
+                                        <h4>두산아트랩 전시 2025</h4>
+                                        <div class="detail">
+                                            <p>두산갤러리</p>
+                                            <span class="date">2025. 1 .22. — 3. 8.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="more"><a href="#">MORE</a></div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/exhibit04.jpg" alt="두산갤러리Ringing Saga전시포스터"></div>
+                                    <div class="subject">
+                                        <h4>한나 허: 8</h4>
+                                        <div class="detail">
+                                            <p>두산갤러리</p>
+                                            <span class="date">2024. 11 .13. — 12. 21.</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="more"><a href="#">MORE</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="read_more"><a href="#"><span class="blind">더보기</span></a></div>
+                </div>
+            </section><!--exhibit-->
         </main>
         <footer></footer>
     </div>
