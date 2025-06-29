@@ -21,12 +21,7 @@ html, body{
     overflow-x: hidden; /*가로 스크롤바만 삭제*/
     width: 100%;
 }
-/*@media screen and (max-width:1580px){
-        .wrapper{
-            width: auto;
-            margin: 0 100px 0 155px; 가운데
-        }
-}*/
+
 @media screen and (max-width:1300px){ /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
                 .wrapper{
                     width: auto;
