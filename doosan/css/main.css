@@ -545,7 +545,7 @@
     .exhibit .list ul li a .subject .date::after {
         display: none;
     }
-    .exhibit .list ul li .more a {
+    .exhibit .list ul li a .more{
         display: none;
     }
     .exhibit .read_more a{
@@ -814,7 +814,8 @@
     background-color: var(--main-font-color);
     padding: 0.086em 0.22em; /*23으로 나누기*/
 }
-.workshop .more{
+.workshop .more a{
+    display: inline-block;
     font-weight: var(--more-weight);
     color: var(--tit-font-color);
     position: absolute;
@@ -822,7 +823,7 @@
     right: 0;
     padding: 0 1.18em 0 0;
 }
-.workshop .more::after{
+.workshop .more a::after{
     content: "";
     position: absolute;
     width: 0.77em;
@@ -849,6 +850,24 @@
     object-fit: cover;
 }
 
+/*마우스 오버 효과*/
+.workshop .more a::before{
+    /*밑줄효과*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.17em;
+    /* -3 / 17 */
+    width: 0;
+    height: 1px;
+    background-color: var(--tit-font-color);
+    transition: 1s;
+}
+.workshop .more a:hover::before{
+    width: 100%;
+}
+
+
 @media screen and (max-width: 1024px) {
     .workshop{
         margin: 5.11em 0 0 0;
@@ -868,7 +887,7 @@
 @media screen and (max-width: 768px) {
     .workshop{
         margin: 4.19em 0 0 0; 
-        border-bottom: 1px solid #1d1d1d;
+        /* border-bottom: 1px solid #1d1d1d; */
     }
     .workshop .wrapper{
         position: relative; /*more정렬 기준*/
@@ -885,7 +904,7 @@
     .workshop .tit p .color{
         padding: 0.08em 0.2em; 
     }
-    .workshop .more{
+    .workshop .more a{
         position: relative;
         display: inline-block;
         margin: 0.937em 0 2.625em 0;
@@ -905,7 +924,7 @@
     margin: 7.11em 0  0;
     background-color: #f7f7f7; 
     border-top: 1px solid var(--tit-font-color);
-    width: 100%;
+    /* width: 100%;*/
 }
 .inter .inter_wrap{
     width: calc(50% + 37.05em);
@@ -916,12 +935,7 @@
 }
 
 .inter .inter_wrap .tit{
-    /* width: 25%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column; */
-    padding: 74px 0 0 0 ;
+    padding: 4.35em 0 0 0 ;
 }
 
 .inter .inter_wrap .tit h2 {
@@ -932,6 +946,9 @@
     margin: 0 0 3.2em 0; /*45로 나누기*/
 }
 .inter .inter_wrap .tit .more a{
+    line-height: var(--tit-line-height);
+    white-space: nowrap;
+    display: inline-block;
     padding: 0.82em 3.35em 0.88em 2.11em;
     background-color: var(--tit-font-color);
     border-radius: 1.76em;
@@ -943,8 +960,8 @@
     position: absolute;
     width: 1.76em;
     height: 1.76em;
-    top: 0.70em;
-    right: 1.53em;
+    top: 0.51em;
+    right: 1.33em;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_50_4020' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_50_4020)'%3E%3Cpath d='M11.25 12.75H5.5V11.25H11.25V5.5H12.75V11.25H18.5V12.75H12.75V18.5H11.25V12.75Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
@@ -959,10 +976,10 @@
 }
 
 .inter .inter_wrap .list .swiper-wrapper{
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 .inter .inter_wrap .list .swiper-slide{
     width: 17.29em;
 }
@@ -974,12 +991,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
 }
 .inter .inter_wrap .list .swiper-slide a h3{
     margin: 1.15em 0 1.1em 0; /*20으로 나누기*/
     font-size: var(--header-font-size);
     font-weight: var(--bold-weight);
     color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
 
     max-width: 100%;
     white-space: nowrap;
@@ -995,6 +1014,10 @@
     position: relative;
     padding-left: 0.59em;
     margin-left: 0.59em;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .inter .inter_wrap .list .swiper-slide a .artist_wrap .date::after{
     content: "";
@@ -1017,24 +1040,145 @@
 }
 .inter .scroll_wrap .swiper-scrollbar .swiper-scrollbar-drag:hover{
     background-color: var(--main-font-color);
+} 
+
+/*마우스 오버 효과*/
+.inter .inter_wrap .list .swiper-slide a:hover h3{
+    color: var(--main-font-color);
+}
+.inter .inter_wrap .list .swiper-slide a:hover .photo img{
+    transform: scale3d(1.1, 1.1, 1);
+}
+.inter .inter_wrap .tit .more a:hover{
+    background-color: var(--main-font-color);
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width:1025px) and (max-width:1300px){ 
+    .inter .inter_wrap{
+        left: 0;
+    }
     .inter .inter_wrap .tit{
         margin-left: 20px;
     }
+} /*@media inter 1024 이상 1300 이하*/
 
-}
+@media screen and (max-width: 1024px) {
+    .inter{
+        margin: 5.11em 0  0;
+    }
+    .inter .inter_wrap{
+        left: 0;
+    }
+    .inter .inter_wrap .tit{
+        padding: 4em 0 0 0 ;
+        margin-left: 20px;
+    }
+    .inter .inter_wrap .tit h2 {
+        margin: 0 0 4.2em 0;
+    }
+    .inter .inter_wrap .tit .more a{
+        padding: 0.62em 3em 0.68em 2em;
+    }
+    .inter .inter_wrap .tit .more a::after{
+        top: 0.33em;
+        right: 1.03em;
+    }
+    .inter .inter_wrap .list{
+        padding: 3.8em 0 4.5em 2.64em;
+    }
+    .inter .inter_wrap .list .swiper-slide a h3{
+        margin: 0.7em 0 1em 0; /*20으로 나누기*/
+    }
+    .inter .inter_wrap .list .swiper-slide a .artist_wrap{
+        margin: 0 0 2.25em 0;
+    }
+} /*@media inter 1024 이하*/
 
+@media screen and (max-width: 768px) {
+    .inter{
+        padding: 4.19em 0 132px 0;
+        margin: 0 ;
+        border-top: 1px solid var(--tit-font-color);
+        /* width: 100%;*/
+    }
+    .inter .inter_wrap{
+        width: auto;
+        position: relative; /*???*/
+        left: auto;
+        display: block;
+    }
+    .inter .inter_wrap .tit{
+        padding: 0;
+        text-align: center;
+        margin-left: 0;
 
+        position: relative;
+    }
+    .inter .inter_wrap .tit h2 {
+        margin: 0 0 26px 0; 
+    }
+    .inter .inter_wrap .tit h2 br{
+        display: none;
+    }
+    .inter .inter_wrap .tit .more a{
+        padding: 7px 35px 7px 18px;
 
+        z-index: 10;
+        position: absolute;
+        top: 414px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .inter .inter_wrap .tit .more a::after{
+        width: 18px;
+        height: 18px;
+        top: 10px;
+        right: 12px;
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_52_28' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_52_28)'%3E%3Cpath d='M8.4375 9.5625H4.125V8.4375H8.4375V4.125H9.5625V8.4375H13.875V9.5625H9.5625V13.875H8.4375V9.5625Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+    .inter .inter_wrap .list{
+        width: auto;
+        overflow: hidden;
+        padding: 0;
+        border-left: 0;
 
-
-
-
-
-
+        position: relative; /*스크롤 선 기준*/
+    }
+    .inter .inter_wrap .list .swiper{
+        padding-left: 20px;
+    }
+    .inter .inter_wrap .list .swiper-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .inter .inter_wrap .list .swiper-slide{
+        width: 152px;
+    }
+    .inter .inter_wrap .list .swiper-slide a .photo{
+        height: 166px;
+    }
+    .inter .inter_wrap .list .swiper-slide a h3{
+        margin: 11px 0 3px 0;
+    }
+    .inter .inter_wrap .list .swiper-slide a .artist_wrap{
+        flex-direction: column;
+        margin: 0 0 42px 0;
+    }
+    .inter .inter_wrap .list .swiper-slide a .artist_wrap .date{
+        position: relative;
+        padding-left: 0;
+        margin-left: 0;
+        margin: 3px 0 0 0;
+    }
+    .inter .inter_wrap .list .swiper-slide a .artist_wrap .date::after{
+        position: relative;
+    }
+    .inter .scroll_wrap .swiper-scrollbar{
+        margin: 0 0 0 15px;
+        width: calc(100% - 40px);
+    }
+} /*@media inter 768 모바일*/
 
 
 footer{
