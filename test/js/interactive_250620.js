@@ -29,7 +29,7 @@ $(document).ready(function(){
         photo_start = photo_top - (win_h * 0.7)
         photo_end = photo_top + photo.height() - (win_h * 0.7)
         photo_scroll = (scrolling - photo_start)/ (photo_end - photo_start) * 100
-        //console.log( 'scroll', photo_scroll)
+        console.log( 'scroll', photo_scroll)
 
         if(photo_start > scrolling ){
             //console.log('시작전')

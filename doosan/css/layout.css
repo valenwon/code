@@ -12,6 +12,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 1.17em; /*20 / 17*/
+
+    transition: top 0.5s;
 }
 header .logo a{
     display: block;
@@ -32,7 +34,7 @@ header.fixed.gnb_up.menu_over{
 header.fixed{
     background-color: #fff;
     color: var(--tit-font-color);
-    border-bottom-color: var(--base-font-color);
+    box-shadow: 0 0.12em 0.18em 0 rgba(0, 0, 0, 0.05);
 }
 header.fixed .logo a{
     background: url(../images/common/logo.png) no-repeat center center / contain;
