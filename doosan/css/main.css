@@ -962,6 +962,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.inter .inter_wrap .list .swiper-slide:nth-child(2) a h3,
+.inter .inter_wrap .list .swiper-slide:nth-child(3) a h3{
+    font-family: 'Pretendard';
+}
 .inter .inter_wrap .list .swiper-slide a .artist_wrap{
     font-family: 'Pretendard';
     display: flex;
