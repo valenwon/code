@@ -101,7 +101,7 @@ html, body{
         --tit-size: 2.35rem; /* 40px % 17 */
         --sub-tit-size: 1.23rem; /* 21px % 17 */
         --header-font-size: 1.12rem; /* 19px % 17 */
-        --display-size : 3.52rem; /* 60px % 17 */
+        --display-size : 3.36rem; /* 57px % 17 */
     }
 }
 @media screen and (max-width:768px) {
