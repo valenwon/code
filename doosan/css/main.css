@@ -8,10 +8,6 @@
     position: relative;
     /*ctrl_wraps, croll_down 정렬 기준*/
 }
-/* .visual .swiper{
-    width: 100%;
-    모바일까지 고려한 브라우저 높이 100% 
-}*/
 .visual .swiper-slide .photo {
     overflow: hidden;
     /* height: 100%;  */
@@ -71,7 +67,6 @@
     display: flex;
 }
 .visual .ctrl_wrap button {
-    /*버튼들*/
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-left: 0;
     width: 1.42em;
@@ -145,7 +140,6 @@
     /* visual 모바일 사이즈 */
     .visual .swiper-slide.swiper-slide-active .photo img {
         transform: scale3d(1, 1, 1);
-        /*확대 안일어남*/
     }
     .visual .swiper-slide .txt_wrap {
         bottom: 31.28%;
@@ -168,7 +162,6 @@
         bottom: 26.42%;
     }
     .visual .ctrl_wrap button {
-        /*버튼들*/
         border: 1px solid rgba(255, 255, 255, 0.8);
         border-left: 0;
         width: 1.42em;
@@ -193,7 +186,6 @@
 }
 
 /*@media visual 768px 모바일*/
-
 
 
 .info {
