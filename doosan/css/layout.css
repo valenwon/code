@@ -207,7 +207,7 @@ header.fixed .util .lang .lang_open{
         z-index: 10; /*검은 배경 위에 있어야 돼서 */
     }
     header .gnb .gnb_wrap ul.depth1 {
-        margin-top: var(--header-h); /*헤더 높이만큼 위 여백 넣어주기*/
+        margin-top: var(--header-h);
         padding: 0 20px;
         height: calc(100% - var(--header-h)); /*헤더 높이 빼고 다 */
         overflow-x: hidden;
@@ -330,31 +330,159 @@ header.fixed .util .lang .lang_open{
         100% {opacity: 1;}
     }
 
-} /*@media header 1024 이하 mobile*/
+} /*@media header 1024 이하 */
 
 
+footer{
+    padding: 2.88em 0 4.35em 0;
+    background-color: var(--bg-black-color);
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .wrapper{
+    position: relative; /*top버튼 정렬*/
+}
+footer .top{
+    position: absolute;
+    top: -5.05em;
+    right: 0;
+    padding: 0.88em 0.54em;
+    background-color: var(--main-font-color);
+    line-height: var(--tit-line-height);
+    color: #fff;
+    font-weight: var(--more-weight);
+    box-shadow: 0.12em 0.06em 0.29em 0 rgba(0, 0, 0, 0.25);
+}
+footer .info_wrap{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2.29em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+footer .info_wrap .sns ul{
+    display: flex;
+    gap: 1.41em;
+    align-items: center;
+}
+footer .info_wrap .sns ul li a{
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+footer .info_wrap .sns ul li.instagram a{
+    width: 1.18em;
+    height: 1.18em;
+    background: url(../images/common/sns_instagram.svg);
+}
+footer .info_wrap .sns ul li.email a{
+    width: 1.23em;
+    height: 1em;
+    background: url(../images/common/sns_email.svg);
+}
+
+footer .info_wrap .f_nav ul{
+    display: flex;
+    gap: 0 3.52em;
+}
+footer .info_wrap .f_nav ul li:nth-child(1) a,
+footer .info_wrap .f_nav ul li:nth-child(5) a{
+    font-weight: var(--bold-weight);
+    position: relative; /*밑줄 선 정렬*/
+}
+
+footer .inner{
+    margin: 3.29em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+footer .inner .copyright{
+    color: rgba(255, 255, 255, 0.6);
+    line-height: var(--tit-line-height);
+}
+
+/*마우스 오버 이벤트*/
+footer .info_wrap .f_nav ul li:nth-child(1) a::before,
+footer .info_wrap .f_nav ul li:nth-child(5) a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15em;
+    width: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: 1s;
+}
+footer .info_wrap .f_nav ul li:nth-child(1) a:hover::before,
+footer .info_wrap .f_nav ul li:nth-child(5) a:hover::before{
+    width: 100%;
+}
 
 
+@media screen and (max-width:1024px) {
+    footer{
+        padding: 2.55em 0 3.8em 0;
+    }
+    footer .info_wrap{
+        padding: 0 0 2em 0;
+    }
+    footer .info_wrap .sns ul{
+        gap: 1.31em;
+    }
+    footer .info_wrap .f_nav ul{
+        gap: 0 3.32em;
+    }
+    footer .inner{
+        margin: 3em 0 0 0;
+    } 
+} /*@media footer 1024 이하 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    footer{
+        padding: 2.81em 0 3.125em 0;
+    }
+    footer .top{
+        top: -4.38em;
+    }
+    footer .info_wrap{
+        flex-direction: column;
+        padding: 0 0 2.06em 0;
+    }
+    footer .info_wrap .sns{
+        margin: 0 0 1.56em 0;
+    }
+    footer .info_wrap .sns ul{
+        display: flex;
+        gap: 1.06em;
+        align-items: center;
+    }
+    footer .info_wrap .sns ul li.instagram a{
+        width: 1.25em;
+        height: 1.25em;
+    }
+    footer .info_wrap .sns ul li.email a{
+        width: 1.31em;
+        height: 1.06em;
+    }
+    footer .info_wrap .f_nav ul{
+        gap: 0 2.93em;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    footer .info_wrap .f_nav ul li:nth-child(1),
+    footer .info_wrap .f_nav ul li:nth-child(5){
+        font-weight: var(--bold-weight);
+    }
+    footer .inner{
+        margin: 2.5em 0 0 0;
+        flex-direction: column
+    } 
+    footer .inner .copyright{
+        text-align: center;
+        margin: 2.5em 0 0 0;
+    }
+} /*@media footer 768 모바일 */
 
 
 

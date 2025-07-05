@@ -39,6 +39,13 @@ $(document).ready(function(){
         }
     }
 
+    /* TOP버튼  스크롤*/
+    $('footer .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 500)
+    })
+
 
     /***** header에 마우스를 오버했을 때 */
 
