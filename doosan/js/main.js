@@ -54,7 +54,7 @@ $(document).ready(function(){
         photo_scroll = (scrolling - photo_start) / (photo_end - photo_start) * 100
         //console.log('scroll', photo_scroll)
 
-        if(window_w > 1024){
+        if(window_w > 1025){ /****.. */
             if(photo_start > scrolling) {
                 //console.log('시작전')
                 photo.width(photo_w_start + '%')
@@ -83,7 +83,7 @@ $(document).ready(function(){
     $(window).resize(function(){
         //브라우저가 리사이즈 될 때마다 1번씩 실행
         resize_chk()
-        //photo_resize()
+        photo_resize() /****.. */
     })
 
     function scroll_chk(){
