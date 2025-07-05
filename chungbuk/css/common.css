@@ -78,38 +78,47 @@ html, body{
 
 /* css 변수 */
 :root{
-    --header-h: 80px; /* header 높이 */
-    --header-h-m: -80px; /* header 높이 마이너스 값 */
+    --header-h: 5.59em; /* 95px header 높이 */
+    --header-h-m: -5.59em; /* header 높이 마이너스 값 */
+    --sub-fontfamily: 'Pretendard';
     --tit-font-color: #1d1d1d;
     --base-font-color: #3d3d3d;
-    --main-font-color: #7850D2;
+    --main-font-color: #2F8EE0;
+    --point-color: #033056;
+    --bg-main-color : #F0F2F6;
     --bg-black-color : #101010;
     --more-weight: 500;
     --bold-weight: 700;
     --Extra-bold-weight: 800;
-    --tit-size: 2.65rem; /* 45px % 17 */
-    --sub-tit-size: 1.35rem; /* 23px % 17 */
-    --header-font-size: 1.18rem; /* 20px % 17 */
+    --display-font-size: 2.65rem; /*45 / 17*/
+    --tit-size: 2.65rem; /* 45 / 17 */
+    --sub-tit-size: 1.47rem; /* 25 / 17 */
+    --header-font-size: 1.35rem; /* 23 / 17 */
+    --news-font-size : 1.18rem; /* 20 / 17*/
+    --banner-font-size: 2.06rem; /*35 / 17*/
     --tit-line-height: 1.2; 
-    --display-size : 4.11rem; /*70 / 17*/
     
 }
 @media screen and (max-width:1024px) {
     :root{
-        --header-h: 56px; /* header 높이 */
-        --header-h-m: -56px;
-        --tit-size: 2.35rem; /* 40px % 17 */
-        --sub-tit-size: 1.23rem; /* 21px % 17 */
-        --header-font-size: 1.12rem; /* 19px % 17 */
-        --display-size : 2.94rem; /* 50px % 17 */
+        --header-h: 3.29em; /* 56px header 높이 */
+        --header-h-m: -3.29em;
+        --display-font-size: 2.53rem; /*43 / 17*/
+        --tit-size: 2.53rem; /* 43 / 17 */
+        --sub-tit-size: 1.35rem; /* 23 / 17 */
+        --header-font-size: 1.23rem; /* 21 / 17 */
+        --news-font-size : 1.12rem; /* 19 / 17*/
+        --banner-font-size: 1.88rem; /*32 / 17*/
     }
 }
 @media screen and (max-width:768px) {
     :root{
-        --tit-size: 1.56rem; /* 25px % 16 */
-        --sub-tit-size: 1.19rem; /* 19px % 16 */
-        --header-font-size: 1.125rem; /* 18px % 16 */
-        --display-size : 2.18rem; /* 35px % 16 */
+        --display-font-size: 1.56rem; /*25 / 16*/
+        --tit-size: 1.44rem; /* 23 / 16 */
+        --sub-tit-size: 1.31rem; /* 21 / 16 */
+        --header-font-size: 1.25rem; /* 20 / 16 */
+        --news-font-size : 1rem; /* 16 / 16*/
+        --banner-font-size: 1.75rem; /*28 / 16*/
     }
 }
 
