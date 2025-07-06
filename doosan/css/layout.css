@@ -57,7 +57,7 @@ header.fixed .util .lang .lang_open{
         display: flex;
     }
     header .gnb .gnb_wrap ul.depth1 > li{
-        position: relative; /*2차메뉴의 정렬*/
+        position: relative; /*2차메뉴의 정렬 기준*/
         text-align: center;
     }
     header .gnb .gnb_wrap ul.depth1 > li > a{

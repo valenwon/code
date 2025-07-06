@@ -4,13 +4,9 @@
 @import url(layout.css);
 
 
-header{
-    height: var(--header-h);
-    width: 100%;
-    border: 1px solid red;
+.visual{
+    padding: var(--header-h);
 }
-
-
 
 .visual_wrap{
     display: flex; /*swiper와 visual_side의 정렬*/
