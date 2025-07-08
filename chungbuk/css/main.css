@@ -711,7 +711,7 @@
     border-radius: 50%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../images/main/rolling03.jpg);
+    background-image: url(../images/main/rolling01.jpg);
 }
 .rolling .current {
     padding: 35px 47px 32px 47px;
@@ -744,7 +744,7 @@
     border-radius: 50%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../images/main/rolling04.jpg);
+    background-image: url(../images/main/rolling02.jpg);
 }
 .rolling  .partner{
     display: flex;
@@ -798,7 +798,7 @@
     .rolling .letter .letter_icon{
         width: 64px;
         height: 64px;
-        background-image: url(../images/main/rolling03_s.png);
+        background-image: url(../images/main/rolling01_s.png);
     }
     .rolling .current {
         padding: 20px 38px 19px 37px;
@@ -812,7 +812,7 @@
     .rolling .paper .paper_icon{
         width: 64px;
         height: 64px;
-        background-image: url(../images/main/rolling04_s.png);
+        background-image: url(../images/main/rolling02_s.png);
     }
     .rolling  .partner{
         gap: 15px;
@@ -1173,7 +1173,7 @@
 
 @media screen and (max-width: 1024px){
     .news{
-        margin: 100px 0 110px 0;
+        margin: 100px 0 100px 0;
     }
     .news .tit h2{
         padding: 0 0 0 75px;
@@ -1254,19 +1254,188 @@
 }/*@media notice :: 768 모바일*/
 
 
+/* ############ banner 시작 ##############*/
+.banner{
+    margin: 0 0 143px 0;
+}
+.banner_bg{
+    width: 100%;
+    padding: 56px 0 55px 82px;
+    background-color: var(--main-font-color);
+    border-radius: 20px;
+    position: relative; /*일러스트 before 정렬의 기준*/
+    box-shadow: 4px 12px 40px 0 rgba(0, 0, 0, 0.15);
+}
+.banner_bg::before{
+    content: "";
+    position: absolute;
+    width: 434px;
+    height: 296px;
+    bottom: 0;
+    right: 47px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/main/banner_img.png) ;
+}
+.banner_bg .ban_partner .tit{
+    color: #fff;
+}
+.banner_bg .ban_partner .tit h2{
+    font-size: var(--banner-font-size);
+    font-weight: var(--Extra-bold-weight);
+    line-height: var(--tit-line-height);
+}
+.banner_bg .ban_partner .tit p{
+    font-family: var(--sub-fontfamily);
+    margin: 26px 0 28px 0;
+}
+.banner_bg .ban_partner .ban_wrap{
+    display: flex;
+    gap: 16px;
+}
+.banner_bg .ban_partner .ban_wrap .edu {
+    padding: 15px 68px 15px 38px;
+    background-color: #fff;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+.banner_bg .ban_partner .ban_wrap .edu a{
+    font-family: var(--sub-fontfamily);
+    font-weight: var(--bold-weight);
+    position: relative;
+}
+.banner_bg .ban_partner .ban_wrap .edu a::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -38px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--point-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_62_1200' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_62_1200)'%3E%3Cpath d='M3.46659 9.75065L2.70825 8.99232L7.90825 3.79232H3.24992V2.70898H9.74992V9.20898H8.66658V4.55065L3.46659 9.75065Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.banner_bg .ban_partner .ban_wrap .plus {
+    padding: 15px 68px 15px 38px;
+    background-color: #fff;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+.banner_bg .ban_partner .ban_wrap .plus a{
+    font-family: var(--sub-fontfamily);
+    font-weight: var(--bold-weight);
+    position: relative;
+}
+.banner_bg .ban_partner .ban_wrap .plus a::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -38px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--point-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_62_1200' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='13' height='13'%3E%3Crect width='13' height='13' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_62_1200)'%3E%3Cpath d='M3.46659 9.75065L2.70825 8.99232L7.90825 3.79232H3.24992V2.70898H9.74992V9.20898H8.66658V4.55065L3.46659 9.75065Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.banner_bg .ban_partner .ban_wrap .plus a strong{
+    color: var(--main-font-color);
+}
+
+/*마우스 오버 이벤트*/
+.banner_bg .ban_partner .ban_wrap .edu:hover,
+.banner_bg .ban_partner .ban_wrap .plus:hover {
+    transform: translate(0, -7px);
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.15);
+}
+.banner_bg .ban_partner .ban_wrap .edu a:hover::after,
+.banner_bg .ban_partner .ban_wrap .plus a:hover::after{
+    background-color: var(--main-font-color);
+}
+
+@media screen and (min-width: 1025px) and (max-width:1180px){
+    .banner_bg::before{
+        width: 315px;
+        height: 215px;
+        bottom: 0;
+        right: 20px;
+    }
+} /*@media 1025 ~ 1180*/
 
 
+@media screen and (max-width: 1024px){
+    .banner{
+        margin: 0 0 123px 0;
+    }
+    .banner_bg{
+        padding: 46px 0 45px 42px;
+    }
+    .banner_bg::before{
+        width: 181px;
+        height: 124px;
+        right: 40px;
+    }
+    .banner_bg .ban_partner .tit p{
+        margin: 20px 0 23px 0;
+    }
+    .banner_bg .ban_partner .ban_wrap{
+        gap: 10px;
+    }
+    .banner_bg .ban_partner .ban_wrap .edu {
+        padding: 12px 48px 11px 18px;
+    }
+    .banner_bg .ban_partner .ban_wrap .edu a::after{
+        top: -3px;
+        right: -33px;
+    }
+    .banner_bg .ban_partner .ban_wrap .plus {
+        padding: 12px 48px 11px 18px;
+    }
+    .banner_bg .ban_partner .ban_wrap .plus a::after{
+        top: -3px;
+        right: -33px;
+    }
+}/*@media notice :: 1024 모바일*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px){
+    .banner{
+        margin: 0 0 67px 0;
+    }
+    .banner_bg{
+        text-align: center;
+        padding: 54px 0 53px 0;
+        border-radius: 15px;
+        position: relative; 
+    }
+    .banner_bg::before{
+        display: none;
+    }
+    .banner_bg .ban_partner .tit p{
+        display: none;
+    }
+    .banner_bg .ban_partner .tit h2{
+        margin: 0 0 33px 0;
+    }
+    .banner_bg .ban_partner .ban_wrap{
+        display: inline-block;
+    }
+    .banner_bg .ban_partner .ban_wrap .edu {
+        padding: 11px 58px 13px 22px;
+        margin: 0 0 12px 0;
+    }
+    .banner_bg .ban_partner .ban_wrap .edu a::after{
+        top: -1px;
+        right: -38px;
+    }
+    .banner_bg .ban_partner .ban_wrap .plus {
+        padding: 11px 58px 13px 22px;
+    }
+    .banner_bg .ban_partner .ban_wrap .plus a::after{
+        top: -1px;
+        right: -45px;
+    }
+} /*@media notice :: 768 모바일*/
