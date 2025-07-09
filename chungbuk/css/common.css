@@ -9,6 +9,7 @@ html, body{
     color: #3d3d3d;
     word-break: keep-all; /*스페이스 기준 단어별로 떨어짐*/
     word-wrap: break-word; /* 단어가 긴 경우 강제로 줄바꿈을 주는 방법 */
+
 }
 
 .wrapper{
@@ -18,7 +19,7 @@ html, body{
 
 #wrap{
     position: relative; /*header정렬의 기준*/
-    overflow-x: hidden; /*가로 스크롤바만 삭제*/
+    overflow-x: hidden; /* sticky를 쓰면은 overflow-x: hidden을 없애줘야 함*/
     width: 100%;
 }
 
@@ -108,7 +109,7 @@ html, body{
         --sub-tit-size: 1.35rem; /* 23 / 17 */
         --header-font-size: 1.23rem; /* 21 / 17 */
         --news-font-size : 1.12rem; /* 19 / 17*/
-        --banner-font-size: 1.88rem; /*32 / 17*/
+        --banner-font-size: 1.76rem; /*30 / 17*/
     }
 }
 @media screen and (max-width:768px) {
