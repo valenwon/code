@@ -517,18 +517,6 @@
 .visit .list ul li a:hover{
     border-color: var(--point-color);
 }
-/* .visit .list ul li a:hover .txt h3{
-    position: relative;
-}
-.visit .list ul li a:hover .txt h3::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: var(--point-color);
-    bottom: -2px;
-    left: 0;
-} */
 
 @media screen and (max-width:1300px){
     .visit .list{
@@ -653,7 +641,7 @@
 
 @keyframes rolling{
     0% {left: 0;}
-    100% {left: -2795px;}
+    100% {left: -2785px;}
 }
 
 .rolling  .heart{
@@ -760,10 +748,11 @@
     .rolling .rolling_wrap{
         gap: 9px;
         animation-duration: 16s;
+        left: 0;
     }
     @keyframes rolling{
         0% {left: 0;}
-        100% {left: -2377px;}
+        100% {left: -2370px;}
     }
 
     .rolling  .heart{
@@ -820,10 +809,11 @@
     }
     .rolling .rolling_wrap{
         animation-duration: 16s;
+        left: 0;
     }
     @keyframes rolling{
         0% {left: 0;}
-        100% {left: -2234px;}
+        100% {left: -2227px;}
     } 
 }/*@media rolling :: 768 모바일*/
 
