@@ -19,7 +19,7 @@ html, body{
 
 #wrap{
     position: relative; /*header정렬의 기준*/
-    overflow-x: hidden; /* sticky를 쓰면은 overflow-x: hidden을 없애줘야 함*/
+    /* overflow-x: hidden; sticky를 쓰면은 overflow-x: hidden을 없애줘야 함*/
     width: 100%;
 }
 
@@ -79,8 +79,8 @@ html, body{
 
 /* css 변수 */
 :root{
-    --header-h: 5.59em; /* 95px header 높이 */
-    --header-h-m: -5.59em; /* header 높이 마이너스 값 */
+    --header-h: 95px; /* 95px header 높이 */
+    --header-h-m: -95px; /* header 높이 마이너스 값 */
     --sub-fontfamily: 'Pretendard';
     --tit-font-color: #1d1d1d;
     --base-font-color: #3d3d3d;
@@ -91,35 +91,35 @@ html, body{
     --more-weight: 500;
     --bold-weight: 700;
     --Extra-bold-weight: 800;
-    --display-font-size: 2.65rem; /*45 / 17*/
-    --tit-size: 2.65rem; /* 45 / 17 */
-    --sub-tit-size: 1.47rem; /* 25 / 17 */
-    --header-font-size: 1.35rem; /* 23 / 17 */
-    --news-font-size : 1.18rem; /* 20 / 17*/
-    --banner-font-size: 2.06rem; /*35 / 17*/
+    --display-font-size: 45px; /*45 / 17*/
+    --tit-size: 45px; /* 45 / 17 */
+    --sub-tit-size: 25px; /* 25 / 17 */
+    --header-font-size: 23px; /* 23 / 17 */
+    --news-font-size : 20px; /* 20 / 17*/
+    --banner-font-size: 35px; /*35 / 17*/
     --tit-line-height: 1.2; 
     
 }
 @media screen and (max-width:1024px) {
     :root{
-        --header-h: 3.29em; /* 56px header 높이 */
-        --header-h-m: -3.29em;
-        --display-font-size: 2.53rem; /*43 / 17*/
-        --tit-size: 2.53rem; /* 40 / 17 */
-        --sub-tit-size: 1.35rem; /* 23 / 17 */
-        --header-font-size: 1.23rem; /* 21 / 17 */
-        --news-font-size : 1.12rem; /* 19 / 17*/
-        --banner-font-size: 1.76rem; /*30 / 17*/
+        --header-h: 56px; /* 56px header 높이 */
+        --header-h-m: -56px;
+        --display-font-size: 43px; /*43 / 17*/
+        --tit-size: 40px; /* 40 / 17 */
+        --sub-tit-size: 23px; /* 23 / 17 */
+        --header-font-size: 21px; /* 21 / 17 */
+        --news-font-size : 19px; /* 19 / 17*/
+        --banner-font-size: 30px; /*30 / 17*/
     }
 }
 @media screen and (max-width:768px) {
     :root{
-        --display-font-size: 1.56rem; /*25 / 16*/
-        --tit-size: 1.44rem; /* 23 / 16 */
-        --sub-tit-size: 1.31rem; /* 21 / 16 */
-        --header-font-size: 1.25rem; /* 20 / 16 */
-        --news-font-size : 1rem; /* 16 / 16*/
-        --banner-font-size: 1.75rem; /*28 / 16*/
+        --display-font-size: 25px; /*25 / 16*/
+        --tit-size: 23px; /* 23 / 16 */
+        --sub-tit-size: 21px; /* 21 / 16 */
+        --header-font-size: 20px; /* 20 / 16 */
+        --news-font-size : 16px; /* 16 / 16*/
+        --banner-font-size: 28px; /*28 / 16*/
     }
 }
 
