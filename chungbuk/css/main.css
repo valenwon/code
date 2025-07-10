@@ -37,7 +37,7 @@
 }
 .visual_wrap .visual_main .txt_wrap h3{
     font-size: var(--tit-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     margin: 0 0 20px 0;
 }
@@ -136,7 +136,7 @@
 .visual_wrap .visual_side .near_side a div h3,
 .visual_wrap .visual_side .navi_side a div h3{
     font-size: var(--news-font-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     color: var(--tit-font-color);
     line-height: var(--tit-line-height);
     padding: 0 0 25px 0;
@@ -172,7 +172,7 @@
     line-height: 57px;
     border-radius: 20px 20px 0 0;
     font-size: var(--news-font-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     color: #fff;
     position: relative; /*뒷배경의 정렬 기준*/
     display: block;
@@ -400,7 +400,7 @@
     color: var(--tit-font-color);
     font-size: var(--tit-size);
     line-height: var(--tit-line-height);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     padding: 0 0 0 95px;
     position: relative; /*앞 3d 아이콘 정렬 기준*/
 }
@@ -461,7 +461,7 @@
 .visit .list ul li a .txt h3{
     display: inline-block;
     font-size: var(--header-font-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     color: var(--point-color);
     line-height: var(--tit-line-height);
     margin: 0 0 25px 0;
@@ -654,7 +654,7 @@
 }
 .rolling  .heart p{
     font-size: var(--sub-tit-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     color: var(--tit-font-color);
 }
@@ -699,7 +699,7 @@
 .rolling  .check p,
 .rolling  .partner p{
     font-size: var(--sub-tit-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     color: #fff;
 }
@@ -831,7 +831,7 @@
     color: var(--tit-font-color);
     font-size: var(--tit-size);
     line-height: var(--tit-line-height);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     padding: 0 0 0 85px;
     position: relative; /*앞 3d 아이콘 정렬 기준*/
 }
@@ -879,7 +879,7 @@
 .notice .list ul li a .txt h3{
     font-size: var(--sub-tit-size);
     color: var(--tit-font-color);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     margin: 18px 0 22px 0;
 
@@ -1042,7 +1042,7 @@
     color: var(--tit-font-color);
     font-size: var(--tit-size);
     line-height: var(--tit-line-height);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     padding: 0 0 0 85px;
     position: relative; /*앞 3d 아이콘 정렬 기준*/
 }
@@ -1261,7 +1261,7 @@
 }
 .banner_bg .ban_partner .tit h2{
     font-size: var(--banner-font-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
 }
 .banner_bg .ban_partner .tit p{
@@ -1437,7 +1437,7 @@
 }
 .program .tit h2{
     font-size: var(--tit-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     color: var(--main-font-color);
     line-height: var(--tit-line-height);
     margin: 0 0 19px 0;
@@ -1508,7 +1508,7 @@
 }
 .program .list ul li a .main_txt h3{
     font-size: var(--sub-tit-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     margin: 0 0 27px 0;
 }
@@ -1737,7 +1737,7 @@
 }
 .center .bg_wrap .tit h2{
     font-size: var(--banner-font-size);
-    font-weight: var(--Extra-bold-weight);
+    font-weight: var(--extra-bold-weight);
     line-height: var(--tit-line-height);
     color: #fff;
 }

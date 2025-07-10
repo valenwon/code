@@ -110,7 +110,7 @@ header.fixed{
         display: inline-block;
         line-height: 95px; /*a에 들어가는 행간은 px로 주기*/
         font-size: var(--header-font-size);
-        font-weight: var(--Extra-bold-weight);
+        font-weight: var(--extra-bold-weight);
         color: var(--tit-font-color);
         padding: 0 34px;
     }
