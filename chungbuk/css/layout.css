@@ -282,7 +282,7 @@ header.fixed{
         display: block;
         padding: 23px 39px 23px 20px; /* 행간으로 주면 안됨*/
         font-size: var(--news-font-size);
-        font-weight: var(--Extra-bold-weight);
+        font-weight: var(--extra-bold-weight);
         line-height: var(--tit-line-height);
         color: var(--point-color);
         position: relative; /*before 정렬기준*/
