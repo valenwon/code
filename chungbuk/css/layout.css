@@ -8,6 +8,8 @@ header{
     z-index: 100;
     height: var(--header-h);
     background-color: #fff;
+
+    transition: 0.5s;
 }
 
 header .wrapper{
@@ -20,7 +22,7 @@ header .logo a{
     display: block;
     width: 242px;
     height: 41px;
-    background: url(../images/common/logo.svg) no-repeat center center / contain;
+    background: url(../images/common/logo_n.png) no-repeat center center / contain;
 }
 
 header .util{

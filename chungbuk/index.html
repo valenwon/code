@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS 라이브러리  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- jquery 라이브러리  -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- swiper 라이브러리  -->
@@ -12,6 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
     <title>충청북도광역치매센터</title>
 </head>
 <body>
@@ -345,39 +350,48 @@
                     <div class="tit">
                         <h2>오늘의 소식</h2>
                     </div>
-                    <div class="list">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <strong>청주시청원구치매안심센터 치매안심센터</strong>
-                                        <h3>비대면 걷기 챌린지 <br>'기억발자국'</h3>
-                                        <span class="date">2025-06-17</span>
-                                    </div>
-                                    <div class="photo"><img src="images/main/notice01.jpg" alt="가족들이 함께 걷는 일러스트레이터"></div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <strong>옥천군치매안심센터 치매안심센터</strong>
-                                        <h3>치매인식개선<br> - 치매예방에 좋은 식재료 안내</h3>
-                                        <span class="date">2025-06-17</span>
-                                    </div>
-                                    <div class="photo"><img src="images/main/notice02.jpg" alt="베리를 두 손에 담은채 보여주는 사진"></div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="txt">
-                                        <strong>괴산군치매안심센터 치매안심센터</strong>
-                                        <h3>치매예방수칙<br> 3·3·3 알아보아요!</h3>
-                                        <span class="date">2025-06-17</span>
-                                    </div>
-                                    <div class="photo"><img src="images/main/notice03.jpg" alt="블록을 쌓고 있는 듯한 사람의 모습"></div>
-                                </a>
-                            </li>
-                        </ul>
+                    <div data-aos="fade-up">
+                        <div class="list">
+                            <ul>
+                                <li div data-aos="fade-up">
+                                    <a href="#">
+                                        <div class="txt">
+                                            <strong>청주시청원구치매안심센터 치매안심센터</strong>
+                                            <h3>비대면 걷기 챌린지 <br>'기억발자국'</h3>
+                                            <span class="date">2025-06-17</span>
+                                        </div>
+                                        <div class="photo"><img src="images/main/notice01.jpg" alt="가족들이 함께 걷는 일러스트레이터"></div>
+                                    </a>
+                                </li>
+                                <li div data-aos="fade-up" data-aos-delay="400">
+                                    <a href="#">
+                                        <div class="txt">
+                                            <strong>옥천군치매안심센터 치매안심센터</strong>
+                                            <h3>치매인식개선<br> - 치매예방에 좋은 식재료 안내</h3>
+                                            <span class="date">2025-06-17</span>
+                                        </div>
+                                        <div class="photo"><img src="images/main/notice02.jpg" alt="베리를 두 손에 담은채 보여주는 사진"></div>
+                                    </a>
+                                </li>
+                                <li div data-aos="fade-up" data-aos-delay="800">
+                                    <a href="#">
+                                        <div class="txt">
+                                            <strong>괴산군치매안심센터 치매안심센터</strong>
+                                            <h3>치매예방수칙<br> 3·3·3 알아보아요!</h3>
+                                            <span class="date">2025-06-17</span>
+                                        </div>
+                                        <div class="photo"><img src="images/main/notice03.jpg" alt="블록을 쌓고 있는 듯한 사람의 모습"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--//list-->
+                        <script>// 반드시 콘텐츠 하단에 배치
+                            AOS.init({
+                            offset: 100, 
+                            duration: 500, 
+                            easing: 'ease', 
+                            });
+                        </script>
                     </div>
                     <a href="#" class="more"><span class="blind">더보기</span></a>
                 </div>
@@ -436,23 +450,36 @@
             </section><!--news-->
             <section class="banner">
                 <div class="wrapper">
-                    <div class="banner_bg">
-                        <div class="ban_partner">
-                            <div class="tit">
-                                <h2>치매파트너로 따뜻한 동반자가 되어주세요!</h2>
-                                <p>치매파트너 홈페이지(국가치매교육홈페이지 연계)에서<br>
-                                    치매파트너 온라인 교육(30분) 영상을 시청하면 치매파트너가 됩니다.</p>
-                            </div>
-                            <div class="ban_wrap">
-                                <div class="edu">
-                                    <a href="#"><span>치매파트너 교육 이수하기</span></a>
-                                </div>
-                                <div class="plus">
-                                    <a href="#"><span>치매파트너 <strong>플러스</strong> 소개</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--//banner_bg-->
+                    <div data-aos="fade-right">
+                        <ul>
+                            <li div data-aos="fade-right">
+                                <div class="banner_bg">
+                                    <div class="ban_partner">
+                                        <div class="tit">
+                                            <h2>치매파트너로 따뜻한 동반자가 되어주세요!</h2>
+                                            <p>치매파트너 홈페이지(국가치매교육홈페이지 연계)에서<br>
+                                                치매파트너 온라인 교육(30분) 영상을 시청하면 치매파트너가 됩니다.</p>
+                                        </div>
+                                        <div class="ban_wrap">
+                                            <div class="edu">
+                                                <a href="#"><span>치매파트너 교육 이수하기</span></a>
+                                            </div>
+                                            <div class="plus">
+                                                <a href="#"><span>치매파트너 <strong>플러스</strong> 소개</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--//banner_bg-->
+                            </li>
+                        </ul>
+                        <script>// 반드시 콘텐츠 하단에 배치
+                            AOS.init({
+                            offset: 150, 
+                            duration: 600, 
+                            easing: 'ease', 
+                            });
+                        </script>
+                    </div>
                 </div>
             </section><!--banner-->
             <section class="program">
@@ -635,40 +662,53 @@
             </section><!--program-->
             <section class="center">               
                 <div class="wrapper">
-                    <div class="bg_wrap">
-                        <div class="tit">
-                            <h2>치매 걱정 없는 충청북도를 만들기 위해<br> 
-                                끊임없이 노력할 것입니다.</h2>
-                        </div>
-                        <div class="list">
-                            <ul>
-                                <li>
-                                    <div class="call">
-                                        <h3>국번없이 1899-9988</h3>
-                                        <div class="num"><span class="blind">번호</span></div>
+                    <div data-aos="fade-in">
+                        <ul>
+                            <li div data-aos="fade-in">
+                                <div class="bg_wrap">
+                                    <div class="tit">
+                                        <h2>치매 걱정 없는 충청북도를 만들기 위해<br> 
+                                            끊임없이 노력할 것입니다.</h2>
                                     </div>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h3>충북 치매관련 현황</h3>
-                                        <div class="more"><span class="blind">더보기</span></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h3>찾아오시는 길</h3>
-                                        <div class="more"><span class="blind">더보기</span></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h3>센터일정 안내</h3>
-                                        <div class="more"><span class="blind">더보기</span></div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                    <div class="list">
+                                        <ul>
+                                            <li>
+                                                <div class="call">
+                                                    <h3>국번없이 1899-9988</h3>
+                                                    <div class="num"><span class="blind">번호</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h3>충북 치매관련 현황</h3>
+                                                    <div class="more"><span class="blind">더보기</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h3>찾아오시는 길</h3>
+                                                    <div class="more"><span class="blind">더보기</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <h3>센터일정 안내</h3>
+                                                    <div class="more"><span class="blind">더보기</span></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--//bg_wrap-->
+                            </li>
+                        </ul>
                     </div>
+                    <script>// 반드시 콘텐츠 하단에 배치
+                        AOS.init({
+                        offset: 200, 
+                        duration: 800, 
+                        easing: 'ease', 
+                        });
+                    </script>
                 </div>
             </section><!--center-->
         </main>
