@@ -991,7 +991,7 @@
     }
     .notice .list ul li a{
         border-radius: 10px;
-        transition: 0; 
+        transition: none; 
     }
     .notice .list ul li:last-child{
         margin-bottom: 0;
