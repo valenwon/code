@@ -30,6 +30,17 @@ html, body{
                     /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기*/
                 }
 }
+@media screen and (max-width:1024px){
+                #wrap{
+                    overflow-x: hidden; /*1024모바일 사이즈부터는 sticky빼주려고 넣어주기*/
+                }
+                .aos-init,
+                .aos-animate { /*aos 효과빼주기*/
+                    opacity: 1 !important;
+                    transform: none !important;
+                    transition: none !important;
+                }
+}
 @media screen and (max-width:768px){
                 /*브라우저 넓이가 768px이하에서만 작용*/
                 html, body{
