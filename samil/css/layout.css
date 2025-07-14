@@ -21,10 +21,11 @@ header .logo a{
     display: block;
     width: 154px;
     height: 48px;
-    background: url(../images/common/logo_w.png);
+    background: url(../images/common/logo_w.png) no-repeat center center / contain;
 }
 header .util .lang_open{
     position: relative;
+    padding: 0 20px 0 0; /*브라우저 사이즈 줄어들 때 대비*/
 }
 header .util .lang_open::after{
     content: "";
@@ -49,7 +50,7 @@ header.fixed.gnb_up.menu_over{
 header.fixed{
     background-color: #fff;
     color: var(--tit-font-color);
-    border-bottom-color: #ccc;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
 }
 header.fixed .logo a{
     background: url(../images/common/logo.png);
@@ -59,6 +60,33 @@ header.fixed .util .lang_open::after{
 }
 /********header에 fixed 클래스 추가 :: 끝 ************/
 
+
+@media screen and (min-width:1025px) and (max-width: 1186px){
+    header .logo a{
+        width: 119px;
+        height: 37px;
+    }
+    header .gnb_wrap ul.depth1 > li {
+        padding: 0 20px; /*왜 안줄어들지...*/
+    }
+    header .gnb_wrap ul.depth1 > li > a {
+        font-size: var(--scroll-size);
+    }
+    header .util .lang_open span{
+        font-size: var(--scroll-size);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:1025px) {
     header .gnb_open,
     header .gnb_close{ /*모바일에서 숨기기*/
@@ -66,25 +94,94 @@ header.fixed .util .lang_open::after{
     } 
     header .gnb_wrap ul.depth1{ /*1차메뉴 정렬*/
         display: flex; 
+        text-align: center;
     }
     header .gnb_wrap ul.depth1 > li{ /*1차메뉴 li*/
-        text-align: center;
-        position: relative; /*2차메뉴 정렬 기준*/
+        /* width: 113px; */
+        padding: 0 23px;
+        /*position: relative; 2차메뉴 정렬 기준*/
     }
     header .gnb_wrap ul.depth1 > li > a{
         display: block;
         line-height: var(--header-h);
-        padding: 0 23px;
+    }
+    
+    /****** li에 over 클래스 추가**********/
+    header .gnb_wrap ul.depth1 > li.over > a span{
+        color: var(--point-font-color);
+        font-weight: var(--bold-weight);
+        position: relative; /*after 선 기준*/
+    }
+    header .gnb_wrap ul.depth1 > li.over > a span::after{
+        content: ""; /*1차메뉴 선*/
+        position: absolute;
+        left: 0;
+        bottom: -38px;
+        z-index: 10;
+        width: 100%;
+        height: 4px;
+        background-color: var(--point-font-color);
+    }
+    
+    /*2차메뉴*/
+    header .gnb_wrap ul.depth1 > li > ul.depth2{ /*다른 2차메뉴 안보이게*/
+        display: none;
+        position: absolute; /*li를 기준으로*/
+        left: 50%;
+        top: var(--header-h);
+        transform: translateX(-50%);
+    }
+    header .gnb_wrap ul.depth1 > li > ul.depth2 > li > a{
+        display: block;
+        line-height: var(--header-h);
+        font-size: var(--scroll-size);
+        padding: 0 27px;
+        color: var(--tit-font-color);
+        white-space: nowrap;
+    }
+    header .gnb_wrap ul.depth1 > li > ul.depth2 > li > a span{
+        position: relative; /*after 선 기준*/
+    }
+    /*2차메뉴 - 마우스 오버시*/
+    header .gnb_wrap ul.depth1 > li > ul.depth2 > li > a:hover span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--tit-font-color);
     }
 
-    header .gnb_wrap ul.depth1 > li > ul.depth2{
-        display: none;
-    }
-    header .gnb_wrap ul.depth1 > li.over> ul.depth2{ /* over 클래스 들어간 2차메뉴 li*/
+    /********* header에 menu_over 클래스 추가 ***********/
+    header.menu_over::before{ /*2차 메뉴 뒷 배경*/
+        content: "";
         position: absolute;
-        display: block;
+        left: 0;
+        top: var(--header-h);
+        width: 100%;
+        height: var(--header-h);
+        background-color: #fff;
+        z-index: -1;
+    }
+    header.menu_over::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: var(--header-h);
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid #ccc;
+    }
+    /* menu_over, over 클래스 들어간 2차메뉴 li*/
+    header.menu_over .gnb_wrap ul.depth1 > li.over > ul.depth2{ 
+        display: flex; /*none -> flex*/
+        justify-content: flex-start;
     }
 } /*@media 1025 이상에서만 */
+
+
+
 
 
 

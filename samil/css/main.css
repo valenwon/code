@@ -58,18 +58,18 @@
     position: absolute;
     top: 12px;
     left: 22px;
-    width: 10px;
+    width: 1px;
     height: 2px;
     background-color: #fff;
 
     animation-name: current;
-    animation-duration: 3.8s;
+    animation-duration: 3.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
 @keyframes current{
-    0%{width: 10px;}
+    0%{width: 1px;}
     100%{width: 80px;}
 }
 
@@ -111,8 +111,8 @@
 } 
 
 @media screen and (max-width:1504px) {
-    .visual .paging{
-        left: 20px;
+    .visual .swiper .paging {
+        left: 20px; 
     }
     .visual .scroll_down{
         right: 20px;
