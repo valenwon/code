@@ -1,7 +1,7 @@
 /* 모든 페이지에 공통으로 들어가는 기본 스타일*/
 
 html, body{
-    font-family: "Poppins", "Pretendard",sans-serif; 
+    font-family: "Geologica", "Pretendard",sans-serif; 
     /*앞에 쓴 서체를 적용, 지원이 안되면 두 번째 서체 적용*/
     font-size: 17px;
     font-weight: 400;
@@ -12,7 +12,7 @@ html, body{
 }
 
 .wrapper{
-    width: 1260px;
+    width: 1464px;
     margin: 0 auto; /*가운데*/
 }
 
@@ -21,7 +21,7 @@ html, body{
     overflow-x: hidden; /*가로 스크롤바만 삭제*/
     width: 100%;
 }
-@media screen and (max-width:1300px) { /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
+@media screen and (max-width:1504px) { /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
                 .wrapper{
                     width: auto;
                     margin: 0 20px; /*여백이 브라우저 사이즈에 따라 점점 좁아짐 - 요즘 추세임 -*/
