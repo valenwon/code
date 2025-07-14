@@ -1,16 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--swiper-->
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+    <!--jqeury 라이브러리-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <script src="js/main.js"></script>
+    <title>삼일제약</title>
 </head>
 <body>
     <div id="wrap">
-        <div class="wrapper">
-            
+        <header class="fixed gnb_up menu_over">
+            <div class="wrapper">
+                <h1 class="logo"><a href="index.html"><span class="blind">삼일제약 로고</span></a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open"><span>메뉴열기</span></button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li class="over">
+                                <a href="#"><span>ABOUT US</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>VISION</span></a></li>
+                                    <li><a href="#"><span>HISTORY</span></a></li>
+                                    <li><a href="#"><span>디자인 삼일</span></a></li>
+                                    <li><a href="#"><span>오시는 길</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>ESG</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>삼일ESG</span></a></li>
+                                    <li><a href="#"><span>E 환경안전</span></a></li>
+                                    <li><a href="#"><span>S 노동인권상생협력사회공헌</span></a></li>
+                                    <li><a href="#"><span>G윤리경영이사회</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>CSR</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>BUSINESS</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>CMDO</span></a></li>
+                                    <li><a href="#"><span>R&D</span></a></li>
+                                    <li><a href="#"><span>GLOBAL PARTNERS</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>PRODUCTS</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>제품검색</span></a></li>
+                                    <li><a href="#"><span>제품소식</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>RECRUIT</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>인재케어</span></a></li>
+                                    <li><a href="#"><span>업무케어</span></a></li>
+                                    <li><a href="#"><span>채용공지</span></a></li>
+                                    <li><a href="#"><span>채용 FAQ</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>IR</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>OVERVIEW</span></a></li>
+                                    <li><a href="#"><span>재무정보</span></a></li>
+                                    <li><a href="#"><span>IR 정보</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>STORY</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>보도자료</span></a></li>
+                                    <li><a href="#"><span>방송광고</span></a></li>
+                                    <li><a href="#"><span>인쇄광고</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>고객지원</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#"><span>FAQ</span></a></li>
+                                    <li><a href="#"><span>CONTACT US</span></a></li>
+                                    <li><a href="#"><span>이상사례보고</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close"><span>메뉴닫기</span></button>
+                </nav>
+                <div class="util">
+                    <div class="lang">
+                        <button class="lang_open"><span>KO</span></button>
+                    </div>
+                </div>
+            </div><!--//wrapper-->
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual01.jpg" alt="분자모형을 3d로 한 이미지"></div>
+                            <div class="txt">
+                                <div class="wrapper">
+                                    <h2>360º Human Care</h2>
+                                    <p>우리는 온전한 휴먼케어를 실천하는 360도 휴먼케어를 지향합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual02.jpg" alt="실험도구 속 물이 담긴 보라색 무드의 이미지"></div>
+                            <div class="txt">
+                                <div class="wrapper">
+                                    <h2>SAMIL to the World</h2>
+                                    <p>최고 수준의 글로벌제약사들과 파트너십으로 세계와 함께합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual03.jpg" alt="연구실에서 주사기를 들고있는 연구원의 손 이미지"></div>
+                            <div class="txt">
+                                <div class="wrapper">
+                                    <h2>Sincerity, Science, Sharing</h2>
+                                    <p>글로벌 품질관리기준(cGMP)을 준수하는 탁월한 생산 역량으로 CDMO 비즈니스를 전개합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="paging">
+                        <span class="current"></span>
+                        <strong class="total"></strong>
+                    </div><!--컨트롤 요소는 swiper 안에 배치-->
+                </div>
+                <div class="scroll_down"><a href="#">SCROLL DOWN</a></div>
+            </section>
+        </main>
+        <footer></footer>
         </div>
     </div>
 </body>

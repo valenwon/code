@@ -3,3 +3,123 @@
 @import url(common.css);
 @import url(layout.css);
 
+.visual{
+    position: relative;
+}
+.visual .swiper-slide .photo{
+    overflow: hidden;
+    height: 100dvh;
+}
+.visual .swiper-slide .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.visual .swiper-slide .txt{
+    position: absolute;
+    left: 0;
+    top: 39.8%;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+}
+.visual .swiper-slide .txt h2{
+    font-size: var(--display-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    margin: 0 0 15px 0;
+}
+
+
+.visual .swiper .paging {
+    position: absolute;
+    z-index: 10;
+    bottom: 37.8%;
+    left: calc(50% - 732px);
+    /* transform: translateX(-50%); */
+    display: flex;
+    gap: 105px;
+    color: #fff;
+}
+.visual .swiper .paging .current{
+    position: relative;
+}
+.visual .swiper .paging .current::after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 22px;
+    width: 80px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.visual .swiper .paging .current::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 22px;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+
+    animation-name: current;
+    animation-duration: 3.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes current{
+    0%{width: 10px;}
+    100%{width: 80px;}
+}
+
+.visual .scroll_down{
+    position: absolute;
+    z-index: 20;
+    right: calc(50% - 732px);
+    bottom: 41.5%;
+    color: #fff;
+    transform: translate(0, -50%)
+}
+.visual .scroll_down a{
+    display: block;
+    transform: translate(50px, 0) rotateZ(-90deg);
+    font-size: var(--scroll-size);
+}
+.visual .scroll_down a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 50px;
+    transform: translate(-50px, 17px) rotateZ(90deg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='46' viewBox='0 0 7 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-0.000490248 45.001C-0.00049026 45.2771 0.223367 45.501 0.49951 45.501C0.775652 45.501 0.99951 45.2771 0.99951 45.001L-0.000490248 45.001ZM0.499512 0.000976562L-0.000488281 0.000976541L-0.000490248 45.001L0.49951 45.001L0.99951 45.001L0.999512 0.000976584L0.499512 0.000976562Z' fill='white'/%3E%3Cpath d='M0.166656 44.6899C0.0137507 44.9199 0.076204 45.2302 0.306149 45.3831C0.536094 45.5361 0.846455 45.4736 0.99936 45.2437L0.166656 44.6899ZM0.583008 44.9668L0.99936 45.2437L6.48089 37.0003L6.06453 36.7234L5.64818 36.4466L0.166656 44.6899L0.583008 44.9668Z' fill='white'/%3E%3C/svg%3E%0A");
+
+    animation-name: scroll_down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes scroll_down{
+    0% {left: 0}
+    50% {left: -8px}
+    100% {left: 0}
+} 
+
+@media screen and (max-width:1504px) {
+    .visual .paging{
+        left: 20px;
+    }
+    .visual .scroll_down{
+        right: 20px;
+    }
+}
+
+
+
+
+

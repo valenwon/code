@@ -1,4 +1,90 @@
 /* header , footer 같이 모든 페이지 공통사항 저장 */
 
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: var(--header-h);
+    border-bottom: 1px solid rgba(237, 237, 237, 0.5);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+}
+header .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a{
+    display: block;
+    width: 154px;
+    height: 48px;
+    background: url(../images/common/logo_w.png);
+}
+header .util .lang_open{
+    position: relative;
+}
+header .util .lang_open::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_63_140' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' width='24' height='24' transform='rotate(90 24 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_63_140)'%3E%3Cpath d='M12 12.6L16.6 8L18 9.4L12 15.4L6 9.4L7.4 8L12 12.6Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+/********스크롤 내리면 header 사라짐 fixed / gnb_up 쿨래스 추가************/
+header.fixed.gnb_up{
+    top: var(--header-h-m);
+}
+/********오버하면 header 다시 나옴 fixed / gnb_up  / menu_over 클래스 추가************/
+header.fixed.gnb_up.menu_over{
+    top: 0;
+}
+
+/********header에 fixed 클래스 추가 ************/
+header.fixed{
+    background-color: #fff;
+    color: var(--tit-font-color);
+    border-bottom-color: #ccc;
+}
+header.fixed .logo a{
+    background: url(../images/common/logo.png);
+}
+header.fixed .util .lang_open::after{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_63_980' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' width='24' height='24' transform='rotate(90 24 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_63_980)'%3E%3Cpath d='M12 12.6L16.6 8L18 9.4L12 15.4L6 9.4L7.4 8L12 12.6Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+/********header에 fixed 클래스 추가 :: 끝 ************/
+
+@media screen and (min-width:1025px) {
+    header .gnb_open,
+    header .gnb_close{ /*모바일에서 숨기기*/
+        display: none;
+    } 
+    header .gnb_wrap ul.depth1{ /*1차메뉴 정렬*/
+        display: flex; 
+    }
+    header .gnb_wrap ul.depth1 > li{ /*1차메뉴 li*/
+        text-align: center;
+        position: relative; /*2차메뉴 정렬 기준*/
+    }
+    header .gnb_wrap ul.depth1 > li > a{
+        display: block;
+        line-height: var(--header-h);
+        padding: 0 23px;
+    }
+
+    header .gnb_wrap ul.depth1 > li > ul.depth2{
+        display: none;
+    }
+    header .gnb_wrap ul.depth1 > li.over> ul.depth2{ /* over 클래스 들어간 2차메뉴 li*/
+        position: absolute;
+        display: block;
+    }
+} /*@media 1025 이상에서만 */
+
 
 
