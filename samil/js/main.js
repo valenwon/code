@@ -24,6 +24,40 @@ $(document).ready(function(){
 
     });
 
+
+    let scrolling
+    let win_h
+    let about = $('.about .about_wrap span.photo')
+
+    
+
+
+
+    scroll_chk()
+    resize_chk()
+
+    $(window).scroll(function(){
+        scroll_chk()
+    })
+    $(window).resize(function(){
+        resize_chk()
+    })
+
+    function scroll_chk(){
+        scrolling = $(window).scrollTop()
+        console.log('스크롤값', scrolling)
+        if(scrolling > 200){
+            $('.about').addClass('active')
+        }else if(scrolling < 700){
+            $('.about').removeClass('active')
+        }
+    }
+    function resize_chk(){
+        win_h = $(window).height()
+        console.log('브라우저 높이', win_h)
+    }
+
+
 })
 
 

@@ -4,7 +4,7 @@
 @import url(layout.css);
 
 .visual{
-    position: relative;
+    position: relative; /* 페이징, 스클로다운*/
 }
 .visual .swiper-slide .photo{
     overflow: hidden;
@@ -29,7 +29,6 @@
     line-height: var(--tit-line-height);
     margin: 0 0 15px 0;
 }
-
 
 .visual .swiper .paging {
     position: absolute;
@@ -117,9 +116,240 @@
     .visual .scroll_down{
         right: 20px;
     }
+} /*@media visual 1504 사이즈 미만일때 */
+
+@media screen and (max-width: 768px) {
+    .visual .swiper .paging{
+        bottom: 36.8%;
+    }
+    .visual .scroll_down {
+        bottom: 24.5%;
+    }
+} /*@media visual 768 모바일 사이즈 */
+
+
+
+
+.about{
+    margin: 204px 0;
+}
+.about .about_wrap strong{
+    font-size: var(--about-font-size);
+    font-weight: var(--medium-weight);
+    color: var(--tit-font-color);
+    display: inline-block; /*단락으로 줄바꿔서 들어가게 됨*/
+    line-height: 1.7;
+}
+.about .about_wrap span.photo{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 83px;
+    width: 0; /*0 이었다가 펼쳐지는 */
+    overflow: hidden;
+    transition: 0.7s;
+}
+.about .about_wrap span.photo img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+.about.active .about_wrap span.photo{ /*active 클래스 넣어주기*/
+    width: 203px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about{
+        margin: 150px 0;
+    }
+    .about .about_wrap span.photo{
+        height: 60px;
+    }
+    .about.active .about_wrap span.photo{ /*active 클래스 넣어주기*/
+        width: 150px;
+    }
+} /*@media about 1024 모바일 사이즈 */
+
+
+@media screen and (max-width: 768px) {
+    .about{
+        margin: 71px 0;
+    }
+    .about .about_wrap strong{
+        display: unset; /*단락으로 줄바꿔서 들어가는 거 없애기*/
+    }
+    .about .about_wrap span.photo{
+        height: 38px;
+    }
+    .about.active .about_wrap span.photo{ /*active 클래스 넣어주기*/
+        width: 100px;
+    }
+} /*@media about 768 모바일 사이즈 */
+
+
+
+.business{
+    padding: 172px 0 166px 0;
+    background-color: var(--bg-color);
+}
+.business .tit strong{
+    color: var(--point-font-color);
+}
+.business .tit h2{
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: #fff;
+    margin: 2px 0 41px 0;
+}
+.business .list{
+    display: flex;
+    justify-content: space-between;
+}
+.business .list .group1 ul{
+    display: flex;
+    flex-direction: column;
+}
+.business .list .group2 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.business .list > div > ul > li > .txt > h3{
+    font-size: var(--list-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: #fff;
+    margin: 20px 0 10px 0;
+}
+.business .list > div > ul > li > .txt > p{
+    color: #fff;
+}
+/* .business .list .group1 ul li.eye_wrap .photo{
+    width: 720px;
+    height: 366px;
+    background: url(../images/main/business01.jpg) no-repeat center center / cover;
+    overflow: hidden;
+} */
+/* .business .list .group1 ul li.diges_wrap {
+    margin: 222px 0 0 0; /* 간, 소화 사이 여백
+} */
+/* .business .list .group1 ul li.diges_wrap .photo{
+    width: 472px;
+    height: 627px;
+    border-radius: 50%;
+    background: url(../images/main/business03.jpg) no-repeat center center / cover;
+    overflow: hidden;
+} */
+.business .list .group2{
+    margin: 232px 0 0 0;
+}
+/* .business .list .group2 ul li.liver_wrap .photo {
+    width: 472px;
+    height: 658px;
+    background: url(../images/main/business02.jpg) no-repeat center center / cover;
+    overflow: hidden;
+} */
+/* .business .list .group2 ul li.bone_wrap{
+    margin: 184px 0 0 0;
+} */
+/* .business .list .group2 ul li.bone_wrap .photo {
+    width: 620px;
+    height: 355px;
+    background: url(../images/main/business04.jpg) no-repeat center center / cover;
+    overflow: hidden;
+} */
+
+.business .list .group1 ul li.eye_wrap .photo{
+    overflow: hidden;
+    height: 100%;
+    line-height: 0;
+}
+.business .list .group1 ul li.eye_wrap .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business .list .group1 ul li.diges_wrap .photo{
+    overflow: hidden;
+    height: 100%;
+    line-height: 0;
+    /* border-radius: 50%; */
+}
+.business .list .group1 ul li.diges_wrap .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.business .list .group2 ul li.liver_wrap .photo{
+    overflow: hidden;
+    height: 100%;
+    line-height: 0;
+}
+.business .list .group2 ul li.liver_wrap .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business .list .group2 ul li.bone_wrap .photo{
+    overflow: hidden;
+    height: 100%;
+    line-height: 0;
+}
+.business .list .group2 ul li.bone_wrap .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.business .more{
+    text-align: center;
+    margin: 117px 0 0 0;
+}
+.business .more a{
+    padding: 18px 59px 17px 34px;
+    background-color: var(--point-font-color);
+    border-radius: 40px;
+    line-height: var(--tit-line-height);
+    font-size: var(--nmore-font-size);
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+.business .more a::after{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 21px;
+    right: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_63_172' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_63_172)'%3E%3Cpath d='M8.25 15.75V9.75H2.25V8.25H8.25V2.25H9.75V8.25H15.75V9.75H9.75V15.75H8.25Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
