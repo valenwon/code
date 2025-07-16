@@ -18,7 +18,7 @@ html, body{
 
 #wrap{
     position: relative; /*header정렬의 기준*/
-    overflow-x: hidden; /*가로 스크롤바만 삭제*/
+    /*overflow-x: hidden; 가로 스크롤바만 삭제*/
     width: 100%;
 }
 @media screen and (max-width:1504px) { /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--AOS를 작동시키기 위한 css와 js파일 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!--swiper-->
     <script src="js/swiper-bundle.min.js"></script>
@@ -166,46 +169,213 @@
                         <h2>SAMIL R&D</h2>
                     </div>
                     <div class="list">
-                        <div class="group1">
-                            <ul>
-                                <li class="eye_wrap">
-                                    <div class="photo"><img src="images/main/business01.jpg" alt=""></div>
-                                    <div class="txt">
-                                        <h3>안과질환</h3>
-                                        <p>Project : ZVT eye drop, KSR-001 eye drop, SIF-1002 Tab</p>
-                                    </div>
-                                </li>
-                                <li class="diges_wrap">
-                                    <div class="photo"><img src="images/main/business03.jpg" alt=""></div>
-                                    <div class="txt">
-                                        <h3>소화기계</h3>
-                                        <p>Project : SII-3001 Tab, FDC Tab</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="group2">
-                            <ul>
-                                <li class="liver_wrap">
-                                    <div class="photo"><img src="images/main/business02.jpg" alt=""></div>
-                                    <div class="txt">
-                                        <h3>간질환</h3>
-                                        <p>Project : Aramchol Tab, SIF-2002 Tab</p>
-                                    </div>
-                                </li>
-                                <li class="bone_wrap">
-                                    <div class="photo"><img src="images/main/business04.jpg" alt=""></div>
-                                    <div class="txt">
-                                        <h3>순환계 근골격</h3>
-                                        <p>Project : SII-5001 Tab, SM04690</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <div data-aos="fade-up">
+                            <div class="group1">
+                                <ul>
+                                    <li class="eye_wrap" data-aos= "fade-up">
+                                        <div class="photo"><img src="images/main/business01.jpg" alt="눈에 안약을 넣고 있는 여성의 이미지"></div>
+                                        <div class="txt">
+                                            <h3>안과질환</h3>
+                                            <p>Project : ZVT eye drop, KSR-001 eye drop, SIF-1002 Tab</p>
+                                        </div>
+                                    </li>
+                                    <li class="diges_wrap" data-aos= "fade-up" data-aos-delay= "300">
+                                        <div class="photo"><img src="images/main/business03.jpg" alt="현미경으로 관찰하고 있는 연구원의 이미지"></div>
+                                        <div class="txt">
+                                            <h3>소화기계</h3>
+                                            <p>Project : SII-3001 Tab, FDC Tab</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--//group1-->
+                        </div><!--//data-aos-->
+                        <script>
+                            AOS.init({
+                            offset: 150, 
+                            duration: 500, 
+                            easing: 'ease', 
+                            });
+                        </script>
+                        <div data-aos="fade-up">
+                            <div class="group2">
+                                <ul>
+                                    <li class="liver_wrap" data-aos= "fade-up">
+                                        <div class="photo"><img src="images/main/business02.jpg" alt="주사기를 들고있는 연구원의 손 이미지"></div>
+                                        <div class="txt">
+                                            <h3>간질환</h3>
+                                            <p>Project : Aramchol Tab, SIF-2002 Tab</p>
+                                        </div>
+                                    </li>
+                                    <li class="bone_wrap" data-aos= "fade-up" data-aos-delay= "400">
+                                        <div class="photo"><img src="images/main/business04.jpg" alt="실험도구에 액체를 담고있는 연구원의 손 이미지"></div>
+                                        <div class="txt">
+                                            <h3>순환계 근골격</h3>
+                                            <p>Project : SII-5001 Tab, SM04690</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--//group2-->
+                        </div><!--//data-aos-->
+                        <script>
+                            AOS.init({
+                            offset: 180, //하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+                            duration: 500, // 애니메이션 효과가 작동되는 시간
+                            easing: 'ease', // 가속도
+                            });
+                        </script>
                     </div>
                     <div class="more"><a href="#"><span>See more</span></a></div>
                 </div>
             </section><!--business-->
+            <section class="products">
+                <div class="wrapper">
+                    <div class="tit">
+                        <strong>삼일제약의 제품</strong>
+                        <h2>PRODUCTS</h2>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products01.jpg" alt="손에 여러 알약들이 있는 이미지"></div>
+                                    <div class="txt">
+                                        <h3>일반의약품</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!--<div class="pro_bg"></div>  안되면 photo 안으로 넣어주기-->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products02.jpg" alt="갈색병을 잡고있는 손의 이미지"></div>
+                                    <div class="txt">
+                                        <h3>전문의약품</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!-- <div class="pro_bg"></div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products03.jpg" alt="여러개 실험도구에 무언가 담겨있는 이미지"></div>
+                                    <div class="txt">
+                                        <h3>의료기기</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!-- <div class="pro_bg"></div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products04.jpg" alt="프로틴 글씨가 적힌 통과 프로틴 가루 이미지 "></div>
+                                    <div class="txt">
+                                        <h3>의약외품</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!-- <div class="pro_bg"></div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products05.jpg" alt="나무 식기에 올려진 견과류 이미지"></div>
+                                    <div class="txt">
+                                        <h3>건강식품</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!-- <div class="pro_bg"></div> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/products06.jpg" alt="뚜껑이 열린 알약통과 떨어져있는 알약들의 이미지"></div>
+                                    <div class="txt">
+                                        <h3>기타</h3>
+                                    </div>
+                                    <div class="more"><span class="blind">더보기</span></div>
+                                    <!-- <div class="pro_bg"></div> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section><!--products-->
+            <section class="recruit">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>RECRUIT SAMIL WITH YOU</h2>
+                        <strong>따뜻한 마음과 열린 생각을 가진 인재를 위한 삼일의 문은 항상 열려있습니다.</strong>
+                        <div class="more"><a href="#"><span>See more</span></a></div>
+                    </div>
+                    <div class="inner">
+                        <div class="bg_item1">
+                            <div class="photo_hand"><img src="images/main/recruit01.jpg" alt="무언가를 들고있는 연구원의 이미지"></div>
+                        </div>
+                        <div class="bg_item2">
+                            <div class="photo_pill"><img src="images/main/recruit02.jpg" alt="여러 종류의 알약 이미지"></div>
+                            <div class="photo_micro"><img src="images/main/recruit03.jpg" alt="현미경위 트레이를 관찰하는 이미지"></div>
+                        </div>
+                        <div class="bg_item3">
+                            <div class="photo_liquid"><img src="images/main/recruit04.jpg" alt="작은 병에 액체를 담고있는 이미지"></div>
+                            <div class="photo_worker"><img src="images/main/recruit05.jpg" alt="연구원들이 서로 얘기하는 이미지"></div>
+                        </div>
+                    </div>
+                </div>
+            </section><!--recruit-->
+            <section class="news">
+                <div class="wrapper">
+                    <div class="group">
+                        <div class="tit">
+                            <strong>삼일 보도자료</strong>
+                            <h2>SAMIL NEWS</h2>
+                        </div><!--//tit-->
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="subject">
+                                            <h3>삼일제약, ‘피닉스랩’과 생성형 AI기반 제약회사 맞춤형 솔루션 개발 MOU 체결</h3>
+                                            <span class="date">07.08</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="subject">
+                                            <h3>삼일제약, ‘싱귤래리티바이오텍’과 전략적 투자 계약 체결</h3>
+                                            <span class="date">07.01</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="subject">
+                                            <h3>삼일제약-대한산업보건협회-한마음혈액원 ESG 사회공헌 협약 체결</h3>
+                                            <span class="date">06.27</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="subject">
+                                            <h3>삼일제약, 2025년 시무식 개최 및 개그맨 김영철 초청 사내 특강 진행</h3>
+                                            <span class="date">01.03</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="subject">
+                                            <h3>삼일제약, 서스틴베스트 ESG 등급평가 A등급 획득</h3>
+                                            <span class="date">12.12</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--//list-->
+                    </div><!--//group-->
+                    <div class="more"><a href="#"><span>See more</span></a></div>
+                </div>
+            </section><!--news-->
         </main>
         <footer></footer>
         </div>
