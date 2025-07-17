@@ -39,6 +39,15 @@ $(document).ready(function(){
             device_status = 'mobile'
         }
     }
+
+    /* TOP버튼  스크롤*/
+    $('footer .top').on('click', function(){
+        $('html, body').animate({
+            scrollTop : 0
+        }, 500)
+    })
+
+
     /***** header에 마우스를 오버했을 때 */
     $('header').on('mouseenter focusin', function(){
         if(device_status == 'pc'){
