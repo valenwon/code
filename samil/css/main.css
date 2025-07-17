@@ -211,7 +211,7 @@
     color: #fff;
     margin: 2px 0 41px 0;
 }
-.business .list{
+.business  .list {
     display: flex;
     justify-content: space-between;
 }
@@ -224,14 +224,20 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.business .list > div > div > ul > li > .txt > h3{
+.business .list .group1 ul li.eye_wrap  .txt h3,
+.business .list .group1 ul li.diges_wrap  .txt h3,
+.business .list .group2 ul li.liver_wrap  .txt h3,
+.business .list .group2 ul li.bone_wrap  .txt h3{
     font-size: var(--list-font-size);
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
     color: #fff;
     margin: 20px 0 10px 0;
 }
-.business .list > div > div > ul > li > .txt > p{
+.business .list .group1 ul li.eye_wrap  .txt p,
+.business .list .group1 ul li.diges_wrap  .txt p,
+.business .list .group2 ul li.liver_wrap  .txt p,
+.business .list .group2 ul li.bone_wrap  .txt p{
     color: #fff;
 }
 .business .list .group2{
@@ -243,6 +249,7 @@
 }
 .business .list .group1 ul li.eye_wrap .photo{
     overflow: hidden;
+    /* max-width: 720px; */
     height: 100%;
     line-height: 0;
 }
@@ -269,6 +276,7 @@
 }
 .business .list .group2 ul li.liver_wrap .photo{
     overflow: hidden;
+    /* max-width: 472px; */
     height: 100%;
     line-height: 0;
 }
@@ -279,6 +287,7 @@
 }
 .business .list .group2 ul li.bone_wrap .photo{
     overflow: hidden;
+    /* max-width: 620px; */
     height: 100%;
     line-height: 0;
 }
@@ -631,7 +640,7 @@
 }
 .recruit .tit{
     position: sticky;
-    top: 200px;
+    top: 70px;
     text-align: center;
     left: 50%;
     margin: 0 0 70px 0;
@@ -737,9 +746,6 @@
     .recruit{
         margin: 180px 0 161px 0;
     }
-    .recruit .tit{
-        top: 180px;
-    }
     .recruit .tit strong{
         margin: 9px 0 29px 0;
     }
@@ -772,9 +778,6 @@
 @media screen and (max-width: 1024px){
     .recruit{
         margin: 150px 0 140px 0;
-    }
-    .recruit .tit{
-        top: 150px;
     }
     .recruit .tit strong{
         margin: 7px 0 25px 0;
@@ -820,7 +823,6 @@
         margin: 83px 0 65px 0;
     }
     .recruit .tit{
-        top: 83px;
         margin: 0 0 30px 0; /*??*/
     }
     .recruit .tit strong{

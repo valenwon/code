@@ -60,6 +60,11 @@ $(document).ready(function(){
         }
     })
     
+    /***** 탭으로 갔을 때 */
+    $('header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li:last-child').on('focusout', function(){
+        $('header ').removeClass('over') /*탭으로 갔을 때 */
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
 
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         if(device_status == 'pc'){
