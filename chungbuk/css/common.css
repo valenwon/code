@@ -102,12 +102,16 @@ html, body{
     --more-weight: 500;
     --bold-weight: 700;
     --extra-bold-weight: 800;
+    --sub-depthname-size : 65px;
     --display-font-size: 45px; /*45 / 17*/
     --tit-size: 45px; /* 45 / 17 */
     --sub-tit-size: 25px; /* 25 / 17 */
     --header-font-size: 23px; /* 23 / 17 */
     --news-font-size : 20px; /* 20 / 17*/
     --banner-font-size: 35px; /*35 / 17*/
+    --center-tit-size : 35px;
+    --center-sign-size: 30px;
+    --sub-lnb-size: 16px;
     --tit-line-height: 1.2; 
     
 }
@@ -115,22 +119,28 @@ html, body{
     :root{
         --header-h: 56px; /* 56px header 높이 */
         --header-h-m: -56px;
+        --sub-depthname-size : 50px;
         --display-font-size: 43px; /*43 / 17*/
         --tit-size: 40px; /* 40 / 17 */
         --sub-tit-size: 23px; /* 23 / 17 */
         --header-font-size: 21px; /* 21 / 17 */
         --news-font-size : 19px; /* 19 / 17*/
         --banner-font-size: 30px; /*30 / 17*/
+        --center-tit-size : 30px;
+        --sub-lnb-size: 15px;
     }
 }
 @media screen and (max-width:768px) {
     :root{
+        --sub-depthname-size : 40px;
         --display-font-size: 25px; /*25 / 16*/
         --tit-size: 23px; /* 23 / 16 */
         --sub-tit-size: 21px; /* 21 / 16 */
         --header-font-size: 20px; /* 20 / 16 */
         --news-font-size : 16px; /* 16 / 16*/
         --banner-font-size: 28px; /*28 / 16*/
+        --center-tit-size : 23px;
+        --sub-lnb-size: 14px;
     }
 }
 
