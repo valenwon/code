@@ -6,6 +6,10 @@
     <!-- jquery 라이브러리  -->
     <script src="../js/jquery-3.7.1.min.js"></script>
 
+    <!--aos 애니메이션 라이브러리-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="../css/sub.css">
     <script src="../js/common.js"></script>
     <!--현재 페이지명 > 상위 메뉴명 > 사이트명-->
@@ -144,7 +148,7 @@
             </div><!--//page_tit-->
             <div class="'content ctn_info"> <!--ctn_페이지명 클래스명을 반드시 추가-->
                 <div class="wrapper">
-                    <div class="center_tit">
+                    <div class="center_tit" data-aos="fade-up">   
                         <h2>치매가 있어도 걱정이 없는 충북,<br><span>충청북도광역치매센터</span>가 치매를 함께 고민하겠습니다.</h2>
                     </div>
                     <div class="photo">
@@ -168,6 +172,13 @@
                             <span>김 현 재</span>
                         </div>
                     </div>
+                    <script>// 반드시 콘텐츠 하단에 배치해야 한다.
+                    AOS.init({
+                    offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+                    duration: 500, // 애니메이션 효과가 작동되는 시간
+                    easing: 'ease', // 가속도
+                    });
+                    </script>
                 </div>
             </div><!--//contents-->
         </main>
