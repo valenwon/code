@@ -122,7 +122,7 @@
         margin: 51px 0 80px 0;
         gap: 17px;
     }
-} /*@media rolling :: 1024 모바일*/
+} /*@media ctn_info :: 1024 모바일*/
 
 @media screen and (max-width: 768px){
     .ctn_info .center_tit{
@@ -136,6 +136,333 @@
         margin: 41px 0 67px 0;
         gap: 15px;
     }
-} /*@media rolling :: 768 모바일*/
+} /*@media ctn_info :: 768 모바일*/
 
 /* 소개 > 센터장 인사말 :: 끝 */
+
+
+/* 소개 > 찾아오시는 길 */
+
+.ctn_map .sub_text{
+    padding: 0 0 36px 0;
+    border-bottom: 1px solid #ccc;
+    font-family: var(--sub-fontfamily);
+}
+.ctn_map .map{
+    margin: 43px 0 0 0;
+}
+.ctn_map .map iframe{
+    width: 100%;
+    height: 531px;
+    border: 0;
+}
+.ctn_map .map_info{
+    padding: 45px 0 39px 0;
+    margin: 0 0 90px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.ctn_map .map_info .detail_info{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--sub-fontfamily);
+}
+.ctn_map .map_info .detail_info .tit h3{
+    font-size: var(--header-font-size);
+    font-weight: var(--extra-bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--main-font-color);
+}
+.ctn_map .map_info .detail_info .address_group{
+    width: calc(100% - 63px);
+}
+.ctn_map .map_info .detail_info .tel_group{
+    width: calc(100% - 83px);
+}
+.ctn_map .map_info .detail_info  .address_group .txt p:first-child{
+    margin: 0 0 6px 0;
+}
+.ctn_map .map_info .detail_info  .address_group .txt p span{
+    font-weight: var(--bold-weight);
+}
+
+.ctn_map .vehicle_info .tit{
+    padding: 0 0 36px 0;
+    border-bottom: 2px solid var(--tit-font-color);
+}
+.ctn_map .vehicle_info .tit h3{
+    font-size: var(--center-tit-size);
+    font-weight: var(--extra-bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-font-color);
+}
+.ctn_map .vehicle_type .taxi{
+    padding: 51px 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.ctn_map .vehicle_type .bus{
+    padding: 51px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+.ctn_map .vehicle_type .car{
+    padding: 51px 0 122px 0 ;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+}
+.ctn_map .vehicle_type .taxi .cate{
+    margin: 0 8%;
+    position: relative;
+}
+.ctn_map .vehicle_type .bus .cate{
+    margin: 0 7%;
+    position: relative;
+}
+.ctn_map .vehicle_type .car .cate{
+    margin: 0 6%;
+    position: relative;
+}
+.ctn_map .vehicle_type > div > .cate > h4{
+    font-size: var(--sub-tit-size);
+    font-weight: var(--extra-bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-font-color);
+}
+.ctn_map .vehicle_type > div > .cate::before{
+    content: "";
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ctn_map .vehicle_type .taxi .cate::before{
+    top: -36px;
+    left: 27px;
+    width: 36px;
+    height: 31px;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='31' viewBox='0 0 36 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1196 3.66593H20.8669C21.3425 3.66593 21.7281 3.28024 21.7281 2.80463V0.861275C21.7281 0.385664 21.3425 0 20.8669 0H14.1196C13.644 0 13.2583 0.385664 13.2583 0.861275V2.80463C13.2583 3.28024 13.644 3.66593 14.1196 3.66593Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M4.28253 30.1359C4.28253 30.6132 4.66942 31 5.14665 31H7.24112C7.71836 31 8.10524 30.6132 8.10524 30.1359V27.1777H4.28294V30.1359H4.28253Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M26.8915 30.1359C26.8915 30.6132 27.2783 31 27.7552 31H29.8496C30.3269 31 30.7134 30.6132 30.7134 30.1359V27.1777H26.8911V30.1359H26.8915Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M33.3077 16.3771H33.2226C32.5165 16.3771 31.8821 15.9457 31.6228 15.289L29.1228 9.2049C28.3037 6.60241 25.8912 4.83203 23.1627 4.83203H12.1123C9.45711 4.83203 7.09364 6.50963 6.21615 9.01205C6.20603 9.04041 6.1955 9.06877 6.18334 9.09632L3.34142 15.3117C3.06999 15.9436 2.44853 16.3536 1.76064 16.3536C0.810636 16.3536 0.0405021 17.1238 0.0405021 18.0738L0 24.2632C0 25.2132 0.770133 25.9833 1.72014 25.9833L33.2676 26.0064C34.2176 26.0064 34.9878 25.2363 34.9878 24.2863L35.0283 18.0969C35.0279 17.1473 34.2577 16.3771 33.3077 16.3771ZM9.11276 9.7113C9.48749 8.85649 10.3322 8.3039 11.266 8.30349L23.9466 8.29822C24.9189 8.29782 25.7915 8.89579 26.1416 9.80325L27.7766 14.0384L7.22895 14.008L9.11276 9.7113ZM6.19388 21.7624C5.15393 21.7624 4.31047 20.9193 4.31047 19.879C4.31047 18.839 5.15353 17.9956 6.19388 17.9956C7.23422 17.9956 8.07727 18.8386 8.07727 19.879C8.07727 20.9189 7.23382 21.7624 6.19388 21.7624ZM28.8028 21.7624C27.7624 21.7624 26.9194 20.9193 26.9194 19.879C26.9194 18.839 27.7624 17.9956 28.8028 17.9956C29.8427 17.9956 30.6862 18.8386 30.6862 19.879C30.6858 20.9189 29.8427 21.7624 28.8028 21.7624Z' fill='%232F8EE0'/%3E%3C/svg%3E%0A");
+}
+.ctn_map .vehicle_type .bus .cate::before{
+    top: -40px;
+    left: 39px;
+    width: 31px;
+    height: 36px;
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='36' viewBox='0 0 31 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.9816 15.5258L30.1878 6.95253C29.8229 3.01318 26.5182 0 22.5618 0H8.60162C4.55344 0 1.17136 3.08311 0.798099 7.11425L0.0192274 15.5258C0.00655222 15.663 0 15.8002 0 15.9379V26.5457C0 29.016 2.00267 31.0183 4.47258 31.0183H26.5273C28.9977 31.0183 30.9999 29.016 30.9999 26.5457V15.9379C31.0008 15.8002 30.9942 15.663 30.9816 15.5258ZM5.25013 7.06836C5.34454 5.98792 6.24885 5.15923 7.33323 5.15923H23.668C24.7524 5.15923 25.6567 5.98792 25.7511 7.06836L26.3503 13.9291H4.6509L5.25013 7.06836ZM5.51719 25.6851C4.39522 25.6851 3.48523 24.7756 3.48523 23.6531C3.48523 22.5307 4.39478 21.6212 5.51719 21.6212C6.63959 21.6212 7.54915 22.5307 7.54915 23.6531C7.54915 24.7751 6.63959 25.6851 5.51719 25.6851ZM25.9823 26.0011C24.8603 26.0011 23.9504 25.0916 23.9504 23.9692C23.9504 22.8472 24.8599 21.9372 25.9823 21.9372C27.1047 21.9372 28.0143 22.8468 28.0143 23.9692C28.0143 25.0911 27.1047 26.0011 25.9823 26.0011Z' fill='%232F8EE0'/%3E%3Cpath d='M3.4765 35.0337C3.4765 35.5486 3.89391 35.966 4.40835 35.966H6.66802C7.18289 35.966 7.6003 35.5486 7.6003 35.0337V31.8418H3.4765V35.0337Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M23.9206 35.0337C23.9206 35.5486 24.338 35.966 24.8524 35.966H27.1121C27.627 35.966 28.0444 35.5486 28.0444 35.0337V31.8418H23.9206V35.0337Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+}
+.ctn_map .vehicle_type .car .cate::before{
+    top: -31px;
+    left: 51px;
+    width: 36px;
+    height: 27px;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='27' viewBox='0 0 36 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.28253 25.3019C4.28253 25.7792 4.66942 26.1661 5.14665 26.1661H7.24112C7.71836 26.1661 8.10524 25.7792 8.10524 25.3019V22.3438H4.28294V25.3019H4.28253Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M26.8915 25.3019C26.8915 25.7792 27.2783 26.1661 27.7552 26.1661H29.8496C30.3269 26.1661 30.7134 25.7792 30.7134 25.3019V22.3438H26.8911V25.3019H26.8915Z' fill='%232F8EE0' fill-opacity='0.4'/%3E%3Cpath d='M33.3077 11.5451H33.2226C32.5165 11.5451 31.8821 11.1137 31.6228 10.457L29.1228 4.37287C28.3037 1.77038 25.8912 0 23.1627 0H12.1123C9.45711 0 7.09364 1.6776 6.21615 4.18002C6.20603 4.20838 6.1955 4.23674 6.18334 4.26429L3.34142 10.4796C3.06999 11.1116 2.44853 11.5216 1.76064 11.5216C0.810636 11.5216 0.0405021 12.2917 0.0405021 13.2417L0 19.4312C0 20.3812 0.770133 21.1513 1.72014 21.1513L33.2676 21.1744C34.2176 21.1744 34.9878 20.4043 34.9878 19.4543L35.0283 13.2648C35.0279 12.3152 34.2577 11.5451 33.3077 11.5451ZM9.11276 4.87926C9.48749 4.02446 10.3322 3.47186 11.266 3.47146L23.9466 3.46619C24.9189 3.46579 25.7915 4.06375 26.1416 4.97122L27.7766 9.20634L7.22895 9.17595L9.11276 4.87926ZM6.19388 16.9304C5.15393 16.9304 4.31047 16.0873 4.31047 15.0469C4.31047 14.007 5.15353 13.1635 6.19388 13.1635C7.23422 13.1635 8.07727 14.0066 8.07727 15.0469C8.07727 16.0869 7.23382 16.9304 6.19388 16.9304ZM28.8028 16.9304C27.7624 16.9304 26.9194 16.0873 26.9194 15.0469C26.9194 14.007 27.7624 13.1635 28.8028 13.1635C29.8427 13.1635 30.6862 14.0066 30.6862 15.0469C30.6858 16.0869 29.8427 16.9304 28.8028 16.9304Z' fill='%232F8EE0'/%3E%3C/svg%3E%0A");
+}
+.ctn_map .vehicle_type > div > .sub_detail{
+    width: 70%;
+}
+.ctn_map .vehicle_type > div > .sub_detail > .inner{
+    display: flex;
+    flex-direction: column;
+}
+.ctn_map .vehicle_type .bus .sub_detail .inner:first-child {
+    margin: 0 0 30px 0;
+}
+.ctn_map .vehicle_type .car .sub_detail p {
+    margin: 0 0 30px 0;
+}
+.ctn_map .vehicle_type .car .sub_detail .inner{
+    margin: 0 0 30px 0;
+}
+.ctn_map .vehicle_type .car .sub_detail .inner:last-child{
+    margin: 0;
+}
+.ctn_map .vehicle_type > div > .sub_detail > .inner strong{
+    font-weight: var(--bold-weight);
+    color: var(--tit-font-color);
+    line-height: var(--tit-line-height);
+    margin: 0 0 13px 0;
+}
+.ctn_map .vehicle_type > div > .sub_detail >.inner span{
+    font-family: var(--sub-fontfamily);
+}
+
+
+@media screen and (max-width: 1024px){
+    .ctn_map .sub_text{
+        padding: 0 0 30px 0;
+    }
+    .ctn_map .map{
+        margin: 33px 0 0 0;
+    }
+    .ctn_map .map iframe{
+        height: 430px;
+    }
+    .ctn_map .map_info{
+        padding: 35px 0 35px 0;
+        margin: 0 0 80px 0;
+        display: block;
+    }
+    .ctn_map .map_info .detail_info{
+        width:  auto;
+        display: flex;
+    }
+    .ctn_map .map_info .detail_info:first-child{
+        margin: 0 0 35px 0;
+    }
+    .ctn_map .map_info .detail_info .address_group{
+        width: calc(100% - 83px);
+    }
+
+    .ctn_map .vehicle_info .tit{
+        padding: 0 0 33px 0;
+    }
+    .ctn_map .vehicle_type .taxi{
+        padding: 41px 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .ctn_map .vehicle_type .bus{
+        padding: 41px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ctn_map .vehicle_type .car{
+        padding: 41px 0 100px 0 ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ctn_map .vehicle_type .taxi .cate{
+        margin: 0 2%;
+    }
+    .ctn_map .vehicle_type .bus .cate{
+        margin: 0 1%;
+    }
+    .ctn_map .vehicle_type .car .cate{
+        margin: 0;
+    }
+    .ctn_map .vehicle_type .taxi .cate::before{
+        left: 24px;
+    }
+    .ctn_map .vehicle_type .bus .cate::before{
+        left: 37px;
+    }
+    .ctn_map .vehicle_type .car .cate::before{
+        left: 42px;
+    }
+    .ctn_map .vehicle_type > div > .sub_detail{
+        width: 80%;
+    }
+    .ctn_map .vehicle_type .bus .sub_detail .inner:first-child {
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .sub_detail p {
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .sub_detail .inner{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type > div > .sub_detail > .inner strong{
+        margin: 0 0 10px 0;
+    }
+} /*@media ctn_map :: 1024 모바일*/
+
+@media screen and (max-width: 768px){
+    .ctn_map .sub_text{
+        padding: 0 0 25px 0;
+    }
+    .ctn_map .map{
+        margin: 28px 0 0 0;
+    }
+    .ctn_map .map iframe{
+        height: 312px;
+    }
+    .ctn_map .map_info{
+        padding: 33px 0 33px 0;
+        margin: 0 0 67px 0;
+    }
+    .ctn_map .map_info .detail_info{
+        width:  auto;
+        display: block;
+    }
+    .ctn_map .map_info .detail_info:first-child{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .map_info .detail_info > .tit > h3{
+        margin: 0 0 10px;
+    }
+    .ctn_map .map_info .detail_info .address_group{
+        width: auto;
+    }
+    .ctn_map .map_info .detail_info .tel_group{
+        width: auto;
+    }
+    .ctn_map .map_info .detail_info  .address_group .txt p:first-child{
+        margin: 0 0 6px 0;
+    }
+
+    .ctn_map .vehicle_info .tit{
+        padding: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .taxi{
+        padding: 40px 0;
+        display: block;
+    }
+    .ctn_map .vehicle_type .bus{
+        padding: 40px 0;
+        display: block;
+    }
+    .ctn_map .vehicle_type .car{
+        padding: 40px 0 67px 0 ;
+        display: block;
+    }
+    .ctn_map .vehicle_type .taxi .cate{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .bus .cate{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .cate{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type > div > .cate::before{
+        display: none;
+    }
+    .ctn_map .vehicle_type > div > .sub_detail{
+        width: auto;
+    }
+    .ctn_map .vehicle_type .taxi .sub_detail .inner{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 11px;
+    }
+    .ctn_map .vehicle_type .bus .sub_detail .inner:first-child {
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .sub_detail p {
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .sub_detail .inner{
+        margin: 0 0 25px 0;
+    }
+    .ctn_map .vehicle_type .car .sub_detail .inner:last-child{
+        margin: 0;
+    }
+    .ctn_map .vehicle_type .taxi .sub_detail .inner strong{
+        margin: 0;
+    }
+    .ctn_map .vehicle_type > div > .sub_detail > .inner strong{
+        margin: 0 0 10px 0;
+    }
+} /*@media ctn_map :: 768 모바일*/

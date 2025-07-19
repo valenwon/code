@@ -6,9 +6,13 @@
     <!-- jquery 라이브러리  -->
     <script src="../js/jquery-3.7.1.min.js"></script>
 
+    <!--aos 애니메이션 라이브러리-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <link rel="stylesheet" href="../css/sub.css">
     <script src="../js/sub.js"></script>
-    <!-- <script src="../js/contents.js"></script> -->
+    <script src="../js/contents.js"></script>
     <script src="../js/common.js"></script>
 
     <!--현재 페이지명 > 상위 메뉴명 > 사이트명-->
@@ -150,8 +154,8 @@
                     <div class="sub_text">
                         <p>충청북도광역치매센터로 찾아오시는 길을 안내해 드립니다.</p>
                     </div>
-                    <div class="map">
-
+                    <div class="map" data-aos="fade-right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.038766780683!2d127.46124967579416!3d36.625453477530485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565289c6b540973%3A0x3152b49d8465266e!2z7Lap7LKt67aB64-E6rSR7Jet7LmY66ek7IS87YSw!5e0!3m2!1sko!2skr!4v1752902305960!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="map_info">
                         <div class="detail_info">
@@ -159,14 +163,77 @@
                                 <h3>주소</h3>
                             </div>
                             <div class="address_group">
-                                <div class="add_inner">
-                                    <p><span>도로명 주소 : </span>충북 청주시 서원구 1순환로 767 지오빌딩 3층 우 28666</p>
+                                <div class="txt">
+                                    <p><span>도로명 주소 : </span>충북 청주시 서원구 1순환로 767 지오빌딩 3층 우 28666</p><!--address-->
                                     <p><span>번지 주소 : </span>충청북도 청주시 서원구 개신동 50-5 3층 우 28666</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="detail_info"></div>
-                    </div>
+                        <div class="detail_info">
+                            <div class="tit">
+                                <h3>연락처</h3>
+                            </div>
+                            <div class="tel_group">
+                                <div class="txt">
+                                    <p>043 269-6891~3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--//map_info-->
+                    <div class="vehicle_info">
+                        <div class="tit" data-aos="fade-in">
+                            <h3>교통정보</h3>
+                        </div>
+                        <div class="vehicle_type" data-aos="fade-up">
+                            <div class="taxi">
+                                <div class="cate">
+                                    <h4>택시 요금</h4>
+                                </div>
+                                <div class="sub_detail">
+                                    <div class="inner">
+                                        <strong>요금</strong>
+                                        <span>약 4,000 ~ 5,000원정도 (4.5km정도)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bus">
+                                <div class="cate">
+                                    <h4>버스 이용 시</h4>
+                                </div>
+                                <div class="sub_detail">
+                                    <div class="inner">
+                                        <strong>고속버스 이용시</strong>
+                                        <span>(출발지 → 목적지) 서울,동서울,상봉,대구,부산,광주시고속터미널 → 청주고속버스터미널 → 823버스 탑승 →충북대학교병원정류장 하차</span>
+                                    </div>
+                                    <div class="inner">
+                                        <strong>시내버스</strong>
+                                        <span>기본요금(신탄진,부강,척산,미평행)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="car">
+                                <div class="cate">
+                                    <h4>자가용 이용 시</h4>
+                                </div>
+                                <div class="sub_detail">
+                                    <p>(출발지 → 목적지) 각도시 → 충북 청주시 서원구 1순환로 767 지오빌딩3층 (가능하면 청주 I.C를 이용하시기 바랍니다.)</p>
+                                    <div class="inner">
+                                        <strong>청원 I.C</strong>
+                                        <span>청원I.C(좌회전) → 청주방향(직진) →미평4거리(좌회전:10.7km) → 충대병원5거리</span>
+                                    </div>
+                                    <div class="inner">
+                                        <strong>서청주I.C</strong>
+                                        <span>서청주I.C(중부고속도로,좌회전) → 봉명사거리(우회전;5.3km) → 사창4거리(직진:6.3km) → 충대병원5거리</span>
+                                    </div>
+                                    <div class="inner">
+                                        <strong>청주I.C</strong>
+                                        <span>청주I.C(경부고속도로) → 청주.보은.속리산방향 → 공단5거리(직진:6.8km) → 사창4거리(우회전:8km) → 충대병원5거리
+                                        충대병원 5거리에서 하나로 약국방면 좌회전 후 첫번째 골목 좌회전 미니스톱편의점 맞은편 우성문구 주차장에 주차.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--//trans_info-->
                 </div><!--//wrapper-->
             </div><!--//contents-->
         </main>
