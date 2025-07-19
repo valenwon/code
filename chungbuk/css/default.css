@@ -2,11 +2,11 @@
   그걸 모두 삭제하고 body에서 선언한 글자스타일대로만 적용
   여백, 동그라미 삭제 */
 
-h1,h2,h3,h4,h5,h6,th{
+h1,h2,h3,h4,h5,h6{
     font-size: inherit;
     font-weight: inherit;
 }
-strong,th{
+strong,th{ /*th: 테이블 글자 두께 조절용*/
     font-weight: inherit;
 }
 em,address{

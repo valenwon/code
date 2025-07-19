@@ -1,5 +1,13 @@
 
 $(document).ready(function(){
+
+    AOS.init({
+    offset: 150, 
+    duration: 500, // 애니메이션 효과가 작동되는 시간
+    easing: 'ease', // 가속도
+    });
+    
+
     let totalNum
     let currNum
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
@@ -23,20 +31,6 @@ $(document).ready(function(){
         }
 
     });
-
-
-    
-
-    // function scroll_chk(){
-    //     scrolling = $(window).scrollTop()
-    //     console.log('스크롤값', scrolling)
-    //     if(scrolling > 200){
-    //         $('.about').addClass('active')
-    //     }else if(scrolling < 700){
-    //         $('.about').removeClass('active')
-    //     }
-    // }
-
 
 
 
