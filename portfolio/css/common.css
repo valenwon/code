@@ -1,15 +1,16 @@
 /* 모든 페이지에 공통으로 들어가는 기본 스타일*/
 
 html, body{
-    font-family: "SUITE",sans-serif; 
+    font-family: "Cal Sans", "Pretendard",sans-serif;
     /*앞에 쓴 서체를 적용, 지원이 안되면 두 번째 서체 적용*/
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
-    color: #3d3d3d;
+    color: #1d1d1d;
     word-break: keep-all; /*스페이스 기준 단어별로 떨어짐*/
     word-wrap: break-word; /* 단어가 긴 경우 강제로 줄바꿈을 주는 방법 */
 }
+
 
 .wrapper{
     width: 1260px;
@@ -34,12 +35,7 @@ html, body{
                     /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기*/
                 }
 }
-@media screen and (max-width:768px){
-                /*브라우저 넓이가 768px이하에서만 작용*/
-                html, body{
-                    font-size: 16px;
-                }
-}
+
 
 /*글자를 숨겨야하는 경우 blind 클래스를 적용*/
 .blind{
@@ -83,41 +79,30 @@ html, body{
 
 /* css 변수 */
 :root{
-    --header-h: 80px; /* header 높이 */
-    --header-h-m: -80px; /* header 높이 마이너스 값 */
+    --font-family: 'Pretendard';
+    --line-black: #101010;
     --tit-font-color: #1d1d1d;
     --base-font-color: #3d3d3d;
-    --point-font-color: #099808;
+    --main-font-color: #FEFF01; 
+    --point-font-color: #0CBBF0;
     --bold-weight: 700;
     --Extra-bold-weight: 800;
-    --tit-size: 2.65rem; /* 45px % 17 */
-    --sub-tit-size: 23px; /* 23px % 17 */
+    --tit-size: 45px;
+    --sub-tit-size: 23px; 
     --tit-line-height: 1.2; 
-    --display-size :60px;
-    --tree-size :65px;
-    --work-size :20px;
+    --visual-size: 25vw;
+    --visual-sub-tit: 95px;
+    --vi-intro-size: 28px;
+    --about-size:40px;
     
 }
 @media screen and (max-width:1024px) {
     :root{
-        --header-h: 56px; /* header 높이 */
-        --header-h-m: -56px;
-        --tit-size: 2.35rem; /* 40px % 17 */
-        --sub-tit-size: 21px; /* 21px % 17 */
-        --display-size : 50px;
-        --tree-size :55px;
-        --work-size :19px;
+        --tit-size: 40px; 
+        --sub-tit-size: 21px; 
     }
 }
-@media screen and (max-width:768px) {
-    :root{
-        --tit-size: 1.56rem; /* 25px % 16 */
-        --sub-tit-size: 18px; /* 18px % 16 */
-        --display-size : 30px;
-        --tree-size :35px;
-        --work-size :17px;
-    }
-}
+
 
 
 
