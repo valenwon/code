@@ -3,12 +3,13 @@
 @import url(common.css);
 @import url(layout.css);
 
-.fp-table{
-    display: block; /*flex 빼주기*/
+
+.fp-responsive .fp-auto-height-responsive.fp-section{
+    height: auto !important;
 }
 .visual{
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     position: relative;
 }
 .visual .tit h2{
@@ -116,21 +117,20 @@
 .about{
     background-color: var(--line-black);
     color: #fff;
-    padding: 243px 0 0 0;
+    padding: 200px 0 150px 0;
 }
 .about .wrapper{
     display: flex;
     justify-content: space-between;
 }
-.about .tit_wrap{
-    width: calc(100% - 724px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* margin: 0 0 154px; */
+.about .tit_wrap .main_tit{
+   margin: 0 0 327px 0;
+}
+.about .tit_wrap .sub_tit{
+    width: 520px;
 }
 .about .introduce{
-    width: 42.22%;
+    width: calc(100% - 724px);
 } 
 .about .tit_wrap .main_tit h2{
     font-size: var(--about-size);
@@ -145,24 +145,179 @@
 }
 .about .introduce .gro{
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
 }
-.about .introduce .gro .tit{
-   width: calc(100% - 403px);
+.about .introduce .con{
+    margin: 0 0 55px 0;
+    width: calc(100% - 170px);
 }
 .about .introduce .experience.con,
 .about .introduce .license.con{
     display: flex;
+    justify-content: space-between;
 }
-.about .introduce .con{
-    margin: 0 0 55px 0;
+.about .introduce .experience.con .detail,
+.about .introduce .license.con .detail{
+    width: calc(100% - 100px);
 }
 .about .introduce .con p{
     font-family: var(--font-family);
     line-height: var(--tit-line-height);
     margin: 0 0 7px 0;
 }
-.about .introduce .experience.con .detail,
-.about .introduce .license.con .detail{
+.about .introduce .programs.con .icon{
+   display: flex;
+   overflow: hidden;
+   height: 31px;
+}
+.about .introduce .programs.con .icon img{
+    height: 100%;
+    object-fit: cover;
+    padding-right: 15px;
+}
 
+
+
+.index{
+    background-color: var(--line-black);
+    color: #fff;
+    padding: 170px 0 160px 0;
+}
+.index .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.index .tit h2{
+    font-size: var(--tit-size);
+}
+.index .list{
+    width: calc(100% - 428px);
+}
+.index .list .photo_wrap{
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    margin: 0 0 165px 0;
+}
+.index .list .photo_wrap .photo{
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+.index .list .photo_wrap .photo img{
+    height: 100%;
+    object-fit: cover;
+}
+.index .list .photo_wrap .photo.doosan::before{
+    content: "";
+    position: absolute;
+    width: 131px;
+    height: 31px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/main/index_logo1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.index .list .photo_wrap .photo.chungbuk::before{
+    content: "";
+    position: absolute;
+    width: 153px;
+    height: 27px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/main/index_iogo2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.index .list .photo_wrap .photo.samil::before{
+    content: "";
+    position: absolute;
+    width: 115px;
+    height: 36px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/main/index_iogo3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.index .list .index_wrap ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 59px 0 18px 0;
+    border-bottom: 1px solid #fff;
+    align-items: flex-end;
+}
+.index .list .index_wrap ul li:first-child{
+    border-top: 1px solid #fff;
+}
+.index .list .index_wrap ul li .inner{
+    width: calc(100% - 532px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.index .list .index_wrap ul li .inner span{
+    font-size: var(--tit-size);
+    line-height: 1;
+}
+.index .list .index_wrap ul li .inner h4{
+    width: calc(100% - 83px);
+    font-size: var(--sub-tit-size);
+    font-weight: var(--bold-weight);
+}
+
+
+/********* #fp-nav ********/
+
+#fp-nav.fp-left {
+    left: 15px; /*왼쪽에서 떨어진 거리*/
+}
+#fp-nav ul li .fp-tooltip { /*글자*/
+    color: transparent;
+}
+
+#fp-nav ul li a {
+    position: absolute; /* li기준으로 정렬, a태그가 fp-tooltip까지 감싸야 돼서 absolute로 바꿔줌 */
+    left: 0;
+    top: 0;
+}
+#fp-nav ul li a::before{ /* 기본 동그라미 */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    background-color: var(--base-font-color);
+    border-radius: 50%;
+}
+#fp-nav ul li .fp-tooltip.fp-left {
+    left: auto;
+}
+#fp-nav ul li a span{
+    display: none;  /*원래 동그라미 없애기*/
+}
+
+/* ################ 마우스 오버, 현재 클릭, 선택된 메뉴 ##################*/
+#fp-nav ul li a.active::before,
+#fp-nav ul li:hover a::before{ /*동그라미 초록색으로 바꿔주기*/
+    background-color: var(--line-black);
+    width: 9px;
+    height: 9px;
+    left: -2px;
+}
+/* ############### 검은색 배경일 때 ####################*/
+body.bg_black #fp-nav ul li a::before{
+    background-color: #fff;
+}
+body.bg_black #fp-nav ul li a.active::before,
+body.bg_black #fp-nav ul li:hover a::before{
+    background-color: #fff;
 }
