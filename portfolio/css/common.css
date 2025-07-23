@@ -92,17 +92,14 @@ html, body{
     --sub-tit-size: 23px; 
     --tit-line-height: 1.2; 
     --visual-size: 25vw;
+    --thank-size: 18vw;
     --visual-sub-tit: 95px;
     --vi-intro-size: 28px;
     --about-size:40px;
-    
+    --doo-txt-size: 20px;
+    --thank-list-size: 30px;
 }
-@media screen and (max-width:1024px) {
-    :root{
-        --tit-size: 40px; 
-        --sub-tit-size: 21px; 
-    }
-}
+
 
 
 

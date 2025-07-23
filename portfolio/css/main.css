@@ -8,8 +8,6 @@
     height: auto !important;
 }
 .visual{
-    /* width: 100%;
-    height: 100%; */
     position: relative;
 }
 .visual .tit h2{
@@ -88,7 +86,7 @@
 }
 .visual .sticker{
     position: absolute;
-    top: calc(100% - 68%);
+    top: 34%;
     right: 10px;
     transform: rotate(5deg);
 }
@@ -118,6 +116,8 @@
     background-color: var(--line-black);
     color: #fff;
     padding: 200px 0 150px 0;
+
+    white-space: nowrap;
 }
 .about .wrapper{
     display: flex;
@@ -128,6 +128,7 @@
 }
 .about .tit_wrap .sub_tit{
     width: 520px;
+    white-space: normal;
 }
 .about .introduce{
     width: calc(100% - 724px);
@@ -176,12 +177,12 @@
     padding-right: 15px;
 }
 
-
-
 .index{
     background-color: var(--line-black);
     color: #fff;
     padding: 170px 0 160px 0;
+
+    white-space: nowrap;
 }
 .index .wrapper{
     display: flex;
@@ -208,7 +209,7 @@
     height: 100%;
     object-fit: cover;
 }
-.index .list .photo_wrap .photo.doosan::before{
+.index .list .photo_wrap .photo.doosan_p::before{
     content: "";
     position: absolute;
     width: 131px;
@@ -221,7 +222,7 @@
     background-repeat: no-repeat;
     z-index: 1;
 }
-.index .list .photo_wrap .photo.chungbuk::before{
+.index .list .photo_wrap .photo.chungbuk_p::before{
     content: "";
     position: absolute;
     width: 153px;
@@ -234,7 +235,7 @@
     background-repeat: no-repeat;
     z-index: 1;
 }
-.index .list .photo_wrap .photo.samil::before{
+.index .list .photo_wrap .photo.samil_p::before{
     content: "";
     position: absolute;
     width: 115px;
@@ -277,7 +278,7 @@
 /********* #fp-nav ********/
 
 #fp-nav.fp-left {
-    left: 15px; /*왼쪽에서 떨어진 거리*/
+    left: 10px; /*왼쪽에서 떨어진 거리*/
 }
 #fp-nav ul li .fp-tooltip { /*글자*/
     color: transparent;
@@ -320,4 +321,375 @@ body.bg_black #fp-nav ul li a::before{
 body.bg_black #fp-nav ul li a.active::before,
 body.bg_black #fp-nav ul li:hover a::before{
     background-color: #fff;
+}
+
+
+/********* 커서 이벤트**********/
+.cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    border-radius: 50%;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+}
+.cursor.photo1,
+.cursor.photo2,
+.cursor.photo3{
+    display: block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    color: #1d1d1d;
+    /* mix-blend-mode: difference; */
+    background-color:var(--main-font-color);
+}
+.photo1,
+.photo2,
+.photo3{
+	cursor: none !important;
+}
+/********* 커서 이벤트**********/
+
+
+.chungbuk{
+    background-color: var(--line-black); 
+    padding: 90px 30px 70px 30px;
+    position: relative; /*more정렬 기준*/
+}
+.chungbuk .tit_group{
+    margin: 0 0 33px 0;
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+}
+.chungbuk .tit_group .tit h2{
+    display: inline-block;
+    font-size: var(--tit-size);
+    line-height: var(--tit-line-height);
+    background-color: var(--main-font-color);
+    padding: 1px 20px;
+}
+.chungbuk .tit_group .tag_wrap{
+    display: flex;
+    color: #fff;
+    gap: 12px;
+}
+.chungbuk .tit_group .tag_wrap .tag{
+    padding: 7px 22px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
+.chungbuk .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.chungbuk .list ul li a{
+    display: block;
+}
+.chungbuk .list ul li a .photo1{
+    height: 663px;
+    width: 490px;
+    overflow: hidden;
+}
+.chungbuk .list ul li a .photo1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.chungbuk .list ul li a .photo2{
+    height: 663px;
+    width: 1346px;
+    overflow: hidden;
+}
+.chungbuk .list ul li a .photo2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.chungbuk .list ul li a .txt{
+    color: #fff;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center; /*가운데*/
+    font-size: var(--doo-txt-size);
+    line-height: var(--tit-line-height);
+    margin: 20px 0 0 0;
+}
+.chungbuk .list ul li a .txt span{
+    margin-left: 16px;
+    padding-left: 16px;
+    position: relative; /*before 정렬의 기준*/
+}
+.chungbuk .list ul li a .txt span::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    top: 3px;
+    left: 0;
+    background-color: #fff;
+}
+.chungbuk .more{
+    position: absolute;
+    top: 75px;
+    right: 30px;
+}
+.chungbuk .more a{
+    display: block;
+    padding: 15px 12px 14px 13px;
+    line-height: var(--tit-line-height);
+    background-color: var(--point-font-color);
+    font-weight: var(--bold-weight);
+    font-size: var(--sub-tit-size);
+}
+.chungbuk .more a:hover{ /*더보기 오버효과*/
+    background-color: var(--main-font-color);   
+}
+
+
+.samil{
+    background: linear-gradient(var(--line-black) 40%, #fff);
+    padding: 90px 30px 70px 30px;
+    position: relative; /*more정렬 기준*/
+}
+.samil .tit_group{
+    margin: 0 0 33px 0;
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+}
+.samil .tit_group .tit h2{
+    display: inline-block;
+    font-size: var(--tit-size);
+    line-height: var(--tit-line-height);
+    background-color: var(--main-font-color);
+    padding: 1px 20px;
+}
+.samil .tit_group .tag_wrap{
+    display: flex;
+    color: #fff;
+    gap: 12px;
+}
+.samil .tit_group .tag_wrap .tag{
+    padding: 7px 22px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
+.samil .list ul{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 24px; */
+}
+.samil .list ul li a{
+    display: block;
+}
+.samil .list ul li a .photo1{
+    width: 850px;
+    height: 661px;
+    overflow: hidden;
+}
+.samil .list ul li a .photo1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.samil .list ul li.small{
+    width: calc(100% - 874px);
+}
+.samil .list ul li.small a .inner{
+    display: flex;
+    gap: 24px;
+}
+.samil .list ul li.small a .inner .photo2{
+    height: 661px;
+    overflow: hidden;
+}
+.samil .list ul li.small a .inner .photo2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.samil .list ul li.small a .inner .photo3{
+    /* width: 490px; */
+    height: 661px;
+    overflow: hidden;
+}
+.samil .list ul li.small a .inner .photo3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.samil .list ul li a .txt{
+    display: flex;
+    color: var(--tit-font-color);
+    font-family: var(--font-family);
+    justify-content: center; /*가운데*/
+    font-size: var(--doo-txt-size);
+    line-height: var(--tit-line-height);
+    margin: 20px 0 0 0;
+
+}
+.samil .list ul li a .txt span{
+    margin-left: 16px;
+    padding-left: 16px;
+    position: relative;
+}
+.samil .list ul li a .txt span::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    top: 3px;
+    left: 0;
+    background-color: var(--tit-font-color);
+}
+.samil .more{
+    position: absolute;
+    top: 85px;
+    right: 30px;
+}
+.samil .more a{
+    display: block;
+    padding: 15px 12px 14px 13px;
+    line-height: var(--tit-line-height);
+    background-color: var(--point-font-color);
+    font-weight: var(--bold-weight);
+    font-size: var(--sub-tit-size);
+}
+.samil .more a:hover{ /*더보기 오버효과*/
+    background-color: var(--main-font-color);
+}
+
+
+
+.doosan{
+    padding: 90px 30px 70px 30px;
+    position: relative; /*more정렬 기준*/
+}
+.doosan .tit_group{
+    margin: 0 0 33px 0;
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+}
+.doosan .tit_group .tit h2{
+    display: inline-block;
+    font-size: var(--tit-size);
+    line-height: var(--tit-line-height);
+    background-color: var(--main-font-color);
+    padding: 1px 20px;
+}
+.doosan .tit_group .tag_wrap{
+    display: flex;
+    color: var(--tit-font-color);
+    gap: 12px;
+}
+.doosan .tit_group .tag_wrap .tag{
+    padding: 7px 22px;
+    border: 1px solid var(--tit-font-color);
+    border-radius: 30px;
+}
+.doosan .list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.doosan .list ul li a{
+    display: block;
+}
+.doosan .list ul li a .photo1{
+    height: 571px;
+    width: 1025px;
+    overflow: hidden;
+}
+.doosan .list ul li a .photo1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.doosan .list ul li a .photo2{
+    margin: 80px 0 0 0;
+    height: 576px;
+    width: 731px;
+    overflow: hidden;
+}
+.doosan .list ul li a .photo2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.doosan .list ul li a .txt{
+    color: var(--tit-font-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center; /*가운데*/
+    font-size: var(--doo-txt-size);
+    line-height: var(--tit-line-height);
+    margin: 20px 0 0 0;
+}
+.doosan .list ul li a .txt span{
+    margin-left: 16px;
+    padding-left: 16px;
+    position: relative; /*before 정렬의 기준*/
+}
+.doosan .list ul li a .txt span::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    top: 3px;
+    left: 0;
+    background-color:  var(--tit-font-color);
+}
+.doosan .more{
+    position: absolute;
+    top: 81px;
+    right: 30px;
+}
+.doosan .more a{
+    display: block;
+    padding: 15px 12px 14px 13px;
+    line-height: var(--tit-line-height);
+    background-color: var(--point-font-color);
+    font-weight: var(--bold-weight);
+    font-size: var(--sub-tit-size);
+}
+.doosan .more a:hover{ /*더보기 오버효과*/
+    background-color: var(--main-font-color);   
+}
+
+
+
+.thank {
+    padding: 30px 0 0 0;
+}
+.thank .tit{
+    margin: 0 0 81px 0;
+}
+.thank .tit h2{
+    text-align: center;
+    font-size: var(--thank-size);
+    line-height: 0.8;
+}
+.thank .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thank .list .contact{
+    margin: 0 98px;
+}
+.thank .list .contact span{
+    display: block;
+    font-size: var(--about-size);
+    line-height: var(--tit-line-height);
+    padding: 3px 23px;
+    background-color: var(--point-font-color);
+}
+.thank .list .email span,
+.thank .list .phone span{
+    font-size: var(--thank-list-size);
 }
