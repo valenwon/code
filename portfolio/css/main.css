@@ -4,9 +4,14 @@
 @import url(layout.css);
 
 
-.fp-responsive .fp-auto-height-responsive.fp-section{
-    height: auto !important;
+.section{
+    overflow: hidden;
 }
+
+
+/* .fp-responsive .fp-auto-height-responsive.fp-section{
+    height: auto !important;
+} */
 .visual{
     position: relative;
 }
@@ -88,8 +93,17 @@
     position: absolute;
     top: 34%;
     right: 10px;
-    transform: rotate(5deg);
+    /* transform: rotate(5deg); */
+
+    animation: sticker_down 3s linear infinite;
+
 }
+@keyframes sticker_down {
+    0% {transform: translateY(0) rotate(5deg);}
+    50% {transform: translateY(20%) rotate(5deg);}
+    100% {transform: translateY(0)  rotate(5deg);}
+}
+
 .visual .sticker p{
     font-size: var(--tit-size);
     line-height: var(--tit-line-height);
@@ -125,10 +139,6 @@
 }
 .about .tit_wrap .main_tit{
    margin: 0 0 327px 0;
-}
-.about .tit_wrap .sub_tit{
-    width: 520px;
-    white-space: normal;
 }
 .about .introduce{
     width: calc(100% - 724px);
@@ -176,6 +186,8 @@
     object-fit: cover;
     padding-right: 15px;
 }
+
+
 
 .index{
     background-color: var(--line-black);
@@ -361,6 +373,8 @@ body.bg_black #fp-nav ul li:hover a::before{
     position: relative; /*more정렬 기준*/
 }
 .chungbuk .tit_group{
+    white-space: nowrap;
+
     margin: 0 0 33px 0;
     display: flex;
     gap: 25px;
@@ -434,12 +448,13 @@ body.bg_black #fp-nav ul li:hover a::before{
     left: 0;
     background-color: #fff;
 }
-.chungbuk .more{
+.chungbuk .more_wrap{
+    display: flex;
     position: absolute;
-    top: 75px;
+    top: 80px;
     right: 30px;
 }
-.chungbuk .more a{
+.chungbuk .more_wrap .more a{
     display: block;
     padding: 15px 12px 14px 13px;
     line-height: var(--tit-line-height);
@@ -447,10 +462,23 @@ body.bg_black #fp-nav ul li:hover a::before{
     font-weight: var(--bold-weight);
     font-size: var(--sub-tit-size);
 }
-.chungbuk .more a:hover{ /*더보기 오버효과*/
-    background-color: var(--main-font-color);   
+.chungbuk .more_wrap .more_sub a{
+    margin-left: 10px;
+    display: block;
+    padding: 14px 11px 13px 12px;
+    color: #fff;
+    line-height: var(--tit-line-height);
+    border: 1px solid #fff;
+    font-weight: var(--bold-weight);
+    font-size: var(--sub-tit-size);
 }
-
+.chungbuk .more_wrap .more a:hover{
+    background-color: var(--main-font-color);
+}
+.chungbuk .more_wrap .more_sub a:hover{
+    background-color: #fff;
+    color: var(--tit-font-color);
+}
 
 .samil{
     background: linear-gradient(var(--line-black) 40%, #fff);
@@ -458,6 +486,8 @@ body.bg_black #fp-nav ul li:hover a::before{
     position: relative; /*more정렬 기준*/
 }
 .samil .tit_group{
+    white-space: nowrap;
+
     margin: 0 0 33px 0;
     display: flex;
     gap: 25px;
@@ -572,6 +602,8 @@ body.bg_black #fp-nav ul li:hover a::before{
     position: relative; /*more정렬 기준*/
 }
 .doosan .tit_group{
+    white-space: nowrap;
+
     margin: 0 0 33px 0;
     display: flex;
     gap: 25px;
