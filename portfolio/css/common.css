@@ -19,7 +19,7 @@ html, body{
 
 #wrap{
     position: relative; /*header정렬의 기준*/
-    overflow-x: hidden; /*가로 스크롤바만 삭제*/
+   overflow-x: hidden;  /*가로 스크롤바만 삭제*/
     width: 100%;
 }
 @media screen and (max-width:1580px){
@@ -29,13 +29,13 @@ html, body{
             /* margin: 0 30px; */
         }
 }
-@media screen and (max-width:1024px){ /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px*/
+/* @media screen and (max-width:1024px){ /* 1260 * 0.05 = 63 + 63 = 126 + 1260 = 1386px
                 .wrapper{
                     width: auto;
-                    margin: 0 20px; /*여백이 브라우저 사이즈에 따라 점점 좁아짐 - 요즘 추세임 -*/
-                    /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기*/
+                    margin: 0 20px; /*여백이 브라우저 사이즈에 따라 점점 좁아짐 - 요즘 추세임 -
+                    /* margin: 0 5%; 넣어주면 됨 / max-width:1386px으로 해주기
                 }
-}
+} */
 
 
 /*글자를 숨겨야하는 경우 blind 클래스를 적용*/
