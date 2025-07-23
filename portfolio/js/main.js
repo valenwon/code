@@ -7,8 +7,8 @@ $(document).ready(function(){
 		navigationTooltips: ['첫번째', '두번째', '세번째', '네번째'], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
 		
-		lockAnchors: true,
-		anchors: ['visual', 'about', 'index', 'doosan', 'chungbuk', 'samil', 'thank'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
+		lockAnchors: false,
+		anchors: ['visual', 'about', 'index', 'chungbuk', 'samil', 'doosan', 'thank'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
 
 		autoScrolling:true, /* 한페이지씩 스크롤 */
 		scrollHorizontally: true,

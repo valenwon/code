@@ -259,33 +259,39 @@
     background-repeat: no-repeat;
     z-index: 1;
 }
-.index .list .index_wrap ul li{
+.index .list .index_wrap ul li a{
     display: flex;
     justify-content: space-between;
     padding: 59px 0 18px 0;
     border-bottom: 1px solid #fff;
     align-items: flex-end;
 }
-.index .list .index_wrap ul li:first-child{
+.index .list .index_wrap ul li:first-child a{
     border-top: 1px solid #fff;
 }
-.index .list .index_wrap ul li .inner{
+.index .list .index_wrap ul li a .inner{
     width: calc(100% - 532px);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.index .list .index_wrap ul li .inner span{
+.index .list .index_wrap ul li a .inner span{
     font-size: var(--tit-size);
     line-height: 1;
 }
-.index .list .index_wrap ul li .inner h4{
+.index .list .index_wrap ul li a .inner h4{
     width: calc(100% - 83px);
     font-size: var(--sub-tit-size);
     font-weight: var(--bold-weight);
 }
 
-
+.index .list .index_wrap ul li a:hover{
+    background-color: var(--main-font-color);
+}
+.index .list .index_wrap ul li a:hover .inner,
+.index .list .index_wrap ul li a:hover p{
+    color: var(--tit-font-color);
+}
 /********* #fp-nav ********/
 
 #fp-nav.fp-left {
